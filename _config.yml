@@ -58,8 +58,15 @@ repository: fistkim101/fistkim101.github.io
 repository_tree: master
 
 ## collections
+collections_dir: collections
 collections:
   algorithm:
+    output: true
+  data_structure:
+    output: true
+  spring:
+    output: true
+  java:
     output: true
 
 ## => Paths

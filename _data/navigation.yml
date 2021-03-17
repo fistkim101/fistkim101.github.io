@@ -1,18 +1,6 @@
 header:
   - titles:
       # @start locale config
-      en: &EN       Project
-      en-GB: *EN
-      en-US: *EN
-      en-CA: *EN
-      en-AU: *EN
-      ko: &KO       프로젝트
-      ko-KR: *KO
-      # @end locale config
-    url: /project.html
-
-  - titles:
-      # @start locale config
       en: &EN       Algorithm
       en-GB: *EN
       en-US: *EN
@@ -25,15 +13,39 @@ header:
 
   - titles:
       # @start locale config
-      en: &EN       Archive
+      en: &EN       Data Structure
       en-GB: *EN
       en-US: *EN
       en-CA: *EN
       en-AU: *EN
-      ko: &KO       아카이브
+      ko: &KO       자료구조
       ko-KR: *KO
       # @end locale config
-    url: /archive.html
+    url: /data_structure.html
+
+  - titles:
+      # @start locale config
+      en: &EN       Spring
+      en-GB: *EN
+      en-US: *EN
+      en-CA: *EN
+      en-AU: *EN
+      ko: &KO       스프링
+      ko-KR: *KO
+      # @end locale config
+    url: /spring.html
+
+  - titles:
+      # @start locale config
+      en: &EN       Java
+      en-GB: *EN
+      en-US: *EN
+      en-CA: *EN
+      en-AU: *EN
+      ko: &KO       자바
+      ko-KR: *KO
+      # @end locale config
+    url: /java.html
 
   - title: GitHub
     url: https://github.com/fistkim101
