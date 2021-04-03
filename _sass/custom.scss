@@ -1,4 +1,9 @@
 
+// image
+.image-wrapper {
+  text-align: center;
+}
+
 // youtube
 .youtube-wrapper {
   position: relative;
@@ -6,6 +11,7 @@
   height: 0;
   padding-bottom: 56.25%;
 }
+
 .youtube-wrapper iframe {
   position: absolute;
   top: 0;
@@ -15,7 +21,3 @@
   border: 0;
 }
 
-// image
-.image-wrapper {
-  text-align: center;
-}
