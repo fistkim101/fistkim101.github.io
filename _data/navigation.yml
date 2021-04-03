@@ -47,5 +47,17 @@ header:
       # @end locale config
     url: /java.html
 
+  - titles:
+      # @start locale config
+      en: &EN       Infra
+      en-GB: *EN
+      en-US: *EN
+      en-CA: *EN
+      en-AU: *EN
+      ko: &KO       인프라
+      ko-KR: *KO
+      # @end locale config
+    url: /infra.html
+
   - title: GitHub
     url: https://github.com/fistkim101

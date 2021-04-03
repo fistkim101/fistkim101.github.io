@@ -68,6 +68,8 @@ collections:
     output: true
   java:
     output: true
+  infra:
+    output: true
 
 ## => Paths
 ##############################
