@@ -23,15 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ 미션2 완료. 미션 3 강의 ing">
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/3tier.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/close-wait.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/tcp-4way.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/time-wait.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/use-method.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/utilization.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/cadvisor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/cloudwatch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/mission3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-04-04-NEXTSTEP-인프라공방-서버진단하기.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-04-04-NEXTSTEP-인프라공방-서버진단하기.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-04-05-NEXTSTEP-인프라공방-애플리케이션진단하기.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-04-05-NEXTSTEP-인프라공방-애플리케이션진단하기.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-04-06-NEXTSTEP-인프라공방-미션3-서비스운영하기.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-04-06-NEXTSTEP-인프라공방-미션3-서비스운영하기.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +90,8 @@
       <workItem from="1617069748412" duration="19053000" />
       <workItem from="1617452559763" duration="31116000" />
       <workItem from="1617603167799" duration="20260000" />
+      <workItem from="1618124118048" duration="4339000" />
+      <workItem from="1618190887807" duration="2663000" />
     </task>
     <task id="LOCAL-00001" summary="docs : Mokito 학습노트">
       <created>1616236910445</created>
