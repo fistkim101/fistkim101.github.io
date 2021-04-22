@@ -22,45 +22,38 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : 카테고리 수정 및 추가">
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/k6-cloud-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/k6-cloud-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/k6-cloud-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/k6-gitaction-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/k6-gitaction-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/k6-metrics.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/lending-load.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/lending-smoke.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/lending-stress.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/load_test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/mission4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/multiserver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/pagespeed-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/pagespeed-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/performence-architecture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/register-load.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/register-smoke.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/register-stress.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/scaling.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/speed1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/speed2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/speed3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/speed4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/stress_test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/test_time.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/user_category.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-04-13-NEXTSTEP-인프라공방-웹성능진단하기.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-04-14-NEXTSTEP-인프라공방-부하테스트.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-04-15-NEXTSTEP-인프라공방-K6.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-04-16-NEXTSTEP-인프라공방-미션4-성능테스트.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ 미션 4 완료">
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/http2-flow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/http2-food.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/k8s-architecture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/k8s-desired-state.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/tcpip-3way.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/tcpip-flow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/tcpip-packet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_architecture/2021-04-22-MSA-개념.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_data_structure/2021-04-19-사전지식.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_data_structure/2021-04-20-동적배열.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-03-15-김영한-HTTP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-03-16-subicura-Kubernetes-시작하기.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-03-17-subicura-Kubernetes-알아보기.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-04-17-NEXTSTEP-인프라공방-리버스프록시개선.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-04-03-NEXTSTEP-인프라공방-미션2-서비스배포하기.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-04-03-NEXTSTEP-인프라공방-미션2-서비스배포하기.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/navigation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-04-14-NEXTSTEP-인프라공방-부하테스트.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-04-14-NEXTSTEP-인프라공방-부하테스트.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-04-16-NEXTSTEP-인프라공방-미션4-성능테스트.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-04-16-NEXTSTEP-인프라공방-미션4-성능테스트.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,6 +67,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images/infra" />
@@ -90,16 +84,18 @@
     <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/_collections" />
-      <recent name="$PROJECT_DIR$/my_collections" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/images/infra" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/collections/_infra" />
       <recent name="$PROJECT_DIR$/_datastructure" />
       <recent name="$PROJECT_DIR$/_data_structure" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/collections" />
+      <recent name="$PROJECT_DIR$/_posts" />
+      <recent name="$PROJECT_DIR$/_collections" />
+      <recent name="$PROJECT_DIR$/my_collections" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -120,7 +116,8 @@
       <workItem from="1617603167799" duration="20260000" />
       <workItem from="1618124118048" duration="4339000" />
       <workItem from="1618190887807" duration="2663000" />
-      <workItem from="1618380556573" duration="31672000" />
+      <workItem from="1618380556573" duration="36701000" />
+      <workItem from="1618991036447" duration="10669000" />
     </task>
     <task id="LOCAL-00001" summary="docs : Mokito 학습노트">
       <created>1616236910445</created>
@@ -241,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618217863995</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="docs : ~ 미션 4 완료">
+      <created>1618723878452</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1618723878453</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,9 +281,14 @@
     <MESSAGE value="docs : ~ 미션2 완료. 미션 3 강의 ing" />
     <MESSAGE value="docs : 랜딩페이지 수정 및 푸터 수정" />
     <MESSAGE value="docs : 카테고리 수정 및 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : 카테고리 수정 및 추가" />
+    <MESSAGE value="docs : ~ 미션 4 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ 미션 4 완료" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="439" y="282" key="#Notifications/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1618992194614" />
     <state x="458" y="336" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1617603141175">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -322,6 +331,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1618214787921" />
+    <state x="100" y="125" width="1240" height="675" key="dock-window-1" timestamp="1618819480340">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="100" y="125" width="1240" height="675" key="dock-window-1/0.25.1440.875/1440.-49.1920.1055@0.25.1440.875" timestamp="1618819480340" />
     <state x="422" y="47" width="597" height="808" key="find.popup" timestamp="1617604601040">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -332,10 +345,10 @@
     <state x="422" y="71" width="596" height="784" key="find.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617602738863" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875/582.-1055.2560.1055/3142.-1247.1080.1895@0.25.1440.875" timestamp="1616229648828" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1616202954437" />
-    <state x="385" y="175" width="672" height="718" key="search.everywhere.popup" timestamp="1618217872245">
+    <state x="385" y="175" width="672" height="718" key="search.everywhere.popup" timestamp="1618800534006">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="175" width="672" height="718" key="search.everywhere.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1618217872245" />
+    <state x="385" y="175" width="672" height="718" key="search.everywhere.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1618800534006" />
     <state x="385" y="195" width="672" height="698" key="search.everywhere.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617602690461" />
     <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950581456" />
     <state x="1266" y="-847" width="1192" height="836" key="search.everywhere.popup/0.0.1440.900/582.-1080.2560.1080/3142.-1272.1080.1920@582.-1080.2560.1080" timestamp="1616229839883" />

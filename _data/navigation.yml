@@ -25,18 +25,6 @@ header:
 
   - titles:
       # @start locale config
-      en: &EN       Architecture
-      en-GB: *EN
-      en-US: *EN
-      en-CA: *EN
-      en-AU: *EN
-      ko: &KO       설계
-      ko-KR: *KO
-      # @end locale config
-    url: /architecture.html
-
-  - titles:
-      # @start locale config
       en: &EN       Infra
       en-GB: *EN
       en-US: *EN
@@ -46,6 +34,18 @@ header:
       ko-KR: *KO
       # @end locale config
     url: /infra.html
+
+  - titles:
+      # @start locale config
+      en: &EN       Architecture
+      en-GB: *EN
+      en-US: *EN
+      en-CA: *EN
+      en-AU: *EN
+      ko: &KO       설계
+      ko-KR: *KO
+      # @end locale config
+    url: /architecture.html
 
   - titles:
       # @start locale config
@@ -70,6 +70,18 @@ header:
       ko-KR: *KO
       # @end locale config
     url: /java.html
+
+#  - titles:
+#      # @start locale config
+#      en      : &EN       Archive
+#      en-GB   : *EN
+#      en-US   : *EN
+#      en-CA   : *EN
+#      en-AU   : *EN
+#      ko      : &KO       아카이브
+#      ko-KR   : *KO
+#      # @end locale config
+#    url: /archive.html
 
   - title: GitHub
     url: https://github.com/fistkim101

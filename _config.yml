@@ -64,13 +64,13 @@ collections:
     output: true
   data_structure:
     output: true
-  architecture:
-    output: true
   infra:
     output: true
   spring:
     output: true
   java:
+    output: true
+  architecture:
     output: true
 
 ## => Paths
