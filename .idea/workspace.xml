@@ -22,26 +22,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ 미션 4 완료">
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/http2-flow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/http2-food.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/k8s-architecture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/k8s-desired-state.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/tcpip-3way.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/tcpip-flow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/tcpip-packet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_architecture/2021-04-22-MSA-개념.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_data_structure/2021-04-19-사전지식.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_data_structure/2021-04-20-동적배열.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-03-15-김영한-HTTP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-03-16-subicura-Kubernetes-시작하기.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-03-17-subicura-Kubernetes-알아보기.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-04-17-NEXTSTEP-인프라공방-리버스프록시개선.md" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ 리버스 프록시 개선">
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/k8s-architecture-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/k8s-architecture-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/k8s-architecture-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/k8s-architecture-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/k8s-architecture-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_data_structure/2021-04-21-단순연결리스트.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-03-18-subicura-Kubernetes-실습하기.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/navigation.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-04-14-NEXTSTEP-인프라공방-부하테스트.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-04-14-NEXTSTEP-인프라공방-부하테스트.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-04-16-NEXTSTEP-인프라공방-미션4-성능테스트.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-04-16-NEXTSTEP-인프라공방-미션4-성능테스트.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/infra/k8s-architecture.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/infra/k8s-architecture-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-03-16-subicura-Kubernetes-시작하기.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-03-16-subicura-Kubernetes-시작하기.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-03-17-subicura-Kubernetes-알아보기.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-03-17-subicura-Kubernetes-알아보기.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +109,7 @@
       <workItem from="1618124118048" duration="4339000" />
       <workItem from="1618190887807" duration="2663000" />
       <workItem from="1618380556573" duration="36701000" />
-      <workItem from="1618991036447" duration="10669000" />
+      <workItem from="1618991036447" duration="12829000" />
     </task>
     <task id="LOCAL-00001" summary="docs : Mokito 학습노트">
       <created>1616236910445</created>
@@ -245,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618723878453</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="docs : ~ 리버스 프록시 개선">
+      <created>1619088859561</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1619088859561</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +281,8 @@
     <MESSAGE value="docs : 랜딩페이지 수정 및 푸터 수정" />
     <MESSAGE value="docs : 카테고리 수정 및 추가" />
     <MESSAGE value="docs : ~ 미션 4 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ 미션 4 완료" />
+    <MESSAGE value="docs : ~ 리버스 프록시 개선" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ 리버스 프록시 개선" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
@@ -298,6 +298,10 @@
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615949701053" />
     <state x="2254" y="193" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617516315532" />
+    <state x="0" y="25" key="FileDocumentManager.FileCacheConflict" timestamp="1619169581336">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="0" y="25" key="FileDocumentManager.FileCacheConflict/0.25.1440.875/1440.-49.1920.1055@0.25.1440.875" timestamp="1619169581336" />
     <state width="1431" height="282" key="GridCell.Tab.0.bottom" timestamp="1617452554721">
       <screen x="1440" y="-43" width="2560" height="1055" />
     </state>
