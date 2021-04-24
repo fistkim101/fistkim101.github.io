@@ -21,4 +21,6 @@ tags: Infra Kubernetes
 <br>
 <br>
 
-### 쿠버네티스 실습준비
+### 쿠버네티스 실습하기
+
+
