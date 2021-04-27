@@ -23,10 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ 쿠버네티스 실습하기">
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/http-structure.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/cache-policy-tree.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/load_with_cache.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/load_with_nocache.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/png-cache.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-04-18-NEXTSTEP-인프라공방-캐싱활용하기.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-04-19-NEXTSTEP-인프라공방-미션5-화면 응답 개선하기.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-04-20-NEXTSTEP-인프라공방-Redis 사용법 정리.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-03-15-김영한-HTTP.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-03-15-김영한-HTTP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-03-18-subicura-Kubernetes-실습하기.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-03-18-subicura-Kubernetes-실습하기.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +106,7 @@
       <workItem from="1618124118048" duration="4339000" />
       <workItem from="1618190887807" duration="2663000" />
       <workItem from="1618380556573" duration="36701000" />
-      <workItem from="1618991036447" duration="13653000" />
+      <workItem from="1618991036447" duration="24832000" />
     </task>
     <task id="LOCAL-00001" summary="docs : Mokito 학습노트">
       <created>1616236910445</created>
