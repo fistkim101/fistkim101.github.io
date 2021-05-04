@@ -22,22 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ redis">
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/index_btree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/index_full_scan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/index_range_scan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/index_unique_scan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/random_scan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/sql_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/sql_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/sql_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/sql_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-04-21-NEXTSTEP-인프라공방-인덱스 이해하기.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-04-22-NEXTSTEP-인프라공방-미션6-1-조회 성능 개선하기.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_infra/2021-04-23-NEXTSTEP-인프라공방-미션6-2-DB이중화.md" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ DB 이중화">
+      <change afterPath="$PROJECT_DIR$/assets/images/infra/http-multipart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/spring/test-junit5-flow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_spring/2021-05-03-TestContatiners.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-04-16-NEXTSTEP-인프라공방-미션4-성능테스트.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-04-16-NEXTSTEP-인프라공방-미션4-성능테스트.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-04-19-NEXTSTEP-인프라공방-미션5-화면 응답 개선하기.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-04-19-NEXTSTEP-인프라공방-미션5-화면 응답 개선하기.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-03-15-김영한-HTTP.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-03-15-김영한-HTTP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-03-16-subicura-Kubernetes-시작하기.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-03-16-subicura-Kubernetes-시작하기.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-03-17-subicura-Kubernetes-알아보기.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-03-17-subicura-Kubernetes-알아보기.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-03-17-JUnit5.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_spring/2021-03-17-JUnit5.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-03-20-Mokito.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_spring/2021-03-20-Mokito.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +60,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images/infra" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images/spring" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,18 +74,18 @@
     <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/images/infra" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/collections/_infra" />
-      <recent name="$PROJECT_DIR$/_datastructure" />
-      <recent name="$PROJECT_DIR$/_data_structure" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/collections" />
       <recent name="$PROJECT_DIR$/_posts" />
       <recent name="$PROJECT_DIR$/_collections" />
       <recent name="$PROJECT_DIR$/my_collections" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images/spring" />
+      <recent name="$PROJECT_DIR$/assets/images/infra" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/collections/_infra" />
+      <recent name="$PROJECT_DIR$/_datastructure" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -114,7 +108,7 @@
       <workItem from="1618190887807" duration="2663000" />
       <workItem from="1618380556573" duration="36701000" />
       <workItem from="1618991036447" duration="34371000" />
-      <workItem from="1619748182114" duration="3867000" />
+      <workItem from="1619748182114" duration="17735000" />
     </task>
     <task id="LOCAL-00001" summary="docs : Mokito 학습노트">
       <created>1616236910445</created>
@@ -263,7 +257,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619511279500</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="docs : ~ DB 이중화">
+      <created>1619765070987</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1619765070987</updated>
+    </task>
+    <task id="LOCAL-00023" summary="docs : ~ DB 이중화">
+      <created>1619767587912</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1619767587912</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +311,8 @@
     <MESSAGE value="docs : ~ 리버스 프록시 개선" />
     <MESSAGE value="docs : ~ 쿠버네티스 실습하기" />
     <MESSAGE value="docs : ~ redis" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ redis" />
+    <MESSAGE value="docs : ~ DB 이중화" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ DB 이중화" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
@@ -360,18 +369,19 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1618214787921" />
-    <state x="205" y="56" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1619687008134">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="1804" y="-1" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1620099550894">
+      <screen x="1440" y="-68" width="2560" height="1080" />
     </state>
+    <state x="1804" y="-1" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900/1440.-68.2560.1080/4000.-704.1080.1920@1440.-68.2560.1080" timestamp="1620099550894" />
     <state x="205" y="56" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1619687008134" />
     <state x="100" y="125" width="1240" height="675" key="dock-window-1" timestamp="1618819480340">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="dock-window-1/0.25.1440.875/1440.-49.1920.1055@0.25.1440.875" timestamp="1618819480340" />
-    <state x="422" y="47" width="597" height="808" key="find.popup" timestamp="1619673360492">
+    <state x="422" y="47" width="597" height="808" key="find.popup" timestamp="1620013499712">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1619673360492" />
+    <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1620013499712" />
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617604601040" />
     <state x="422" y="48" width="596" height="806" key="find.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950540073" />
     <state x="1332" y="-1023" width="1058" height="967" key="find.popup/0.0.1440.900/582.-1080.2560.1080/3142.-1272.1080.1920@582.-1080.2560.1080" timestamp="1616229862665" />
@@ -379,10 +389,10 @@
     <state x="422" y="71" width="596" height="784" key="find.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617602738863" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875/582.-1055.2560.1055/3142.-1247.1080.1895@0.25.1440.875" timestamp="1616229648828" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1616202954437" />
-    <state x="385" y="175" width="672" height="718" key="search.everywhere.popup" timestamp="1619688815265">
+    <state x="385" y="175" width="672" height="718" key="search.everywhere.popup" timestamp="1620021916152">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="175" width="672" height="718" key="search.everywhere.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1619688815265" />
+    <state x="385" y="175" width="672" height="718" key="search.everywhere.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1620021916152" />
     <state x="385" y="195" width="672" height="698" key="search.everywhere.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617602690461" />
     <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950581456" />
     <state x="1266" y="-847" width="1192" height="836" key="search.everywhere.popup/0.0.1440.900/582.-1080.2560.1080/3142.-1272.1080.1920@582.-1080.2560.1080" timestamp="1616229839883" />
