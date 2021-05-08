@@ -22,38 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ DB 이중화">
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/header-cache-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/header-cache-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/header-cache-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/header-etag-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/header-etag-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/header-etag-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/http-priority-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/http-priority-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/http-priority-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/prg-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/infra/prg-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/code-coverage-jacoco.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/code-coverage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/jdk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/jvm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/security-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/security-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/security-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/security-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/security-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/security-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/security-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/security-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_spring/2021-04-21-Security.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_spring/2021-04-22-JVM.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_spring/2021-04-23-바이트코드.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_spring/2021-04-24-리플렉션.md" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ 리플렉션">
+      <change afterPath="$PROJECT_DIR$/assets/images/spring/proxy-flow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_spring/2021-04-25-프록시.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-03-15-김영한-HTTP.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-03-15-김영한-HTTP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-03-18-subicura-Kubernetes-실습하기.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-03-18-subicura-Kubernetes-실습하기.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-05-03-TestContatiners.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_spring/2021-04-20-TestContatiners.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_data_structure/2021-04-20-동적배열.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_data_structure/2021-04-20-동적배열.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_data_structure/2021-04-21-단순연결리스트.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_data_structure/2021-04-21-단순연결리스트.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +104,7 @@
       <workItem from="1618190887807" duration="2663000" />
       <workItem from="1618380556573" duration="36701000" />
       <workItem from="1618991036447" duration="34371000" />
-      <workItem from="1619748182114" duration="44414000" />
+      <workItem from="1619748182114" duration="49116000" />
     </task>
     <task id="LOCAL-00001" summary="docs : Mokito 학습노트">
       <created>1616236910445</created>
@@ -293,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619767587912</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="docs : ~ 리플렉션">
+      <created>1620400588376</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1620400588376</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +315,8 @@
     <MESSAGE value="docs : ~ 쿠버네티스 실습하기" />
     <MESSAGE value="docs : ~ redis" />
     <MESSAGE value="docs : ~ DB 이중화" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ DB 이중화" />
+    <MESSAGE value="docs : ~ 리플렉션" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ 리플렉션" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
