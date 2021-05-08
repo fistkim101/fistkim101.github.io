@@ -133,7 +133,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: disqus
+  provider: "disqus"
 
   ## Disqus
   disqus:
@@ -222,6 +222,7 @@ defaults:
       type: posts
     values:
       layout: article
+      comments: true
       sharing: true
       license: true
       aside:
