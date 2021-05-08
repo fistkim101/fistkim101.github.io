@@ -25,7 +25,6 @@
     <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : disqus 적용 test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_includes/disqus.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/disqus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,21 +101,7 @@
       <workItem from="1618190887807" duration="2663000" />
       <workItem from="1618380556573" duration="36701000" />
       <workItem from="1618991036447" duration="34371000" />
-      <workItem from="1619748182114" duration="57820000" />
-    </task>
-    <task id="LOCAL-00010" summary="feat : css test">
-      <created>1617454696346</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1617454696346</updated>
-    </task>
-    <task id="LOCAL-00011" summary="feat : br test">
-      <created>1617454829230</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1617454829230</updated>
+      <workItem from="1619748182114" duration="58302000" />
     </task>
     <task id="LOCAL-00012" summary="feat : post 최신순 노출로 변경">
       <created>1617456250138</created>
@@ -447,7 +432,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620470437294</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="docs : disqus 적용 test">
+      <created>1620470470893</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1620470470893</updated>
+    </task>
+    <task id="LOCAL-00060" summary="docs : disqus 적용 test">
+      <created>1620470611528</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1620470611528</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
