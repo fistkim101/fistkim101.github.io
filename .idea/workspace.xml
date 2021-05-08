@@ -22,9 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ sitemap 추가 및 config 수정">
-      <change afterPath="$PROJECT_DIR$/robots.txt" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ robots.txt 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
       <workItem from="1618190887807" duration="2663000" />
       <workItem from="1618380556573" duration="36701000" />
       <workItem from="1618991036447" duration="34371000" />
-      <workItem from="1619748182114" duration="49973000" />
+      <workItem from="1619748182114" duration="50410000" />
     </task>
     <task id="LOCAL-00001" summary="docs : Mokito 학습노트">
       <created>1616236910445</created>
@@ -292,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620442091508</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="docs : ~ robots.txt 추가">
+      <created>1620442154528</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1620442154528</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +318,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat : 코드 폰트 크기 변경 및 파비콘" />
     <MESSAGE value="docs : Mokito 포스팅 layout 추가" />
     <MESSAGE value="docs : Mokito 포스팅 태그 변경" />
     <MESSAGE value="feat : 불필요 파일 제거" />
@@ -336,7 +342,8 @@
     <MESSAGE value="docs : ~ 다이나믹 프록시" />
     <MESSAGE value="docs : ~ 카테고리 구조 변경 및 구글 콘솔 관련 파일 추가" />
     <MESSAGE value="docs : ~ sitemap 추가 및 config 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ sitemap 추가 및 config 수정" />
+    <MESSAGE value="docs : ~ robots.txt 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ robots.txt 추가" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
