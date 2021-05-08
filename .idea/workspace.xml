@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : sitemap 변경">
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : disqus 적용">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
     </list>
@@ -101,7 +101,7 @@
       <workItem from="1618190887807" duration="2663000" />
       <workItem from="1618380556573" duration="36701000" />
       <workItem from="1618991036447" duration="34371000" />
-      <workItem from="1619748182114" duration="53220000" />
+      <workItem from="1619748182114" duration="53479000" />
     </task>
     <task id="LOCAL-00001" summary="docs : Mokito 학습노트">
       <created>1616236910445</created>
@@ -376,7 +376,28 @@
       <option name="project" value="LOCAL" />
       <updated>1620464785977</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="docs : disqus 적용">
+      <created>1620465687134</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1620465687134</updated>
+    </task>
+    <task id="LOCAL-00041" summary="docs : disqus 적용">
+      <created>1620465707922</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1620465707922</updated>
+    </task>
+    <task id="LOCAL-00042" summary="docs : disqus 적용">
+      <created>1620465732952</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1620465732952</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +416,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="build : husky 제거" />
     <MESSAGE value="docs : infra 컬렉션 추가" />
     <MESSAGE value="feat : 추가 설정 및 css" />
     <MESSAGE value="feat : gitignore" />
@@ -420,7 +440,8 @@
     <MESSAGE value="docs : ~ sitemap 변경" />
     <MESSAGE value="docs : robot.txt 변경" />
     <MESSAGE value="docs : sitemap 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : sitemap 변경" />
+    <MESSAGE value="docs : disqus 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : disqus 적용" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
