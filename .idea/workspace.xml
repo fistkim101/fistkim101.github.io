@@ -23,7 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : disqus 적용 test">
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/disqus_comments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,14 +102,7 @@
       <workItem from="1618190887807" duration="2663000" />
       <workItem from="1618380556573" duration="36701000" />
       <workItem from="1618991036447" duration="34371000" />
-      <workItem from="1619748182114" duration="55482000" />
-    </task>
-    <task id="LOCAL-00001" summary="docs : Mokito 학습노트">
-      <created>1616236910445</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1616236910447</updated>
+      <workItem from="1619748182114" duration="56010000" />
     </task>
     <task id="LOCAL-00002" summary="feat : 코드 폰트 크기 변경 및 파비콘">
       <created>1616236930204</created>
@@ -445,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620467785533</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="docs : disqus 적용 test">
+      <created>1620467985073</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1620467985075</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +557,7 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="dock-window-1/0.25.1440.875/1440.-49.1920.1055@0.25.1440.875" timestamp="1618819480340" />
-    <state x="422" y="71" width="597" height="786" key="find.popup" timestamp="1620467266956">
+    <state x="422" y="71" width="597" height="786" key="find.popup" timestamp="1620468416702">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1620013499712" />
@@ -563,7 +565,7 @@
     <state x="422" y="48" width="596" height="806" key="find.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950540073" />
     <state x="1332" y="-1023" width="1058" height="967" key="find.popup/0.0.1440.900/582.-1080.2560.1080/3142.-1272.1080.1920@582.-1080.2560.1080" timestamp="1616229862665" />
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1620264986149" />
-    <state x="422" y="71" width="597" height="786" key="find.popup/0.25.1440.875/-258.-1055.1920.1055@0.25.1440.875" timestamp="1620467266956" />
+    <state x="422" y="71" width="597" height="786" key="find.popup/0.25.1440.875/-258.-1055.1920.1055@0.25.1440.875" timestamp="1620468416702" />
     <state x="2190" y="12" width="1060" height="946" key="find.popup/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617456047644" />
     <state x="422" y="71" width="596" height="784" key="find.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617602738863" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875/582.-1055.2560.1055/3142.-1247.1080.1895@0.25.1440.875" timestamp="1616229648828" />
