@@ -22,9 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ sitemap 변경">
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : sitemap 변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
       <workItem from="1618190887807" duration="2663000" />
       <workItem from="1618380556573" duration="36701000" />
       <workItem from="1618991036447" duration="34371000" />
-      <workItem from="1619748182114" duration="52053000" />
+      <workItem from="1619748182114" duration="52620000" />
     </task>
     <task id="LOCAL-00001" summary="docs : Mokito 학습노트">
       <created>1616236910445</created>
@@ -355,7 +355,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620463680131</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="docs : robot.txt 변경">
+      <created>1620464156550</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1620464156550</updated>
+    </task>
+    <task id="LOCAL-00038" summary="docs : sitemap 변경">
+      <created>1620464205209</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1620464205209</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,8 +388,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs : Mokito 포스팅 태그 변경" />
-    <MESSAGE value="feat : 불필요 파일 제거" />
     <MESSAGE value="build : husky 제거" />
     <MESSAGE value="docs : infra 컬렉션 추가" />
     <MESSAGE value="feat : 추가 설정 및 css" />
@@ -399,7 +411,9 @@
     <MESSAGE value="docs : ~ sitemap 추가 및 config 수정" />
     <MESSAGE value="docs : ~ robots.txt 추가" />
     <MESSAGE value="docs : ~ sitemap 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ sitemap 변경" />
+    <MESSAGE value="docs : robot.txt 변경" />
+    <MESSAGE value="docs : sitemap 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : sitemap 변경" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
