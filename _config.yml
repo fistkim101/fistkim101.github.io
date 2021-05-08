@@ -137,7 +137,7 @@ comments:
   ## Disqus
   disqus:
     comments: true
-    shortname: httpsfistkim101githubio # the Disqus shortname for the site
+    shortname: 'httpsfistkim101githubio' # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
