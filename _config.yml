@@ -18,7 +18,8 @@
 ##############################
 text_skin: ocean # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night-bright # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url: "https://fistkim101.github.io" # the base hostname & protocol for your site e.g. https://www.someone.com
+url: "" # the base hostname & protocol for your site e.g. https://www.someone.com
+#url: "https://fistkim101.github.io" # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: "" # does not include hostname
 title: fistkim101
 description: > # this means to ignore newlines until "Language & timezone"
@@ -136,7 +137,7 @@ comments:
 
   ## Disqus
   disqus:
-    shortname: "https-fistkim101-github-io-1" # the Disqus shortname for the site
+    shortname: "https-fistkim101-github-io-2" # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
