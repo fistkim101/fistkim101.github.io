@@ -24,7 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : disqus 적용 test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/disqus_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/disqus_comments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,14 +102,7 @@
       <workItem from="1618190887807" duration="2663000" />
       <workItem from="1618380556573" duration="36701000" />
       <workItem from="1618991036447" duration="34371000" />
-      <workItem from="1619748182114" duration="56526000" />
-    </task>
-    <task id="LOCAL-00004" summary="docs : Mokito 포스팅 태그 변경">
-      <created>1616238998411</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1616238998411</updated>
+      <workItem from="1619748182114" duration="56883000" />
     </task>
     <task id="LOCAL-00005" summary="build : husky 제거">
       <created>1617453505819</created>
@@ -447,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620468928386</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="docs : disqus 적용 test">
+      <created>1620469117801</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1620469117802</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
