@@ -23,9 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : disqus 적용 test">
-      <change afterPath="$PROJECT_DIR$/_includes/disqus_comments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/disqus_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/disqus_comments.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,14 +101,7 @@
       <workItem from="1618190887807" duration="2663000" />
       <workItem from="1618380556573" duration="36701000" />
       <workItem from="1618991036447" duration="34371000" />
-      <workItem from="1619748182114" duration="56010000" />
-    </task>
-    <task id="LOCAL-00002" summary="feat : 코드 폰트 크기 변경 및 파비콘">
-      <created>1616236930204</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1616236930204</updated>
+      <workItem from="1619748182114" duration="56347000" />
     </task>
     <task id="LOCAL-00003" summary="docs : Mokito 포스팅 layout 추가">
       <created>1616238884313</created>
@@ -447,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620467985075</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="docs : disqus 적용 test">
+      <created>1620468571503</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1620468571503</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
