@@ -22,12 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : disqus 적용 test">
-      <change afterPath="$PROJECT_DIR$/sitemap-1.xml" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ 어노테이션 프로세서">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-04-24-리플렉션.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_spring/2021-04-24-리플렉션.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap-1.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,14 +102,7 @@
       <workItem from="1618190887807" duration="2663000" />
       <workItem from="1618380556573" duration="36701000" />
       <workItem from="1618991036447" duration="34371000" />
-      <workItem from="1619748182114" duration="66070000" />
-    </task>
-    <task id="LOCAL-00015" summary="docs : ~ 미션2 완료. 미션 3 강의 ing">
-      <created>1618035752282</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1618035752282</updated>
+      <workItem from="1619748182114" duration="67040000" />
     </task>
     <task id="LOCAL-00016" summary="docs : 랜딩페이지 수정 및 푸터 수정">
       <created>1618216819562</created>
@@ -449,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620484759751</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="docs : ~ 어노테이션 프로세서">
+      <created>1620571706564</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1620571706564</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +466,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat : 추가 설정 및 css" />
     <MESSAGE value="feat : gitignore" />
     <MESSAGE value="feat : css test" />
     <MESSAGE value="feat : br test" />
@@ -493,7 +490,8 @@
     <MESSAGE value="docs : sitemap 변경" />
     <MESSAGE value="docs : disqus 적용" />
     <MESSAGE value="docs : disqus 적용 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : disqus 적용 test" />
+    <MESSAGE value="docs : ~ 어노테이션 프로세서" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ 어노테이션 프로세서" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
