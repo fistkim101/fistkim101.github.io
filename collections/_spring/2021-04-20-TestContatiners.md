@@ -1,6 +1,6 @@
 ---
 layout: article
-title: TEST - TestContainers
+title: TestContainers
 tags: Spring TEST TestContainers
 ---
 
