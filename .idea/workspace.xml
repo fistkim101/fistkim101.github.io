@@ -22,13 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : 구조변경 및 스프링자동설정">
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/dispatcherservlet-interfaces.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/spring/servlet-life-cycle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_spring/Servlet.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-04-23-NEXTSTEP-인프라공방-미션6-2-DB이중화.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_infra/2021-04-23-NEXTSTEP-인프라공방-미션6-2-DB이중화.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ Servlet">
+      <change beforePath="$PROJECT_DIR$/collections/_spring/Servlet.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_spring/2021-05-11-Servlet.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,14 +101,7 @@
       <workItem from="1618380556573" duration="36701000" />
       <workItem from="1618991036447" duration="34371000" />
       <workItem from="1619748182114" duration="77453000" />
-      <workItem from="1620801120638" duration="5928000" />
-    </task>
-    <task id="LOCAL-00018" summary="docs : ~ 미션 4 완료">
-      <created>1618723878452</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1618723878453</updated>
+      <workItem from="1620801120638" duration="6114000" />
     </task>
     <task id="LOCAL-00019" summary="docs : ~ 리버스 프록시 개선">
       <created>1619088859561</created>
@@ -451,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620726253461</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="docs : ~ Servlet">
+      <created>1620809791913</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1620809791914</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +465,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat : css test" />
     <MESSAGE value="feat : br test" />
     <MESSAGE value="feat : post 최신순 노출로 변경" />
     <MESSAGE value="docs : 망분리 &amp; 통신확인하기 완료" />
@@ -495,7 +489,8 @@
     <MESSAGE value="docs : disqus 적용 test" />
     <MESSAGE value="docs : ~ 어노테이션 프로세서" />
     <MESSAGE value="docs : 구조변경 및 스프링자동설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : 구조변경 및 스프링자동설정" />
+    <MESSAGE value="docs : ~ Servlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ Servlet" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
