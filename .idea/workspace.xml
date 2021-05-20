@@ -22,14 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ Servlet">
-      <change afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-11-브루트포스for문.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-16-브루트포스순열.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-17-브루트포스재귀호출.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-18-브루트포스비트마스크.md" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ 브루트포스for문">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/navigation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +104,7 @@
       <workItem from="1618991036447" duration="34371000" />
       <workItem from="1619748182114" duration="77453000" />
       <workItem from="1620801120638" duration="6131000" />
-      <workItem from="1620977615766" duration="6099000" />
-    </task>
-    <task id="LOCAL-00020" summary="docs : ~ 쿠버네티스 실습하기">
-      <created>1619171286638</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1619171286638</updated>
+      <workItem from="1620977615766" duration="6331000" />
     </task>
     <task id="LOCAL-00021" summary="docs : ~ redis">
       <created>1619511279500</created>
@@ -453,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620810870377</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="docs : ~ 브루트포스for문">
+      <created>1621470403202</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1621470403202</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +468,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat : br test" />
     <MESSAGE value="feat : post 최신순 노출로 변경" />
     <MESSAGE value="docs : 망분리 &amp; 통신확인하기 완료" />
     <MESSAGE value="docs : 망분리 &amp; 통신확인하기 날짜 조정, 배포와 관련된 이야기 완료" />
@@ -497,7 +492,8 @@
     <MESSAGE value="docs : ~ 어노테이션 프로세서" />
     <MESSAGE value="docs : 구조변경 및 스프링자동설정" />
     <MESSAGE value="docs : ~ Servlet" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ Servlet" />
+    <MESSAGE value="docs : ~ 브루트포스for문" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ 브루트포스for문" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
