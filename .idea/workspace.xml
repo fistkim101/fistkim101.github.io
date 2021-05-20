@@ -22,10 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : base 수정">
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : 브루트포스for문">
+      <change afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-18-그리디.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_algorithm/2021-05-11-브루트포스for문.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-11-브루트포스for문.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_algorithm/2021-05-11-브루트포스for문.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_algorithm/2021-05-16-브루트포스순열.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_algorithm/2021-05-17-브루트포스재귀호출.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_algorithm/2021-05-18-브루트포스비트마스크.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +86,13 @@
       <recent name="$PROJECT_DIR$/my_collections" />
     </key>
   </component>
+  <component name="RubyModuleManagerSettings">
+    <option name="blackListedRootsPaths">
+      <list>
+        <option value="$PROJECT_DIR$/test" />
+      </list>
+    </option>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
@@ -104,14 +115,7 @@
       <workItem from="1618991036447" duration="34371000" />
       <workItem from="1619748182114" duration="77453000" />
       <workItem from="1620801120638" duration="6131000" />
-      <workItem from="1620977615766" duration="8270000" />
-    </task>
-    <task id="LOCAL-00023" summary="docs : ~ DB 이중화">
-      <created>1619767587912</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1619767587912</updated>
+      <workItem from="1620977615766" duration="12363000" />
     </task>
     <task id="LOCAL-00024" summary="docs : ~ 리플렉션">
       <created>1620400588376</created>
@@ -449,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621471122050</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="docs : 브루트포스for문">
+      <created>1621496268399</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1621496268399</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +479,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs : 망분리 &amp; 통신확인하기 날짜 조정, 배포와 관련된 이야기 완료" />
     <MESSAGE value="docs : ~ 미션2 완료. 미션 3 강의 ing" />
     <MESSAGE value="docs : 랜딩페이지 수정 및 푸터 수정" />
     <MESSAGE value="docs : 카테고리 수정 및 추가" />
@@ -493,7 +503,8 @@
     <MESSAGE value="docs : ~ 브루트포스for문" />
     <MESSAGE value="docs : sitemap 수정" />
     <MESSAGE value="docs : base 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : base 수정" />
+    <MESSAGE value="docs : 브루트포스for문" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : 브루트포스for문" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
