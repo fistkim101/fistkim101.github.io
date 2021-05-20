@@ -22,10 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ 브루트포스for문">
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : sitemap 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,14 +104,7 @@
       <workItem from="1618991036447" duration="34371000" />
       <workItem from="1619748182114" duration="77453000" />
       <workItem from="1620801120638" duration="6131000" />
-      <workItem from="1620977615766" duration="6331000" />
-    </task>
-    <task id="LOCAL-00021" summary="docs : ~ redis">
-      <created>1619511279500</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1619511279500</updated>
+      <workItem from="1620977615766" duration="6646000" />
     </task>
     <task id="LOCAL-00022" summary="docs : ~ DB 이중화">
       <created>1619765070987</created>
@@ -449,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621470403202</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="docs : sitemap 수정">
+      <created>1621470733395</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1621470733395</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +468,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat : post 최신순 노출로 변경" />
     <MESSAGE value="docs : 망분리 &amp; 통신확인하기 완료" />
     <MESSAGE value="docs : 망분리 &amp; 통신확인하기 날짜 조정, 배포와 관련된 이야기 완료" />
     <MESSAGE value="docs : ~ 미션2 완료. 미션 3 강의 ing" />
@@ -493,7 +492,8 @@
     <MESSAGE value="docs : 구조변경 및 스프링자동설정" />
     <MESSAGE value="docs : ~ Servlet" />
     <MESSAGE value="docs : ~ 브루트포스for문" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : ~ 브루트포스for문" />
+    <MESSAGE value="docs : sitemap 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : sitemap 수정" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
@@ -559,14 +559,14 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="dock-window-1/0.25.1440.875/1440.-49.1920.1055@0.25.1440.875" timestamp="1618819480340" />
-    <state x="422" y="71" width="595" height="783" key="find.popup" timestamp="1620544055172">
-      <screen x="0" y="25" width="1440" height="875" />
+    <state x="422" y="47" width="597" height="808" key="find.popup" timestamp="1621471076471">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1620013499712" />
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617604601040" />
     <state x="422" y="48" width="596" height="806" key="find.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950540073" />
     <state x="1332" y="-1023" width="1058" height="967" key="find.popup/0.0.1440.900/582.-1080.2560.1080/3142.-1272.1080.1920@582.-1080.2560.1080" timestamp="1616229862665" />
-    <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1620264986149" />
+    <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1621471076471" />
     <state x="422" y="71" width="597" height="786" key="find.popup/0.25.1440.875/-258.-1055.1920.1055@0.25.1440.875" timestamp="1620484483693" />
     <state x="2190" y="12" width="1060" height="946" key="find.popup/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617456047644" />
     <state x="422" y="71" width="596" height="784" key="find.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617602738863" />
