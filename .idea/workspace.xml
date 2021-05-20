@@ -22,11 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : 유형분석 - 그리디">
-      <change afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-18-완전탐색.md" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : 유형분석 - 브루트포스ing">
+      <change afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-19-DFS.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_algorithm/2021-05-18-그리디.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-17-그리디.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_algorithm/2021-05-17-그리디.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-17-그리디.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_algorithm/2021-05-18-완전탐색.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-18-브루트포스.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,14 +113,7 @@
       <workItem from="1618991036447" duration="34371000" />
       <workItem from="1619748182114" duration="77453000" />
       <workItem from="1620801120638" duration="6131000" />
-      <workItem from="1620977615766" duration="13155000" />
-    </task>
-    <task id="LOCAL-00025" summary="docs : ~ 다이나믹 프록시">
-      <created>1620440220837</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1620440220837</updated>
+      <workItem from="1620977615766" duration="13857000" />
     </task>
     <task id="LOCAL-00026" summary="docs : ~ 카테고리 구조 변경 및 구글 콘솔 관련 파일 추가">
       <created>1620441982270</created>
@@ -457,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621511007111</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="docs : 유형분석 - 브루트포스ing">
+      <created>1621511860042</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1621511860042</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +477,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs : 랜딩페이지 수정 및 푸터 수정" />
     <MESSAGE value="docs : 카테고리 수정 및 추가" />
     <MESSAGE value="docs : ~ 미션 4 완료" />
     <MESSAGE value="docs : ~ 리버스 프록시 개선" />
@@ -501,7 +501,8 @@
     <MESSAGE value="docs : base 수정" />
     <MESSAGE value="docs : 브루트포스for문" />
     <MESSAGE value="docs : 유형분석 - 그리디" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs : 유형분석 - 그리디" />
+    <MESSAGE value="docs : 유형분석 - 브루트포스ing" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs : 유형분석 - 브루트포스ing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
