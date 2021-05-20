@@ -23,7 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : ~ Servlet">
-      <change beforePath="$PROJECT_DIR$/collections/_spring/Servlet.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_spring/2021-05-11-Servlet.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-11-브루트포스for문.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-16-브루트포스순열.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-17-브루트포스재귀호출.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-18-브루트포스비트마스크.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/navigation.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,14 +107,8 @@
       <workItem from="1618380556573" duration="36701000" />
       <workItem from="1618991036447" duration="34371000" />
       <workItem from="1619748182114" duration="77453000" />
-      <workItem from="1620801120638" duration="6114000" />
-    </task>
-    <task id="LOCAL-00019" summary="docs : ~ 리버스 프록시 개선">
-      <created>1619088859561</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1619088859561</updated>
+      <workItem from="1620801120638" duration="6131000" />
+      <workItem from="1620977615766" duration="6099000" />
     </task>
     <task id="LOCAL-00020" summary="docs : ~ 쿠버네티스 실습하기">
       <created>1619171286638</created>
@@ -446,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620809791914</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="docs : ~ Servlet">
+      <created>1620810870377</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1620810870377</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
