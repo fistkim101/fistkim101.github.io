@@ -23,10 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs : 유형분석 - DFS">
-      <change afterPath="$PROJECT_DIR$/assets/images/algorithm/bfs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/algorithm/dfs.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collections/_algorithm/2021-05-19-DFS.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-19-DFS.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,14 +112,8 @@
       <workItem from="1618991036447" duration="34371000" />
       <workItem from="1619748182114" duration="77453000" />
       <workItem from="1620801120638" duration="6131000" />
-      <workItem from="1620977615766" duration="16055000" />
-    </task>
-    <task id="LOCAL-00027" summary="docs : ~ sitemap 추가 및 config 수정">
-      <created>1620442091508</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1620442091508</updated>
+      <workItem from="1620977615766" duration="16829000" />
+      <workItem from="1621816242145" duration="116000" />
     </task>
     <task id="LOCAL-00028" summary="docs : ~ robots.txt 추가">
       <created>1620442154528</created>
@@ -458,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621517290515</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="docs : 유형분석 - DFS">
+      <created>1621519791807</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1621519791807</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +568,7 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="dock-window-1/0.25.1440.875/1440.-49.1920.1055@0.25.1440.875" timestamp="1618819480340" />
-    <state x="422" y="47" width="597" height="808" key="find.popup" timestamp="1621518735109">
+    <state x="422" y="47" width="597" height="808" key="find.popup" timestamp="1621816318450">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1621518735109" />
@@ -576,7 +576,7 @@
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617604601040" />
     <state x="422" y="48" width="596" height="806" key="find.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950540073" />
     <state x="1332" y="-1023" width="1058" height="967" key="find.popup/0.0.1440.900/582.-1080.2560.1080/3142.-1272.1080.1920@582.-1080.2560.1080" timestamp="1616229862665" />
-    <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1621471076471" />
+    <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1621816318450" />
     <state x="422" y="71" width="597" height="786" key="find.popup/0.25.1440.875/-258.-1055.1920.1055@0.25.1440.875" timestamp="1620484483693" />
     <state x="2190" y="12" width="1060" height="946" key="find.popup/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617456047644" />
     <state x="422" y="71" width="596" height="784" key="find.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617602738863" />

@@ -133,11 +133,11 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: "disqus"
+  provider: #"disqus"
 
   ## Disqus
   disqus:
-    shortname: "gitblog-11" # the Disqus shortname for the site
+    shortname: #"gitblog-11" # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
