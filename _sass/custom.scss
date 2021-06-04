@@ -21,3 +21,24 @@
   border: 0;
 }
 
+.custom-row {
+  display: flex;
+}
+
+.custom-column {
+  flex: 50%;
+  border: 1px dotted #1da1f2;
+}
+
+.custom-column-title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.custom-column-link {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}

@@ -23,9 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="feat: 댓글기능 교체(disqus-&gt;utterances)">
+      <change afterPath="$PROJECT_DIR$/_includes/semantic-tree/algorithm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/semantic-tree/backend.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/semantic-tree/data-structure.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/semantic-tree/data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/semantic-tree/frontend.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/semantic-tree/infra.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/semantic-tree/monitoring.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/semantic-tree/testing.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/utterances.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/utterances.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_algorithm/2021-05-19-DFS.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_algorithm/2021-05-19-DFS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/navigation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sass/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/custom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,14 +122,13 @@
       <workItem from="1619748182114" duration="77453000" />
       <workItem from="1620801120638" duration="6131000" />
       <workItem from="1620977615766" duration="16829000" />
-      <workItem from="1621816242145" duration="1414000" />
-    </task>
-    <task id="LOCAL-00030" summary="docs : ~ sitemap 변경">
-      <created>1620442755812</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1620442755812</updated>
+      <workItem from="1621816242145" duration="1527000" />
+      <workItem from="1621826251472" duration="150000" />
+      <workItem from="1621826969644" duration="883000" />
+      <workItem from="1622375237121" duration="546000" />
+      <workItem from="1622448266440" duration="453000" />
+      <workItem from="1622679628440" duration="2182000" />
+      <workItem from="1622769912321" duration="4725000" />
     </task>
     <task id="LOCAL-00031" summary="docs : ~ sitemap 변경">
       <created>1620443164925</created>
@@ -457,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621817678227</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="feat: 댓글기능 교체(disqus-&gt;utterances)">
+      <created>1621819497329</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1621819497329</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,9 +570,10 @@
     </state>
     <state x="229" y="86" key="SettingsEditor/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617602670728" />
     <state x="229" y="109" key="SettingsEditor/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617603709492" />
-    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1618214787921">
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1622700872105">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1622700872105" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1618214787921" />
     <state x="1804" y="-1" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1620099550894">
       <screen x="1440" y="-68" width="2560" height="1080" />
@@ -567,10 +584,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="dock-window-1/0.25.1440.875/1440.-49.1920.1055@0.25.1440.875" timestamp="1618819480340" />
-    <state x="422" y="47" width="597" height="808" key="find.popup" timestamp="1621816318450">
+    <state x="422" y="47" width="597" height="808" key="find.popup" timestamp="1622701312765">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1621518735109" />
+    <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1622701312765" />
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1620013499712" />
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617604601040" />
     <state x="422" y="48" width="596" height="806" key="find.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950540073" />
@@ -580,10 +597,11 @@
     <state x="2190" y="12" width="1060" height="946" key="find.popup/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617456047644" />
     <state x="422" y="71" width="596" height="784" key="find.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617602738863" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875/582.-1055.2560.1055/3142.-1247.1080.1895@0.25.1440.875" timestamp="1616229648828" />
-    <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1620544055172" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1621818318715">
+    <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1622375251056" />
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1622700176248">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1622700176248" />
     <state x="385" y="175" width="672" height="718" key="search.everywhere.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1620021916152" />
     <state x="385" y="195" width="672" height="698" key="search.everywhere.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617602690461" />
     <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950581456" />
