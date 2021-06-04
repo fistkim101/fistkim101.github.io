@@ -2,12 +2,12 @@
 layout: articles
 titles:
   # @start locale config
-  en      : &EN       Infra
+  en      : &EN       Infra & System
   en-GB   : *EN
   en-US   : *EN
   en-CA   : *EN
   en-AU   : *EN
-  ko      : &KO       인프라
+  ko      : &KO       인프라 & 시스템
   ko-KR   : *KO
   # @end locale config
 articles:
