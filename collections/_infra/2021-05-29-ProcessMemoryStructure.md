@@ -50,6 +50,9 @@ function calls와 지역 변수들이 저장되는 곳이다. 여기서 function
 그래서 재귀로 계속 함수를 호출하면서 종료조건을 주지 않으면 stack으로 계속 쌓이기만하고 결국 'stack over flow' 가 발생하게 된다.
 영상에서 2:15부터 그림과 함께 자세하게 순서대로 보여주고 있는데 좀 재밌다.
 
+function calls 외에 또 중요한 사항은 stack에는 지역 변수가 저장된다는 것이다. 가령 String testText = "test" 라고 선언해주면
+testText의 주소값이 stack에 저장되고 그 주소값은 heap을 가리키고 있게 된다.
+
 <br>
 
 (4) **<blue>heap</blue>**<br>
