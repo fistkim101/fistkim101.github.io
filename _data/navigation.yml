@@ -37,6 +37,18 @@ header:
 
   - titles:
       # @start locale config
+      en: &EN       Database
+      en-GB: *EN
+      en-US: *EN
+      en-CA: *EN
+      en-AU: *EN
+      ko: &KO       데이터베이스
+      ko-KR: *KO
+      # @end locale config
+    url: /database.html
+
+  - titles:
+      # @start locale config
       en: &EN       Infra & System
       en-GB: *EN
       en-US: *EN
