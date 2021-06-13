@@ -22,11 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: sitemap 변경">
-      <change afterPath="$PROJECT_DIR$/collections/_database/2021-06-06-mysql_isolation_level.md" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: mysql isolation level">
+      <change afterPath="$PROJECT_DIR$/collections/_spring/2021-06-13-java-cleancode-1.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/semantic-tree/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/semantic-tree/data.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,21 +119,7 @@
       <workItem from="1622375237121" duration="546000" />
       <workItem from="1622448266440" duration="453000" />
       <workItem from="1622679628440" duration="2182000" />
-      <workItem from="1622769912321" duration="38223000" />
-    </task>
-    <task id="LOCAL-00041" summary="docs : disqus 적용">
-      <created>1620465707922</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1620465707922</updated>
-    </task>
-    <task id="LOCAL-00042" summary="docs : disqus 적용">
-      <created>1620465732952</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1620465732952</updated>
+      <workItem from="1622769912321" duration="41524000" />
     </task>
     <task id="LOCAL-00043" summary="docs : disqus 적용">
       <created>1620465959941</created>
@@ -465,7 +450,21 @@
       <option name="project" value="LOCAL" />
       <updated>1623116424177</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="docs: mysql isolation level">
+      <created>1623226713528</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1623226713528</updated>
+    </task>
+    <task id="LOCAL-00091" summary="docs: mysql isolation level">
+      <created>1623226877884</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1623226877884</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +483,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs : ~ sitemap 변경" />
     <MESSAGE value="docs : robot.txt 변경" />
     <MESSAGE value="docs : sitemap 변경" />
     <MESSAGE value="docs : disqus 적용" />
@@ -509,7 +507,8 @@
     <MESSAGE value="docs: 객체지향생활체조 정리" />
     <MESSAGE value="docs: database 목록 추가" />
     <MESSAGE value="docs: sitemap 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: sitemap 변경" />
+    <MESSAGE value="docs: mysql isolation level" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: mysql isolation level" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
