@@ -22,14 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: 숫자야구게임">
-      <change afterPath="$PROJECT_DIR$/_includes/semantic-tree/architecture.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/architecture/strategy-pattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_architecture/2021-06-18-디자인패턴-스트레티지패턴.md" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: 디자인패턴 전략패턴">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_architecture/2021-04-22-MSA-개념.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_architecture/2021-06-18-디자인패턴-스트레티지패턴.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_architecture/2021-06-18-디자인패턴-스트레티지패턴.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,14 +119,7 @@
       <workItem from="1622375237121" duration="546000" />
       <workItem from="1622448266440" duration="453000" />
       <workItem from="1622679628440" duration="2182000" />
-      <workItem from="1622769912321" duration="49892000" />
-    </task>
-    <task id="LOCAL-00047" summary="docs : disqus 적용">
-      <created>1620466755545</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1620466755545</updated>
+      <workItem from="1622769912321" duration="50285000" />
     </task>
     <task id="LOCAL-00048" summary="docs : disqus 적용 test">
       <created>1620466916871</created>
@@ -468,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623984203474</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="docs: 디자인패턴 전략패턴">
+      <created>1624019084147</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1624019084147</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +483,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs : ~ 어노테이션 프로세서" />
     <MESSAGE value="docs : 구조변경 및 스프링자동설정" />
     <MESSAGE value="docs : ~ Servlet" />
     <MESSAGE value="docs : ~ 브루트포스for문" />
@@ -512,7 +507,8 @@
     <MESSAGE value="docs: 클린코드 문자열계산기 목록 추가" />
     <MESSAGE value="docs: enum 관련 목록 추가" />
     <MESSAGE value="docs: 숫자야구게임" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: 숫자야구게임" />
+    <MESSAGE value="docs: 디자인패턴 전략패턴" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: 디자인패턴 전략패턴" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
