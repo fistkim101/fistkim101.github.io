@@ -22,9 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: 디자인패턴 전략패턴(수정)">
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: 인터페이스 개념 바로잡기">
+      <change afterPath="$PROJECT_DIR$/collections/_architecture/2021-06-21-디자인패턴-어댑터패턴.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/semantic-tree/backend.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/semantic-tree/backend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/semantic-tree/architecture.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/semantic-tree/architecture.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_architecture/2021-06-18-디자인패턴-스트레티지패턴.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_architecture/2021-06-18-디자인패턴-스트레티지패턴.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,14 +121,7 @@
       <workItem from="1622375237121" duration="546000" />
       <workItem from="1622448266440" duration="453000" />
       <workItem from="1622679628440" duration="2182000" />
-      <workItem from="1622769912321" duration="50349000" />
-    </task>
-    <task id="LOCAL-00049" summary="docs : disqus 적용 test">
-      <created>1620467785533</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1620467785533</updated>
+      <workItem from="1622769912321" duration="55091000" />
     </task>
     <task id="LOCAL-00050" summary="docs : disqus 적용 test">
       <created>1620467985073</created>
@@ -463,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624019473599</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="docs: 인터페이스 개념 바로잡기">
+      <created>1624019571030</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1624019571030</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +485,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs : ~ Servlet" />
     <MESSAGE value="docs : ~ 브루트포스for문" />
     <MESSAGE value="docs : sitemap 수정" />
     <MESSAGE value="docs : base 수정" />
@@ -507,7 +509,8 @@
     <MESSAGE value="docs: 숫자야구게임" />
     <MESSAGE value="docs: 디자인패턴 전략패턴" />
     <MESSAGE value="docs: 디자인패턴 전략패턴(수정)" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: 디자인패턴 전략패턴(수정)" />
+    <MESSAGE value="docs: 인터페이스 개념 바로잡기" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: 인터페이스 개념 바로잡기" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
