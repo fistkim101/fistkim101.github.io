@@ -75,6 +75,8 @@ collections:
     output: true
   architecture:
     output: true
+  kotlin:
+    output: true
 
 ## => Paths
 ##############################
