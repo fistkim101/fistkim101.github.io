@@ -22,12 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: 인터페이스 개념 바로잡기">
-      <change afterPath="$PROJECT_DIR$/collections/_architecture/2021-06-21-디자인패턴-어댑터패턴.md" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: jvm 구조 이해하기">
+      <change afterPath="$PROJECT_DIR$/collections/_kotlin/2021-06-25-document.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/semantic-tree/architecture.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/semantic-tree/architecture.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_architecture/2021-06-18-디자인패턴-스트레티지패턴.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_architecture/2021-06-18-디자인패턴-스트레티지패턴.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/navigation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/semantic-tree/backend.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/semantic-tree/backend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +58,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images/architecture" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images/infra" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,15 +66,15 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Kotlin Additions" />
   </component>
   <component name="ReadonlyStatusHandler">
     <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/images/architecture" />
       <recent name="$PROJECT_DIR$/assets/images/infra" />
+      <recent name="$PROJECT_DIR$/assets/images/architecture" />
       <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/assets/images/algorithm" />
       <recent name="$PROJECT_DIR$/assets/images/spring" />
@@ -121,35 +123,7 @@
       <workItem from="1622375237121" duration="546000" />
       <workItem from="1622448266440" duration="453000" />
       <workItem from="1622679628440" duration="2182000" />
-      <workItem from="1622769912321" duration="55091000" />
-    </task>
-    <task id="LOCAL-00050" summary="docs : disqus 적용 test">
-      <created>1620467985073</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1620467985075</updated>
-    </task>
-    <task id="LOCAL-00051" summary="docs : disqus 적용 test">
-      <created>1620468571503</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1620468571503</updated>
-    </task>
-    <task id="LOCAL-00052" summary="docs : disqus 적용 test">
-      <created>1620468928386</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1620468928386</updated>
-    </task>
-    <task id="LOCAL-00053" summary="docs : disqus 적용 test">
-      <created>1620469117801</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1620469117802</updated>
+      <workItem from="1622769912321" duration="78825000" />
     </task>
     <task id="LOCAL-00054" summary="docs : disqus 적용 test">
       <created>1620469482009</created>
@@ -466,7 +440,35 @@
       <option name="project" value="LOCAL" />
       <updated>1624019571030</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="docs: 어댑터 패턴">
+      <created>1624252747596</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1624252747596</updated>
+    </task>
+    <task id="LOCAL-00100" summary="docs: 링크 일부변경">
+      <created>1624321742513</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1624321742513</updated>
+    </task>
+    <task id="LOCAL-00101" summary="docs: 링크 일부변경">
+      <created>1624321834978</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1624321834978</updated>
+    </task>
+    <task id="LOCAL-00102" summary="docs: jvm 구조 이해하기">
+      <created>1624343317201</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1624343317201</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,9 +487,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs : ~ 브루트포스for문" />
-    <MESSAGE value="docs : sitemap 수정" />
-    <MESSAGE value="docs : base 수정" />
     <MESSAGE value="docs : 브루트포스for문" />
     <MESSAGE value="docs : 유형분석 - 그리디" />
     <MESSAGE value="docs : 유형분석 - 브루트포스ing" />
@@ -510,13 +509,20 @@
     <MESSAGE value="docs: 디자인패턴 전략패턴" />
     <MESSAGE value="docs: 디자인패턴 전략패턴(수정)" />
     <MESSAGE value="docs: 인터페이스 개념 바로잡기" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: 인터페이스 개념 바로잡기" />
+    <MESSAGE value="docs: 어댑터 패턴" />
+    <MESSAGE value="docs: 링크 일부변경" />
+    <MESSAGE value="docs: jvm 구조 이해하기" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: jvm 구조 이해하기" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="439" y="282" key="#Notifications/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1618992194614" />
+    <state x="320" y="95" key="#Plugins" timestamp="1624622158682">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="95" key="#Plugins/0.0.1440.900@0.0.1440.900" timestamp="1624622158682" />
     <state x="351" y="247" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619665012702">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -558,11 +564,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="444" y="73" key="RollbackChangesDialog/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1618214648277" />
-    <state x="229" y="86" key="SettingsEditor" timestamp="1622895120401">
+    <state x="229" y="86" key="SettingsEditor" timestamp="1624622947281">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="86" key="SettingsEditor/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617602670728" />
-    <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1622895120401" />
+    <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1624622947281" />
     <state x="229" y="109" key="SettingsEditor/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617603709492" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1622700872105">
       <screen x="0" y="0" width="1440" height="900" />
@@ -578,7 +584,7 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="dock-window-1/0.25.1440.875/1440.-49.1920.1055@0.25.1440.875" timestamp="1618819480340" />
-    <state x="422" y="47" width="606" height="808" key="find.popup" timestamp="1624005074868">
+    <state x="422" y="47" width="606" height="808" key="find.popup" timestamp="1624606416947">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1622701312765" />
@@ -586,13 +592,13 @@
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617604601040" />
     <state x="422" y="48" width="596" height="806" key="find.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950540073" />
     <state x="1332" y="-1023" width="1058" height="967" key="find.popup/0.0.1440.900/582.-1080.2560.1080/3142.-1272.1080.1920@582.-1080.2560.1080" timestamp="1616229862665" />
-    <state x="422" y="47" width="606" height="808" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1624005074868" />
+    <state x="422" y="47" width="606" height="808" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1624606416947" />
     <state x="422" y="71" width="597" height="786" key="find.popup/0.25.1440.875/-258.-1055.1920.1055@0.25.1440.875" timestamp="1620484483693" />
     <state x="2190" y="12" width="1060" height="946" key="find.popup/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617456047644" />
     <state x="422" y="71" width="596" height="784" key="find.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617602738863" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875/582.-1055.2560.1055/3142.-1247.1080.1895@0.25.1440.875" timestamp="1616229648828" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1622375251056" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1624007191514">
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1624763821147">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1622700176248" />
@@ -600,7 +606,7 @@
     <state x="385" y="195" width="672" height="698" key="search.everywhere.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617602690461" />
     <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950581456" />
     <state x="1266" y="-847" width="1192" height="836" key="search.everywhere.popup/0.0.1440.900/582.-1080.2560.1080/3142.-1272.1080.1920@582.-1080.2560.1080" timestamp="1616229839883" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1624007191514" />
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1624763821147" />
     <state x="2124" y="185" width="1193" height="818" key="search.everywhere.popup/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617452500626" />
     <state x="385" y="195" width="672" height="698" key="search.everywhere.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617603132404" />
     <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1620546519469" />

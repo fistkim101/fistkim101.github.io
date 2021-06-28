@@ -83,6 +83,18 @@ header:
       # @end locale config
     url: /spring.html
 
+  - titles:
+      # @start locale config
+      en: &EN       Kotlin
+      en-GB: *EN
+      en-US: *EN
+      en-CA: *EN
+      en-AU: *EN
+      ko: &KO       코틀린
+      ko-KR: *KO
+      # @end locale config
+    url: /kotlin.html
+
 #  - titles:
 #      # @start locale config
 #      en      : &EN       Archive
