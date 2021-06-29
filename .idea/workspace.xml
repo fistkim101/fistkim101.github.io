@@ -22,14 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: jvm 구조 이해하기">
-      <change afterPath="$PROJECT_DIR$/collections/_kotlin/2021-06-25-document.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin.md" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: kotlin 추가">
+      <change afterPath="$PROJECT_DIR$/assets/images/architecture/template-method.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_architecture/2021-06-29-디자인패턴-템플릿메소드패턴.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_kotlin/2021-06-29-kotlin-in-action-1.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/navigation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/semantic-tree/architecture.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/semantic-tree/architecture.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_includes/semantic-tree/backend.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/semantic-tree/backend.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_architecture/2021-06-18-디자인패턴-스트레티지패턴.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_architecture/2021-06-18-디자인패턴-스트레티지패턴.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_architecture/2021-06-21-디자인패턴-어댑터패턴.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_architecture/2021-06-21-디자인패턴-어댑터패턴.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_kotlin/2021-06-25-document.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_kotlin/2021-06-25-basic.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images/infra" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images/architecture" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,8 +76,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/images/infra" />
       <recent name="$PROJECT_DIR$/assets/images/architecture" />
+      <recent name="$PROJECT_DIR$/assets/images/infra" />
       <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/assets/images/algorithm" />
       <recent name="$PROJECT_DIR$/assets/images/spring" />
@@ -123,21 +126,7 @@
       <workItem from="1622375237121" duration="546000" />
       <workItem from="1622448266440" duration="453000" />
       <workItem from="1622679628440" duration="2182000" />
-      <workItem from="1622769912321" duration="78825000" />
-    </task>
-    <task id="LOCAL-00054" summary="docs : disqus 적용 test">
-      <created>1620469482009</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1620469482009</updated>
-    </task>
-    <task id="LOCAL-00055" summary="docs : disqus 적용 test">
-      <created>1620469823567</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1620469823567</updated>
+      <workItem from="1622769912321" duration="83723000" />
     </task>
     <task id="LOCAL-00056" summary="docs : disqus 적용 test">
       <created>1620470027955</created>
@@ -468,7 +457,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624343317201</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="docs: kotlin 추가">
+      <created>1624844804733</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1624844804734</updated>
+    </task>
+    <task id="LOCAL-00104" summary="docs: kotlin 추가">
+      <created>1624844831923</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1624844831923</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +490,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs : 브루트포스for문" />
     <MESSAGE value="docs : 유형분석 - 그리디" />
     <MESSAGE value="docs : 유형분석 - 브루트포스ing" />
     <MESSAGE value="docs : 유형분석 - DFS" />
@@ -512,7 +514,8 @@
     <MESSAGE value="docs: 어댑터 패턴" />
     <MESSAGE value="docs: 링크 일부변경" />
     <MESSAGE value="docs: jvm 구조 이해하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: jvm 구조 이해하기" />
+    <MESSAGE value="docs: kotlin 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: kotlin 추가" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
@@ -598,7 +601,7 @@
     <state x="422" y="71" width="596" height="784" key="find.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617602738863" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875/582.-1055.2560.1055/3142.-1247.1080.1895@0.25.1440.875" timestamp="1616229648828" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1622375251056" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1624763821147">
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1624844773144">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1622700176248" />
@@ -606,7 +609,7 @@
     <state x="385" y="195" width="672" height="698" key="search.everywhere.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617602690461" />
     <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950581456" />
     <state x="1266" y="-847" width="1192" height="836" key="search.everywhere.popup/0.0.1440.900/582.-1080.2560.1080/3142.-1272.1080.1920@582.-1080.2560.1080" timestamp="1616229839883" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1624763821147" />
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1624844773144" />
     <state x="2124" y="185" width="1193" height="818" key="search.everywhere.popup/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617452500626" />
     <state x="385" y="195" width="672" height="698" key="search.everywhere.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617603132404" />
     <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1620546519469" />
