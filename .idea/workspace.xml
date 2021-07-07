@@ -22,17 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: kotlin 추가">
-      <change afterPath="$PROJECT_DIR$/assets/images/architecture/template-method.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_architecture/2021-06-29-디자인패턴-템플릿메소드패턴.md" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: 템플릿 메소드 패턴 추가">
+      <change afterPath="$PROJECT_DIR$/assets/images/kotlin/exception-type-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/kotlin/exception-type-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/kotlin/kotlin-build-process.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/kotlin/kotlin-package.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/kotlin/no-checked-exception.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/collections/_kotlin/2021-06-29-kotlin-in-action-1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collections/_kotlin/2021-07-03-kotlin-in-action-2.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/semantic-tree/architecture.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/semantic-tree/architecture.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_includes/semantic-tree/backend.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/semantic-tree/backend.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_architecture/2021-06-18-디자인패턴-스트레티지패턴.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_architecture/2021-06-18-디자인패턴-스트레티지패턴.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_architecture/2021-06-21-디자인패턴-어댑터패턴.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_architecture/2021-06-21-디자인패턴-어댑터패턴.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_kotlin/2021-06-25-document.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_kotlin/2021-06-25-basic.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +61,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images/architecture" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images/kotlin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -75,19 +75,19 @@
     <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/images/architecture" />
-      <recent name="$PROJECT_DIR$/assets/images/infra" />
-      <recent name="$PROJECT_DIR$/assets/images" />
-      <recent name="$PROJECT_DIR$/assets/images/algorithm" />
-      <recent name="$PROJECT_DIR$/assets/images/spring" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/collections/_database" />
       <recent name="$PROJECT_DIR$/assets/images/infra" />
       <recent name="$PROJECT_DIR$/collections" />
       <recent name="$PROJECT_DIR$/_posts" />
       <recent name="$PROJECT_DIR$/_collections" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images/kotlin" />
+      <recent name="$PROJECT_DIR$/assets/images/architecture" />
+      <recent name="$PROJECT_DIR$/assets/images/infra" />
+      <recent name="$PROJECT_DIR$/assets/images" />
+      <recent name="$PROJECT_DIR$/assets/images/algorithm" />
     </key>
   </component>
   <component name="RubyModuleManagerSettings">
@@ -126,14 +126,8 @@
       <workItem from="1622375237121" duration="546000" />
       <workItem from="1622448266440" duration="453000" />
       <workItem from="1622679628440" duration="2182000" />
-      <workItem from="1622769912321" duration="83723000" />
-    </task>
-    <task id="LOCAL-00056" summary="docs : disqus 적용 test">
-      <created>1620470027955</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1620470027955</updated>
+      <workItem from="1622769912321" duration="94013000" />
+      <workItem from="1625452684211" duration="25122000" />
     </task>
     <task id="LOCAL-00057" summary="docs : disqus 적용 test">
       <created>1620470352980</created>
@@ -471,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624844831923</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="docs: 템플릿 메소드 패턴 추가">
+      <created>1624958724449</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1624958724449</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +491,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs : 유형분석 - 그리디" />
     <MESSAGE value="docs : 유형분석 - 브루트포스ing" />
     <MESSAGE value="docs : 유형분석 - DFS" />
     <MESSAGE value="docs : disqus 제거" />
@@ -515,7 +515,8 @@
     <MESSAGE value="docs: 링크 일부변경" />
     <MESSAGE value="docs: jvm 구조 이해하기" />
     <MESSAGE value="docs: kotlin 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: kotlin 추가" />
+    <MESSAGE value="docs: 템플릿 메소드 패턴 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: 템플릿 메소드 패턴 추가" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
@@ -537,7 +538,6 @@
     <state x="2254" y="193" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617516315532">
       <screen x="1440" y="-43" width="2560" height="1055" />
     </state>
-    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615949701053" />
     <state x="2254" y="193" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617516315532" />
     <state x="0" y="25" key="FileDocumentManager.FileCacheConflict" timestamp="1619169581336">
       <screen x="0" y="25" width="1440" height="875" />
@@ -547,31 +547,27 @@
       <screen x="1440" y="-43" width="2560" height="1055" />
     </state>
     <state width="1431" height="282" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617452554721" />
-    <state width="1398" height="223" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1614869448192" />
     <state width="1431" height="282" key="GridCell.Tab.0.center" timestamp="1617452554720">
       <screen x="1440" y="-43" width="2560" height="1055" />
     </state>
     <state width="1431" height="282" key="GridCell.Tab.0.center/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617452554720" />
-    <state width="1398" height="223" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1614869448189" />
     <state width="1431" height="282" key="GridCell.Tab.0.left" timestamp="1617452554719">
       <screen x="1440" y="-43" width="2560" height="1055" />
     </state>
     <state width="1431" height="282" key="GridCell.Tab.0.left/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617452554719" />
-    <state width="1398" height="223" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1614869448186" />
     <state width="1431" height="282" key="GridCell.Tab.0.right" timestamp="1617452554720">
       <screen x="1440" y="-43" width="2560" height="1055" />
     </state>
     <state width="1431" height="282" key="GridCell.Tab.0.right/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617452554720" />
-    <state width="1398" height="223" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1614869448190" />
     <state x="444" y="73" key="RollbackChangesDialog" timestamp="1618214648277">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="444" y="73" key="RollbackChangesDialog/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1618214648277" />
-    <state x="229" y="86" key="SettingsEditor" timestamp="1624622947281">
+    <state x="229" y="86" key="SettingsEditor" timestamp="1625548857560">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="86" key="SettingsEditor/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617602670728" />
-    <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1624622947281" />
+    <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1625548857560" />
     <state x="229" y="109" key="SettingsEditor/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617603709492" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1622700872105">
       <screen x="0" y="0" width="1440" height="900" />
@@ -587,31 +583,28 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="dock-window-1/0.25.1440.875/1440.-49.1920.1055@0.25.1440.875" timestamp="1618819480340" />
-    <state x="422" y="47" width="606" height="808" key="find.popup" timestamp="1624606416947">
+    <state x="422" y="47" width="606" height="808" key="find.popup" timestamp="1625539951753">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1622701312765" />
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1620013499712" />
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617604601040" />
-    <state x="422" y="48" width="596" height="806" key="find.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950540073" />
-    <state x="1332" y="-1023" width="1058" height="967" key="find.popup/0.0.1440.900/582.-1080.2560.1080/3142.-1272.1080.1920@582.-1080.2560.1080" timestamp="1616229862665" />
-    <state x="422" y="47" width="606" height="808" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1624606416947" />
+    <state x="422" y="47" width="606" height="808" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1625539951753" />
     <state x="422" y="71" width="597" height="786" key="find.popup/0.25.1440.875/-258.-1055.1920.1055@0.25.1440.875" timestamp="1620484483693" />
     <state x="2190" y="12" width="1060" height="946" key="find.popup/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617456047644" />
     <state x="422" y="71" width="596" height="784" key="find.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617602738863" />
-    <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875/582.-1055.2560.1055/3142.-1247.1080.1895@0.25.1440.875" timestamp="1616229648828" />
+    <state x="3270" y="80" width="1078" height="948" key="find.popup/0.25.1440.875/2520.25.2560.1055/1440.-469.1080.1895@2520.25.2560.1055" timestamp="1625271843058" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1622375251056" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1624844773144">
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1625455726773">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1622700176248" />
     <state x="385" y="175" width="672" height="718" key="search.everywhere.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1620021916152" />
     <state x="385" y="195" width="672" height="698" key="search.everywhere.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617602690461" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900/1440.158.1102.742@0.0.1440.900" timestamp="1615950581456" />
-    <state x="1266" y="-847" width="1192" height="836" key="search.everywhere.popup/0.0.1440.900/582.-1080.2560.1080/3142.-1272.1080.1920@582.-1080.2560.1080" timestamp="1616229839883" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1624844773144" />
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1625455726773" />
     <state x="2124" y="185" width="1193" height="818" key="search.everywhere.popup/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617452500626" />
     <state x="385" y="195" width="672" height="698" key="search.everywhere.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617603132404" />
+    <state x="3204" y="252" width="1192" height="816" key="search.everywhere.popup/0.25.1440.875/2520.25.2560.1055/1440.-469.1080.1895@2520.25.2560.1055" timestamp="1625272564878" />
     <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1620546519469" />
     <state x="450" y="373" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1617603280822">
       <screen x="0" y="25" width="1440" height="875" />
