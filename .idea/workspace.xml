@@ -22,17 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: 템플릿 메소드 패턴 추가">
-      <change afterPath="$PROJECT_DIR$/assets/images/kotlin/exception-type-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/kotlin/exception-type-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/kotlin/kotlin-build-process.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/kotlin/kotlin-package.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/kotlin/no-checked-exception.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_kotlin/2021-06-29-kotlin-in-action-1.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collections/_kotlin/2021-07-03-kotlin-in-action-2.md" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: ~ 코틀린 2장">
+      <change afterPath="$PROJECT_DIR$/collections/_kotlin/2021-07-07-kotlin-in-action-3.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_includes/semantic-tree/backend.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/semantic-tree/backend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collections/_kotlin/2021-07-03-kotlin-in-action-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_kotlin/2021-07-03-kotlin-in-action-2.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,14 +122,7 @@
       <workItem from="1622448266440" duration="453000" />
       <workItem from="1622679628440" duration="2182000" />
       <workItem from="1622769912321" duration="94013000" />
-      <workItem from="1625452684211" duration="25122000" />
-    </task>
-    <task id="LOCAL-00057" summary="docs : disqus 적용 test">
-      <created>1620470352980</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1620470352980</updated>
+      <workItem from="1625452684211" duration="38905000" />
     </task>
     <task id="LOCAL-00058" summary="docs : disqus 적용 test">
       <created>1620470437294</created>
@@ -472,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624958724449</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="docs: ~ 코틀린 2장">
+      <created>1625631601219</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1625631601220</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +486,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs : 유형분석 - 브루트포스ing" />
     <MESSAGE value="docs : 유형분석 - DFS" />
     <MESSAGE value="docs : disqus 제거" />
     <MESSAGE value="feat: 댓글기능 교체(disqus-&gt;utterances)" />
@@ -516,7 +510,8 @@
     <MESSAGE value="docs: jvm 구조 이해하기" />
     <MESSAGE value="docs: kotlin 추가" />
     <MESSAGE value="docs: 템플릿 메소드 패턴 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: 템플릿 메소드 패턴 추가" />
+    <MESSAGE value="docs: ~ 코틀린 2장" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: ~ 코틀린 2장" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
@@ -595,13 +590,13 @@
     <state x="422" y="71" width="596" height="784" key="find.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617602738863" />
     <state x="3270" y="80" width="1078" height="948" key="find.popup/0.25.1440.875/2520.25.2560.1055/1440.-469.1080.1895@2520.25.2560.1055" timestamp="1625271843058" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1622375251056" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1625455726773">
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1625798306934">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1622700176248" />
     <state x="385" y="175" width="672" height="718" key="search.everywhere.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1620021916152" />
     <state x="385" y="195" width="672" height="698" key="search.everywhere.popup/0.0.1440.900/1440.126.1102.742@0.0.1440.900" timestamp="1617602690461" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1625455726773" />
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1625798306934" />
     <state x="2124" y="185" width="1193" height="818" key="search.everywhere.popup/0.25.1440.875/1440.-43.2560.1055/4000.-679.1080.1895@1440.-43.2560.1055" timestamp="1617452500626" />
     <state x="385" y="195" width="672" height="698" key="search.everywhere.popup/0.25.1440.875/1440.151.1102.717@0.25.1440.875" timestamp="1617603132404" />
     <state x="3204" y="252" width="1192" height="816" key="search.everywhere.popup/0.25.1440.875/2520.25.2560.1055/1440.-469.1080.1895@2520.25.2560.1055" timestamp="1625272564878" />
