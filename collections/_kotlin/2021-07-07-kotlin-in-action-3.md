@@ -330,7 +330,7 @@ fun <T> joinToString(
 ### 3.2.3 정적인 유틸리티 클래스 없애기: 최상위 함수와 프로퍼티
 이번 소챕터의 학습 포인트는 아래 두 가지 였다.
 
-**<blue>1) 함수를 최상위 선언함으로써 누릴 수 있는 이점은 무엇인가</blue>**
+**<blue>1) 함수를 최상위 선언함으로써 누릴 수 있는 이점은 무엇인가</blue>** <br>
 **<blue>2) 코틀린에서는 프로퍼티, 함수를 클래스에 속하게 하지 않고 최상위로 선언할 수 있는데 이것의 동작원리가 무엇인가</blue>**<br>
 
 <br>
@@ -419,8 +419,8 @@ fun main() {
 
 #### 코틀린에서는 프로퍼티, 함수를 클래스에 속하게 하지 않고 최상위로 선언할 수 있는데 이것의 동작원리가 무엇인가
 
-원칙적으로 JVM 은 클래스 안에 들어있는 코드만을 실행할 수 있다. 그래서 코틀린에서 클래스 없이 함수를 최상위 선언해주면
-**<blue>컴파일을 할 때 컴파일러가 코틀린 소스 파일의 이름을 이용해서 클래스를 만들어주고 그 안에 public static 하게 메소드를 만들어주기 때문에
+**<blue>원칙적으로 JVM 은 클래스 안에 들어있는 코드만을 실행할 수 있다. 그래서 코틀린에서 클래스 없이 함수를 최상위 선언해주면
+컴파일을 할 때 컴파일러가 코틀린 소스 파일의 이름을 이용해서 클래스를 만들어주고 그 안에 public static 하게 메소드를 만들어주기 때문에
 함수를 바로 사용할 수 있는 것이다.</blue>**
 
 자바로 디컴파일을 해보면 아래와 같이 소스가 나오는데 파일명을 이용해서 StringUtilsKt 라는 클래스를 만들어줬고,
@@ -612,6 +612,9 @@ fun main() {
 위 '코틀린에서는 프로퍼티, 함수를 클래스에 속하게 하지 않고 최상위로 선언할 수 있는데 이것의 동작원리가 무엇인가' 에서 알아본 대로
 확장함수를 선언해준 소스 코드 파일명이 클래스명이 되면서 클래스가 생성되고 내부에 메소드가 만들어지므로,
 자바에서 사용을 할 때도 그에 맞게 동일하게 사용해주면 된다. 아래와 같이 StringKt.lastChar("Kotlin") 이런 식으로 사용이 가능하다.
+
+원리를 잠깐 설명하자면, 확장함수도 결국 특정 파일에서 최상위로 함수를 선언해준 것과 같기 때문에
+소스 코드의 파일명을 클래스 명으로한 클래스의 내부에 함수가 생성되는 것이라서 원리가 같은 것이다.
 ```java
 public final class MainKt {
    public static final void main() {
@@ -734,5 +737,348 @@ Process finished with exit code 0
 이걸 밖에 선언한다? 좀 이상한 것 같다. 개인적으로 안쓰는게 낫지 않을까 하는 생각이 들었다.
 
 <br>
+
+## 3.4 컬렉션 처리: 가변 길이 인자, 중위 함수 호출, 라이브러리 지원
+### 3.4.1 자바 컬렉션 API 확장
+코틀린에서는 자바의 컬렉션을 그대로 사용하되 조금더 편리하게 개발할 수 있도록 여러 함수들을 제공한다고 정리를 했었다.
+'3.4.1 자바 컬렉션 API 확장' 에서는 그렇게 제공되는 여러 함수들이 사실 모두 '확장 함수' 였다는 것을 알려주고 있었다.
+```kotlin
+fun main() {
+    val fruits = listOf("banana", "apple", "orange")
+    val lastFruit = fruits.last()
+    println(lastFruit)
+}
+```
+```java
+String lastFruit = (String)CollectionsKt.last(fruits);
+```
+위와 같이 decompile 을 해보면 실제로 확장함수임을 알 수 있다.
+
 <br>
 
+### 3.4.2 가변 인자 함수: 인자의 개수가 달라질 수 있는 함수 정의
+인자(파라미터)의 갯수가 달라질 수 있는 인자를 '가변 길이 인자' 라고 하는데 자바와 문법이 조금 다르다.
+**<blue>자바는 타입 뒤에 ...를 붙여주는 반면 코틀린에서는 파라미터 앞에 vararg 라는 변경자를 붙여주어야 한다.
+호출을 할 때에도 자바에서는 배열을 그냥 넘기면 되는데, 코틀린에서는 배열을 명시적으로 풀어서 넘겨줘야하고
+이는 스프레드 연산자(*) 로 처리한다.</blue>**
+
+예시코드로 차이를 살펴보자. 먼저 코틀린이다.
+```kotlin
+fun main() {
+    println(sum(1, 2, 3, 4, 5)) // 15
+
+    val numbers = intArrayOf(1, 2, 3, 4, 5)
+    println(sum(*numbers)) // 15
+}
+
+fun sum(vararg values: Int): Int {
+    var result = 0
+    for (value in values) {
+        result += value
+    }
+
+    return result
+}
+```
+함수 선언시 가변 길이 인자를 사용하고자 vararg 라는 변경자(책에서 변경자라는 단어를 사용하고 있다)를 이용해서
+함수를 선언해줬다. 그리고 첫번째 케이스로 1, 2, 3, 4, 5 라는 가변길이의 인자를 사용해서 제대로 출력되는지 살펴 보았고
+두번째 케이스로 리스트를 스프레드 연산자를 사용해서 풀어서 넘겨줘 보았다. 둘 다 잘 작동되는 것을 확인할 수 있었다.
+
+같은 로직으로 자바에서 만들어봤다.
+
+<br>
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(sum(1, 2, 3, 4, 5));
+
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+//        System.out.println(sum(numbers)); <-- compile error
+    }
+
+    public static int sum(int... values) {
+        int result = 0;
+        for (int value : values) {
+            result += value;
+        }
+
+        return result;
+    }
+}
+```
+
+<br>
+
+좀 이상한 부분이 책에서는 분명 '자바에서는 배열을 그냥 넘기면 되지만 코틀린에서는 배열을 명시적으로 풀어서
+배열의 각 원소가 인자로 전달되게 해야한다. 기술적으로는 스프레드 연산자가 그런 작업을 해준다' 라고 쓰여져 있는데,
+실제로 자바에서 '배열을 그냥 넘겨' 봤더니 컴파일 에러가 난다고 IDE 가 미리 알려준다.
+
+음.. 내가 책을 잘못 이해한 것인지.. 더 파보는건 학습 가성비가 떨어질 것 같아서 일단은 넘어간다.
+아무튼 학습 포인트는 아래와 같다.
+
+**<blue>1) 코틀린에서도 자바와 같이 가변길이 인자를 활용할 수 있다.</blue>**<br>
+**<blue>2) 활용하는 방법은 vararg 라는 변경자를 사용하여 함수를 선언하는 것이며 호출시 파라미터 배열이라면 스프레드 연산자(*)를 활용해야한다</blue>**
+
+<br>
+
+### 3.4.3 값의 쌍 다루기: 중위 호출과 구조 분해 선언
+#### 중위 호출(infix call)
+infix 라는 단어를 네이버 사전에서 찾아보면 '삽입사(단어 중간에 들어가서 의미를 바꾸는 접사)' 라고 나온다.
+'2+2' 에서 + 가 infix 라고 이해할 수 있다.
+
+코틀린에서는 이러한 infix 와 같은 형식으로 함수를 호출할 수 있는데 이를 infix call 이라고 소개하고 있다.
+이미 예시로 다룬 코드중 infix call 을 사용한 코드는 아래와 같다.
+```kotlin
+fun main() {
+    val numberMap = mapOf(1 to "one", 2 to "two")
+    println(numberMap[1]) // one
+    println(numberMap[2]) // two
+}
+```
+
+<br>
+
+함수를 선언할 때 infix call 이 가능하도록 하려면 아래와 같이 선언 해줘야한다.
+```kotlin
+fun main() {
+    val sum = 1 plus 2
+    println(sum) // 3
+}
+
+infix fun Int.plus(value: Int): Int = this + value
+```
+
+<br>
+
+infix call 이 가능한 함수를 선언하려면 아래 두 조건을 만족해야한다.
+
+**<blue>1) 인자가 하나뿐이다.</blue>**<br>
+**<blue>2) 확장함수이다.</blue>**
+
+<br>
+
+#### 구조 분해 선언(destructuring declaration)
+**<blue>코틀린에서 제공해주는 편리한 syntax 중 하나로 특정한 object 를 이를 구성하는 변수로 쪼개서 한번에 선언할 수 있도록 해준다.</blue>**<br>
+[공식 문서](https://kotlinlang.org/docs/destructuring-declarations.html) 의 일부를 발췌해서 아래에 옮긴다. 심플하고 확실한 설명이다.
+
+> A destructuring declaration creates multiple variables at once.
+
+<br>
+
+```kotlin
+fun main() {
+    val pair = 1 to "one"
+    val (first, second) = pair
+
+    println(first)
+    println(second)
+}
+```
+```bash
+/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=56320:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/jungkwonkim/Desktop/lab/servers/kotlin-in-action/build/classes/kotlin/main:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.5.20/636c5653641cd956de9aee5792155b07ea49825e/kotlin-stdlib-jdk8-1.5.20.jar:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.5.20/218b60e1d446d1e0a18bc7aa8663634b136fbcc5/kotlin-stdlib-jdk7-1.5.20.jar:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.5.20/9de35cc611bcecec8edce1d56d8e659953806751/kotlin-stdlib-1.5.20.jar:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.5.20/3d79dbd48bf605f4aac1e7028981a1953e245cbb/kotlin-stdlib-common-1.5.20.jar MainKt
+1
+one
+
+Process finished with exit code 0
+```
+
+<br>
+
+이건 data class 에도 동일하게 적용된다. 아래의 예제 코드를 보자.
+```kotlin
+fun main() {
+    val fistkim = Person("jk", 15)
+    val (name, age) = fistkim
+
+    println(name) // jk
+    println(age) // 15
+}
+
+data class Person(val name: String, val age: Int)
+```
+나중에 data class 를 다룰 때 더 깊게 살펴봐야 하겠지만, 이 구조 분해 선언은 class 가 아닌 data class 일때 가능하다.
+**<blue>이는 구조 분해 선언의 원리와 연관이 있는데 data class 에 구조 분해 선언을 사용할 경우 내부적으로 componentN() 을 사용하기 때문이다.
+data 클래스가 아닌 그냥 class 를 사용하면 아래와 같은 메세지를 볼 수 있다.</blue>**
+
+```bash
+Destructuring declaration initializer of type Person must have a 'component1()' function
+```
+
+<br>
+
+## 3.5 문자열과 정규식 다루기
+### 3.5.1 문자열 나누기
+자바에서 문자열을 나눌때 자주 사용한 것은 .split() 이다. 책에서도 이를 예시로 들고 있는데 책에서 말하고자 하는 핵심은
+**<blue>'코틀린은 .split()의 여러가지 버전을 오버로딩하여 갖고 있어서 개발 편의를 더 높혔다'</blue>** 이다.
+
+예시로 자바는 .split() 의 인자가 정규식 하나 뿐이어서 아래와 같은 상황이 발생한다.
+```java
+public class Main {
+    public static void main(String[] args) {
+        String[] strings = "12.345-6.A".split(".");
+        System.out.println(strings.length); // 0
+    }
+}
+```
+
+<br>
+
+왜냐하면 . 이 정규식으로 인식되기 때문이다.
+
+코틀린에서 똑같은 로직으로 실행해보면 다른 결과가 나온다.
+```kotlin
+fun main() {
+    val strings = "12.345-6.A".split(".")
+    println(strings.size) // 3
+}
+```
+
+<br>
+
+여기서 IDE 의 힘을 빌려서 split 을 타고 들어가면 CharSequence.split() 의 형태로 많은 오버로딩된 함수들을 볼 수 있다.
+예시 문자열인 "12.345-6.A" 을 코틀린에서 제공해주는 split 을 이용해서 특수문자 기준으로 배열을 나누고자 한다면 아래와 같이 쉽게 나눌 수 있다.
+
+```kotlin
+fun main() {
+    val strings = "12.345-6.A".split(".", "-")
+    println(strings.toString())
+}
+```
+```bash
+/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=56690:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/jungkwonkim/Desktop/lab/servers/kotlin-in-action/build/classes/kotlin/main:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.5.20/636c5653641cd956de9aee5792155b07ea49825e/kotlin-stdlib-jdk8-1.5.20.jar:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.5.20/218b60e1d446d1e0a18bc7aa8663634b136fbcc5/kotlin-stdlib-jdk7-1.5.20.jar:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.5.20/9de35cc611bcecec8edce1d56d8e659953806751/kotlin-stdlib-1.5.20.jar:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.5.20/3d79dbd48bf605f4aac1e7028981a1953e245cbb/kotlin-stdlib-common-1.5.20.jar MainKt
+[12, 345, 6, A]
+
+Process finished with exit code 0
+```
+
+<br>
+
+### 3.5.2 정규식과 3중 따옴표로 묶은 문자열
+**<blue>이번 소챕터에서 말하고자 하는 핵심은 '코틀린에서는 문자열에 관한 다양한 함수를 제공해줘서 굳이 정규식을 쓰지 않아도 문자열을 쉽게 다룰 수 있다' 이다.
+그리고 이 논리의 밑바탕에 깔린 전제는 '정규식은 강력하긴 하지만 나중에 알아보기 힘든 경우가 많다'는 것이다.</blue>**
+
+그냥 막연히 내가 정규식에 약하다고 생각만 했는데 책에서 저렇게 말해주니 다들 그런가보다 싶어서 다행(?) 스럽다는 생각도 들었다.
+예시로 쓰인 코드가 괜찮아서 그대로 옮긴다.
+
+```kotlin
+fun main() {
+    parsePath("Users/fistkim101/kotlin-in-action/chapter1.pdf")
+}
+
+fun parsePath(path: String) {
+    val directory = path.substringBeforeLast("/")
+    val fullName = path.substringAfterLast("/")
+    val fileName = fullName.substringBeforeLast(".")
+    val extension = fullName.substringAfterLast(".")
+
+    println("directory:${directory}, fullName:${fullName}, fileName:${fileName}, extension:${extension}")
+}
+```
+```bash
+/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=56796:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/jungkwonkim/Desktop/lab/servers/kotlin-in-action/build/classes/kotlin/main:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.5.20/636c5653641cd956de9aee5792155b07ea49825e/kotlin-stdlib-jdk8-1.5.20.jar:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.5.20/218b60e1d446d1e0a18bc7aa8663634b136fbcc5/kotlin-stdlib-jdk7-1.5.20.jar:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.5.20/9de35cc611bcecec8edce1d56d8e659953806751/kotlin-stdlib-1.5.20.jar:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/jungkwonkim/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.5.20/3d79dbd48bf605f4aac1e7028981a1953e245cbb/kotlin-stdlib-common-1.5.20.jar MainKt
+directory:Users/fistkim101/kotlin-in-action, fullName:chapter1.pdf, fileName:chapter1, extension:pdf
+
+Process finished with exit code 0
+```
+
+<br>
+
+3중 따옴표에 관해서는 활용도가 그리 높아보이진 않아서 일단은 정리를 하지 않고 넘어가기로 한다.
+
+<br>
+
+### 3.5.3 여러 줄 3중 따옴표 문자열
+3중 따옴표에 관해서는 활용도가 그리 높아보이진 않아서 일단은 정리를 하지 않고 넘어가기로 한다.
+
+<br>
+
+## 3.6 코드 다듬기: 로컬 함수와 확장
+**<blue>이 소챕터의 핵심은 '자바에서 사용되던 불필요한 준비 코드들을 코틀린에서 제공해주는
+함수 안의 함수인 '로컬 함수' 와 앞서 살펴본 '확장 함수'를 통해서 없앰으로써 코드를 간결하게 만들 수 있다' 는 것이었다.</blue>**
+
+함수 내부에 함수를 선언 할 수 있다는 것이 참 재미있었는데, 결국 리팩토링의 패턴이 덩어리가 큰 메소드를 만들게 되고
+이를 보면서 '음 너무 길군, 단위로 나눌 순 없을까' 하면서 메소드를 더 세분화하는 패턴인데 이 과정에서
+'특정한 메소드를 위한 메소드'가 만들어지는 것이 불가피하다보니 이런 경우 그냥 그 메소드 내부에 메소드를 선언할 수 있도록 함으로써
+코드가 더 보기 깔끔해지는 맥락이었다.
+
+책에서 나온 예시를 살펴보자. 먼저 리팩토링이 필요한 코드이다.
+```kotlin
+class User(val id: Int, val name: String, val address: String)
+
+fun saveUser(user: User) {
+    if (user.name.isEmpty()) {
+        throw IllegalArgumentException("Can't save user ${user.id}: empty Name")
+    }
+
+    if (user.address.isEmpty()) {
+        throw IllegalArgumentException("Can't save user ${user.id}: empty Address")
+    }
+
+    // save user to database
+}
+```
+
+<br>
+
+user 객체를 db 에 저장하는 로직인데 저장하기 전에 user 의 프로퍼티 값들이 제대로 갖춰져 있는지 검증하고 있다.
+이를 먼저 '로컬 함수' 를 이용해서 리팩토링 해보면 아래와 같은 코드를 만들 수 있다.
+
+```kotlin
+class User(val id: Int, val name: String, val address: String)
+
+fun saveUser(user: User) {
+
+    fun validateParams(value: String, fieldName: String) {
+        if (value.isEmpty()) {
+            throw IllegalArgumentException("Can't save user ${user.id}: empty ${fieldName}")
+        }
+    }
+
+    validateParams(user.name, "Name")
+    validateParams(user.address, "Address")
+
+    // save user to database
+}
+```
+
+<br>
+
+'확장 함수'를 통해서 리팩토링하면 아래와 같은 코드가 나올 수 있다.
+```kotlin
+class User(val id: Int, val name: String, val address: String)
+
+fun User.validateBeforeSave() {
+    fun validateParams(value: String, fieldName: String) {
+        if (value.isEmpty()) {
+            throw IllegalArgumentException("Can't save user ${user.id}: empty ${fieldName}")
+        }
+    }
+
+    validateParams(user.name, "Name")
+    validateParams(user.address, "Address")
+}
+
+fun saveUser(user: User) {
+    user.validateBeforeSave()
+    // save user to database
+}
+```
+
+<br>
+
+아무튼 핵심은 아래 두 가지라고 생각한다.<br>
+**<red>1) 함수 안의 함수인 '로컬 함수'라는 개념이 코틀린에 존재한다</red>**<br>
+**<red>2) 함수를 위한 함수 같은 '특정 함수를 더 잘게 쪼개기 위해 만들어진 함수'는 동등한 레벨로 따로 선언해주는 것 보다
+함수 내부에서 선언해주는 것이 가독성 측면에서 더 좋다는 철학이 밑바탕이 되어 있다.</red>**
+
+<br>
+<br>
