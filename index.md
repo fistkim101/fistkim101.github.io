@@ -36,7 +36,7 @@ blue { color: Blue }
 
 ### 개념별 정리
 * [Checked Exception VS Unchecked Exception](https://fistkim101.github.io/kotlin/2021-07-03-kotlin-in-action-2.html#25-코틀린의-예외-처리)
-* [java의 enum은 메모리에 언제, 어떻게 할당되는가](https://fistkim101.github.io/spring/2021-06-13-java-cleancode-1.html#java의-enum은-메모리에-언제-어떻게-할당되는가)
+* [java의 enum은 메모리에 언제, 어떻게 할당되는가](https://fistkim101.github.io/java/2021-06-13-java-cleancode-1.html#java의-enum은-메모리에-언제-어떻게-할당되는가)
 * [인터페이스 개념 바로잡기](https://fistkim101.github.io/architecture/2021-06-18-디자인패턴-스트레티지패턴.html#인터페이스-개념-바로잡기)
 
 <br>

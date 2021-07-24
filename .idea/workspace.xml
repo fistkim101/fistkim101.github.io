@@ -22,28 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: 코틀린 목차 추가">
-      <change afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="26294372-56df-4087-a1ce-59177d0666af" name="Default Changelist" comment="docs: 목차 모두 변경">
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/navigation.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-05-30-jvmGc.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_java/2021-05-30-jvmGc.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_infra/2021-06-22-jvm구조.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_java/2021-06-22-jvm구조.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-04-22-JVM.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_java/2021-04-22-JVM.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-04-23-바이트코드.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_java/2021-04-23-바이트코드.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-04-24-리플렉션.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_java/2021-04-24-리플렉션.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-04-25-프록시.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_java/2021-04-25-프록시.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-04-26-어노테이션프로세서.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_java/2021-04-26-어노테이션프로세서.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-05-30-클린코드필요성.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_java/2021-05-30-클린코드필요성.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-05-31-클린코드객체지향생활체조.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_java/2021-05-31-클린코드객체지향생활체조.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-06-01-객체지향생활체조상세.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_java/2021-06-01-객체지향생활체조상세.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-06-13-java-cleancode-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_java/2021-06-13-java-cleancode-1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collections/_spring/2021-06-18-java-cleancode-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/collections/_java/2021-06-18-java-cleancode-2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra-system.md" beforeDir="false" afterPath="$PROJECT_DIR$/infra.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring.md" beforeDir="false" afterPath="$PROJECT_DIR$/spring.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,14 +122,7 @@
       <workItem from="1625452684211" duration="47144000" />
       <workItem from="1626874677437" duration="182000" />
       <workItem from="1626874939302" duration="3022000" />
-      <workItem from="1627086271827" duration="4689000" />
-    </task>
-    <task id="LOCAL-00061" summary="docs : disqus 적용 test">
-      <created>1620471018188</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1620471018188</updated>
+      <workItem from="1627086271827" duration="4954000" />
     </task>
     <task id="LOCAL-00062" summary="docs : disqus 적용 test">
       <created>1620484752820</created>
@@ -486,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626079176633</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="docs: 목차 모두 변경">
+      <created>1627129414794</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1627129414795</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +486,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: 목록 페이지 추가" />
     <MESSAGE value="feat: 목록 페이지 redirect 설정" />
     <MESSAGE value="docs: 커널, 프로세스, 쓰레드 알아보기" />
     <MESSAGE value="docs: 프로세스 메모리 구조" />
@@ -530,7 +510,8 @@
     <MESSAGE value="docs: ~ 코틀린 3장 (ing)" />
     <MESSAGE value="docs: ~ 코틀린 3장 완료" />
     <MESSAGE value="docs: 코틀린 목차 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: 코틀린 목차 추가" />
+    <MESSAGE value="docs: 목차 모두 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: 목차 모두 변경" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="282" key="#Notifications" timestamp="1618992194614">
@@ -568,21 +549,21 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="dock-window-1/0.25.1440.875/1440.-49.1920.1055@0.25.1440.875" timestamp="1618819480340" />
-    <state x="422" y="47" width="606" height="808" key="find.popup" timestamp="1626067197086">
+    <state x="422" y="47" width="606" height="808" key="find.popup" timestamp="1627129601380">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1626062104527" />
     <state x="422" y="47" width="597" height="808" key="find.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1620013499712" />
-    <state x="422" y="47" width="606" height="808" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1626067197086" />
+    <state x="422" y="47" width="606" height="808" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1627129601380" />
     <state x="422" y="71" width="597" height="786" key="find.popup/0.25.1440.875/-258.-1055.1920.1055@0.25.1440.875" timestamp="1620484483693" />
     <state x="3270" y="80" width="1078" height="948" key="find.popup/0.25.1440.875/2520.25.2560.1055/1440.-469.1080.1895@2520.25.2560.1055" timestamp="1625271843058" />
     <state x="422" y="71" width="595" height="783" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1622375251056" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1627086593770">
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1627129392860">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900/-618.-1080.2560.1080@0.0.1440.900" timestamp="1622700176248" />
     <state x="385" y="175" width="672" height="718" key="search.everywhere.popup/0.0.1440.900/1440.-74.1920.1080@0.0.1440.900" timestamp="1620021916152" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1627086593770" />
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1627129392860" />
     <state x="3204" y="252" width="1192" height="816" key="search.everywhere.popup/0.25.1440.875/2520.25.2560.1055/1440.-469.1080.1895@2520.25.2560.1055" timestamp="1625272564878" />
     <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1626876103024" />
   </component>
