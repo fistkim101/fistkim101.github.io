@@ -3,7 +3,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  {% for post in site.algorithm %}
+  <!--  java -->
+  {% for post in site.java %}
   <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
     {% if post.lastmod == null %}
@@ -27,7 +28,8 @@
   </url>
   {% endfor %}
 
-  {% for post in site.data_structure %}
+  <!-- kotlin -->
+  {% for post in site.kotlin %}
   <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
     {% if post.lastmod == null %}
@@ -51,54 +53,7 @@
   </url>
   {% endfor %}
 
-  {% for post in site.infra %}
-  <url>
-    <loc>{{ site.url }}{{ post.url }}</loc>
-    {% if post.lastmod == null %}
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-    {% else %}
-    <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
-    {% endif %}
-
-    {% if post.sitemap.changefreq == null %}
-    <changefreq>weekly</changefreq>
-    {% else %}
-    <changefreq>{{ post.sitemap.changefreq }}</changefreq>
-    {% endif %}
-
-    {% if post.sitemap.priority == null %}
-    <priority>0.5</priority>
-    {% else %}
-    <priority>{{ post.sitemap.priority }}</priority>
-    {% endif %}
-
-  </url>
-  {% endfor %}
-
-  {% for post in site.architecture %}
-  <url>
-    <loc>{{ site.url }}{{ post.url }}</loc>
-    {% if post.lastmod == null %}
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-    {% else %}
-    <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
-    {% endif %}
-
-    {% if post.sitemap.changefreq == null %}
-    <changefreq>weekly</changefreq>
-    {% else %}
-    <changefreq>{{ post.sitemap.changefreq }}</changefreq>
-    {% endif %}
-
-    {% if post.sitemap.priority == null %}
-    <priority>0.5</priority>
-    {% else %}
-    <priority>{{ post.sitemap.priority }}</priority>
-    {% endif %}
-
-  </url>
-  {% endfor %}
-
+  <!-- spring -->
   {% for post in site.spring %}
   <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
@@ -123,6 +78,7 @@
   </url>
   {% endfor %}
 
+  <!-- database -->
   {% for post in site.database %}
   <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
@@ -147,7 +103,83 @@
   </url>
   {% endfor %}
 
-  {% for post in site.kotlin %}
+  <!-- infra -->
+  {% for post in site.infra %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    {% if post.lastmod == null %}
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+    <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+    {% endif %}
+
+    {% if post.sitemap.changefreq == null %}
+    <changefreq>weekly</changefreq>
+    {% else %}
+    <changefreq>{{ post.sitemap.changefreq }}</changefreq>
+    {% endif %}
+
+    {% if post.sitemap.priority == null %}
+    <priority>0.5</priority>
+    {% else %}
+    <priority>{{ post.sitemap.priority }}</priority>
+    {% endif %}
+
+  </url>
+  {% endfor %}
+
+  <!-- architecture -->
+  {% for post in site.architecture %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    {% if post.lastmod == null %}
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+    <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+    {% endif %}
+
+    {% if post.sitemap.changefreq == null %}
+    <changefreq>weekly</changefreq>
+    {% else %}
+    <changefreq>{{ post.sitemap.changefreq }}</changefreq>
+    {% endif %}
+
+    {% if post.sitemap.priority == null %}
+    <priority>0.5</priority>
+    {% else %}
+    <priority>{{ post.sitemap.priority }}</priority>
+    {% endif %}
+
+  </url>
+  {% endfor %}
+
+  <!-- algorithm -->
+  {% for post in site.algorithm %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    {% if post.lastmod == null %}
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+    <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+    {% endif %}
+
+    {% if post.sitemap.changefreq == null %}
+    <changefreq>weekly</changefreq>
+    {% else %}
+    <changefreq>{{ post.sitemap.changefreq }}</changefreq>
+    {% endif %}
+
+    {% if post.sitemap.priority == null %}
+    <priority>0.5</priority>
+    {% else %}
+    <priority>{{ post.sitemap.priority }}</priority>
+    {% endif %}
+
+  </url>
+  {% endfor %}
+
+  <!-- data_structure -->
+  {% for post in site.data_structure %}
   <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
     {% if post.lastmod == null %}

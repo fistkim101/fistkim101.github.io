@@ -2,16 +2,16 @@
 layout: articles
 titles:
   # @start locale config
-  en      : &EN       Spring
+  en      : &EN       java
   en-GB   : *EN
   en-US   : *EN
   en-CA   : *EN
   en-AU   : *EN
-  ko      : &KO       스프링
+  ko      : &KO       자바
   ko-KR   : *KO
   # @end locale config
 articles:
-  data_source: spring
+  data_source: java
   show_cover: false
   show_excerpt: true
   show_readmore: true
