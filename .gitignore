@@ -25,5 +25,5 @@ Gemfile.lock
 _site/
 .jekyll-metadata
 .jekyll-cache/
-.idea/
-wo
+.idea
+.idea/workspace.xml
