@@ -63,7 +63,7 @@ just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
     diary:
-      name: 일지
+      name: 업무일지
     lecture:
       name: 강의
     book:
@@ -84,6 +84,12 @@ just_the_docs:
       # search_exclude: true
 
 callouts:
-  new:
+  point:
     color: green
+    opacity: 0.3
+  careful:
+    color: yellow
+    opacity: 0.3
+  warning:
+    color: red
     opacity: 0.3
