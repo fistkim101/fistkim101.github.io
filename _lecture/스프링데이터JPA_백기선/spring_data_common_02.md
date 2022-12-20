@@ -8,6 +8,11 @@ nav_order: 6
 - 쿼리 만들기
   - 쿼리가 만들어지는 원리
   - 쿼리를 만드는 방법
+- 쿼리 만들기 실습
+  - 페이징 적용시 자동 생성되는 쿼리 
+- 커스텀 레포지토리
+  - 기존 레포지토리 생성 원리 복습
+  - 커스텀 레포지토리 생성 원리 및 방법
 
 ## 쿼리 만들기
 쿼리 생성은 Common 계층이 아니라 JPA 계층에서 만들어 지는 것이다. 강의에서도 JPA 계층에서 만들어진다고 밝히고 있다.
@@ -97,3 +102,82 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 ![](/images/concept-spring-data-create-query.png)
 
 출처 : 강의자료
+
+## 쿼리 만들기 실습
+
+### 페이징 적용시 자동 생성되는 쿼리
+페이징시 limit N, N 의 쿼리가 생소하여 찾아봤더니 아래와 같이 offset 의 의미였다.
+```java
+PageRequest pageRequest = PageRequest.of(1, 5);
+Page<Post> postPage = postRepository.findAll(pageRequest);
+```
+```sql
+select post0_.id          as id1_0_,
+       post0_.description as descript2_0_,
+       post0_.name        as name3_0_
+from post post0_
+limit 5 offset 5;
+
+select post0_.id          as id1_0_,
+       post0_.description as descript2_0_,
+       post0_.name        as name3_0_
+from post post0_
+limit 5,5;
+```
+
+## 커스텀 레포지토리
+
+### 기존 레포지토리 생성 원리 복습
+자동 생성되는 쿼리 외에 직접 커스텀하게 쿼리를 구성해야할 때가 있다. 이 때 커스텀 레포지토리를 만들고 이를 기존 레포지토리가 상속하게 만들어서
+기존 레포지토리로 커스텀 정의한 쿼리를 사용할 수 있도록 할 수 있다.
+
+이 방법을 정리하기 전에 먼저 기존 레포지토리를 Bean 으로 어떻게 사용하는지 그 원리를 다시 짚어본다.(`핵심개념이해 4` 에서 이미 다뤘다.)
+{: .point }
+PostRepository -> JpaRepository<Post, Long> -> PagingAndSortingRepository<T, ID> -> CrudRepository<T, ID> -> Repository<T, ID>
+
+위와 같은 방향으로 상속이 이뤄지고 있으며, 최종적으로 최하단의 PostRepository 가 bean 으로 등록이 될때 @NoRepositoryBean 가 있는 중간 계층의 Repository들의 자원을 모두 갖게 된다.
+그리고 @NoRepositoryBean 이 있는 중간 계층의 Repository 는 정의된 메소드들만 제공하고 bean 으로 등록되지 않는다.
+
+###  커스텀 레포지토리 생성 원리 및 방법
+커스텀 레포지토리 생성 원리도 이와 크게 다르지 않다.
+
+* 커스텀 메소드들을 정의해주고,
+* 최하단 Repository 가 해당 메소드들을 사용할 수 있게 한다. 
+
+결국 이렇게만 해주면 되는데, 내부적으로 지켜줘야할 규칙이 있다.
+
+* 인터페이스로 다중 상속의 형태로 상속하게 만들어야한다.
+* 구현체의 Postfix 를 규칙대로 지정해줘야한다.
+
+```java
+public interface PostCustomRepository {
+    Post findMyPost();
+}
+```
+```java
+@Repository
+@Transactional
+public class PostCustomRepositoryImpl implements PostCustomRepository {
+
+    @PersistenceContext
+    EntityManager entityManager;
+
+    @Override
+    public Post findMyPost() {
+        return entityManager.find(Post.class, 1L);
+    }
+
+}
+```
+```java
+@SpringBootApplication
+@EnableJpaRepositories(repositoryImplementationPostfix = "Impl")
+public class SpringJpaWhiteshipStudyApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringJpaWhiteshipStudyApplication.class, args);
+    }
+
+}
+```
+Impl 이 default 값이고 이를 바꾸고 싶으면 위 설정에서 따로 바꿔 주어야 한다.
