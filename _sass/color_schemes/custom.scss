@@ -128,3 +128,8 @@ $media-queries: (
         lg: $content-width + $nav-width,
         xl: 1400px,
 ) !default;
+
+.video-container iframe{
+  min-height: 400px;
+  width: 100%;
+}

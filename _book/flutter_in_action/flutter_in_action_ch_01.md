@@ -18,7 +18,7 @@ nav_order: 1
 다트가 [JIT 컴파일], [AOT 컴파일] 모두를 지원하기 때문이다.
 
 ## 플러터의 장점(= 리액트 네이티브와 비교하여)
-책에서는 '자체 렌더링 엔진을 탑해ㅏ고 있고, 바로 ARM 코드로 컴파일 한다.'는 장점 덕분에 '앱이 네이티브로 구동'되며 리액트 네이티브처럼 자바 스크립트 브릿지와 같은
+책에서는 '자체 렌더링 엔진을 탑재하고 있고, 바로 ARM 코드로 컴파일 한다.'는 장점 덕분에 '앱이 네이티브로 구동'되며 리액트 네이티브처럼 자바 스크립트 브릿지와 같은
 중간 계층이 필요가 없다고 하고 있다.
 
 [공식문서에서 설명하고 있는 아키텍처]에서 이와 관련된 여러 내용들을 확인할 수 있는데 몇몇 표현만 봐도 같은 맥락에서 설명하고 있다.
@@ -54,7 +54,7 @@ accessibility, and input; and manages the message event loop.
 
 ### StatelessWidget vs StatefulWidget
 
-<b>StatelessWidget</b>
+<b>StatelessWidget</b><br>
 StatelessWidget 은 프레임워크에 그 어떤 것도 알리지 않는다. 프레임워크에서 위젯에 언제 리빌드 해야하는지 알려준다.
 철저하게 외부(=프레임워크)에 의해서 생명이 결정[^1]된다.
 
@@ -62,7 +62,7 @@ StatelessWidget 은 프레임워크에 그 어떤 것도 알리지 않는다. �
 
 <br>
 
-<b>StatefulWidget</b>
+<b>StatefulWidget</b><br>
 StatefulWidget 은 항상 State 객체를 갖는다. State 객체는 setState()란는 메서드를 갖고 있는데, 위젯을 다시 그려야함을
 플러터에 알리는 기능을 수행한다. 이 포인트에서 StatelessWidget 와 크게 구별된다. StatelessWidget 는 프레임워크에 의사표현을 할 수 없는데 반해,
 StatefulWidget 는 언제 위젯을 다시 그려야하는지에 대해서 프레임워크에 위젯이 발언권을 가지고 있는 것이다.
