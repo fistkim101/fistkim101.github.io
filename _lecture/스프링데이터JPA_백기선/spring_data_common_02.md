@@ -44,6 +44,15 @@ public class SpringJpaWhiteshipStudyApplication {
 그렇기 때문에 @Query 로 직접 설정한 쿼리가 존재할 경우 Repository의 메소드는 직접 설정한 쿼리를 수행하고
 특별히 @Query 로 설정해준 쿼리가 없는 경우 메소드 이름을 분석해서 쿼리를 자동 생성하여 해당 쿼리를 수행한다.
 
+결국 쿼리가 만들어지는 방법을 정리하면 아래와 같다. 
+
+- JPA가 메소드 명을 분석해서 쿼리
+- @Query 로 직접 선언한 쿼리
+- 뒤에 나올 Query DSL 에 의해 생성된 쿼리
+- 뒤에 나올 Specification<T> 로 만들어지는 쿼리
+
+더 있을 수 있으나 이 정도면 충분한 것 같다.
+
 ```java
 public interface PostRepository extends JpaRepository<Post, Long> {
   List<Post> findByNameLike(String name);
@@ -132,8 +141,13 @@ limit 5,5;
 기존 레포지토리로 커스텀 정의한 쿼리를 사용할 수 있도록 할 수 있다.
 
 이 방법을 정리하기 전에 먼저 기존 레포지토리를 Bean 으로 어떻게 사용하는지 그 원리를 다시 짚어본다.(`핵심개념이해 4` 에서 이미 다뤘다.)
+
 {: .point }
-PostRepository -> JpaRepository<Post, Long> -> PagingAndSortingRepository<T, ID> -> CrudRepository<T, ID> -> Repository<T, ID>
+Repository<T, ID><br>
+<- CrudRepository<T, ID><br>
+<- PagingAndSortingRepository<T, ID><br> 
+<- JpaRepository<Post, Long><br> 
+<- PostRepository
 
 위와 같은 방향으로 상속이 이뤄지고 있으며, 최종적으로 최하단의 PostRepository 가 bean 으로 등록이 될때 @NoRepositoryBean 가 있는 중간 계층의 Repository들의 자원을 모두 갖게 된다.
 그리고 @NoRepositoryBean 이 있는 중간 계층의 Repository 는 정의된 메소드들만 제공하고 bean 으로 등록되지 않는다.
