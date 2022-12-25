@@ -92,6 +92,7 @@ public class AbstractAggregateRoot<A extends AbstractAggregateRoot<A>> {
 	}
 }
 ```
+
 {: .point }
 Convenience base class for aggregate roots that exposes a {@link #registerEvent(Object)} to capture domain events and
 expose them via {@link #domainEvents()}.
@@ -142,10 +143,13 @@ public class Post extends AbstractAggregateRoot<Post> {
         post.setName("event publish test");
         post.setDescription("event description");
 
-        post.registerEvent(); // <-- 도메인 내에서 선언한 event publish 처리를 해준다.
-        postRepository.save(post);
+        post.registerEvent(); // <-- 도메인 내에서 선언한 event 등록을 하면
+        postRepository.save(post); // <-- save 시점에 publish 된다.
     }
 ```
+
+위와 같이 처리하기전에 리스너 등록을 해두고 원하는 처리를 구성해두면 된다.
+위와 같은 방식은 DDD 구현에 더 용이한 것 같다. 
 
 ## Query DSL 
 

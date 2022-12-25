@@ -29,6 +29,20 @@ public interface PostRepository extends JpaRepository<Post, Long>, PostCustomRep
 }
 ```
 ```java
+    public static Specification<Post> getPostsByCustomSpecification(String name, String description) {
+        return ((root, query, criteriaBuilder) -> {
+            List<Predicate> predicates = new ArrayList<>(); // javax.persistence.criteria.Predicate;
+            if (name != null) {
+                predicates.add(criteriaBuilder.equal(root.get("name"), name));
+            }
+            if (description != null) {
+                predicates.add(criteriaBuilder.equal(root.get("description"), description));
+            }
+            return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
+        });
+    }
+```
+```java
     @Test
     void specificationTest() {
         Post post = new Post();
