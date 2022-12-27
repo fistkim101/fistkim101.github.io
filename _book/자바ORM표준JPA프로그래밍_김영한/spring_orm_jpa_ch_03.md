@@ -13,6 +13,7 @@ nav_order: 3
   - 수정
   - 삭제
 - JPA repository.save() 시 발생하는 내부 동작 (persist vs merge)
+- entityManager.flush()
 
 ## Persistent Context 란
 
@@ -169,3 +170,19 @@ repositoy의 save() 구현체를 보면 아래와 같다.
 
 이를 알아둬야 하는 이유는 실제 로직에서 update 발생시 이후에 뭔가 비즈니스 로직 처리를 해야할 때 파라미터로 보낸 entity 를 사용해선 안되고
 return 받은 그 entity 를 사용해야 하는 것의 근거이기 때문이다.
+
+## entityManager.flush()
+
+```java
+    /**
+     * Synchronize the persistence context to the
+     * underlying database.
+     * @throws TransactionRequiredException if there is
+     *         no transaction or if the entity manager has not been
+     *         joined to the current transaction
+     * @throws PersistenceException if the flush fails
+     */
+    public void flush();
+```
+
+entityManager의 flush() 가 호출되면 1차 캐시는 비워지지 않고 쓰기 지연 SQL 에 담긴 모든 sql 이 실행된다.
