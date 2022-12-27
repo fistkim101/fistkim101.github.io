@@ -38,6 +38,8 @@ JPA 를 사용하면 위와 같은 EntityManager 생성 및 트랜잭션 관리�
 [이 사이트](https://www.javatpoint.com/spring-boot-jpa) 에 정리가 매우 잘되어 있어서 그대로 가져왔다.
 
 ![](/images/concept-spring-jpa-architecture.png)
+![](/images/spring-jpa-architecture.png)
+![](/images/spring-jpa-class-relationship.png)
 
 여기서 persistence unit은 아래와 같이 Database 접속 정보를 가지고 있는 configuration 이라고 보면 된다. 
 
