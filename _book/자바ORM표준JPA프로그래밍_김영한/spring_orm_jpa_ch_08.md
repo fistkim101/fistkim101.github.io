@@ -125,11 +125,19 @@ org.hibernate.collection.internal.PersistentSet
 ## 결국 fetch 전략을 어떻게 선택할까
 
 너무 뻔한 말이지만 연관관계에 있되 거의 항상 자주 사용한다 싶으면 EAGER 전략을 취하고 그렇지 않으면 LAZY를 택한다.
-책에서는 일단 모두 LAZY 하게 가져오고 실제 사용을 보면서 EAGER로 개선하라고 권한다.
+책과 강의에서는 일단 모두 LAZY 로 가져오도록 처리하라고 권고한다.
 
-(강의 보고 보강하기. 강의에서는 아예 즉시 로딩 사용하지 마라고 권고)
+{: .warning }
+LAZY로 인해서 발생하는 문제는 fetch join, batch size, 어노테이션 등 차후에 나올 개념으로 해결한다.
 
-## 컬렉션 타입에 EAGER 사용시 주의할 점 두 가지 ((to be deleted) 참고 : NULL 제약 조건과 JPA 조인 전략)
+{: .careful }
+*무조건 그냥 지연 로딩만 사용. 즉시 로딩은 절대 사용하지 않는다.<br>
+*즉시 로딩은 JPQL 에서 N+1 문제를 일으킨다.(드라이빙 테이블에서 가져오고 보니 필드가 EAGER 인게 있어서 그것의 개수만큼 모두 조회 또 한다)<br>
+*@ManyToOne, @OneToOne 의 기본값이 EAGER니까 그건 직접 LAZY로 변경<br>
+
+![](/images/jpa-lazy-eager-careful.png)
+
+## 컬렉션 타입에 EAGER 사용시 주의할 점 두 가지
 
 1. 컬렉션 하나를 초과하여 즉시 로딩은 삼가한다.
 N과 M개 두 컬렉션이 있는 경우 이를 둘다 EAGER 로 가져오게 되면 N * M 의 경우의 수를 가져와야해서 성능에 악영향을 주므로 삼가한다.
@@ -186,5 +194,11 @@ where
   member0_.id=?
 ```
 
-## 영속성 전이와 DDD
-https://www.popit.kr/%EC%97%90%EA%B7%B8%EB%A6%AC%EA%B2%8C%EC%9E%87-%ED%95%98%EB%82%98%EC%97%90-%EB%A6%AC%ED%8C%8C%EC%A7%80%ED%86%A0%EB%A6%AC-%ED%95%98%EB%82%98/
+## [영속성 전이와 DDD](https://www.popit.kr/%EC%97%90%EA%B7%B8%EB%A6%AC%EA%B2%8C%EC%9E%87-%ED%95%98%EB%82%98%EC%97%90-%EB%A6%AC%ED%8C%8C%EC%A7%80%ED%86%A0%EB%A6%AC-%ED%95%98%EB%82%98/)
+DDD 책을 읽을때 참고해서 봤던 포스팅인데 당시에 도움이 많이 되었었다. 영속성 전이 전략과 엮어서 내용을 이해해두면 좋을 것 같다.  
+
+또 한 가지로 강의에서 cascade 사용시 주의할 점을 아래와 같이 강조한다.
+
+{: .careful }
+*단일 소유자가 분명한 child 에만 영속성 전이<br>
+*라이프사이클이 똑같은 child 에만 영속성 전이
