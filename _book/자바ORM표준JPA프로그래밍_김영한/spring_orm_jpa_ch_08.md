@@ -130,6 +130,9 @@ org.hibernate.collection.internal.PersistentSet
 {: .warning }
 LAZY로 인해서 발생하는 문제는 fetch join, batch size, 어노테이션 등 차후에 나올 개념으로 해결한다.
 
+{: .warning }
+무조건 그냥 지연 로딩만 사용. 즉시 로딩은 절대 사용하지 않는다.
+
 {: .careful }
 *무조건 그냥 지연 로딩만 사용. 즉시 로딩은 절대 사용하지 않는다.<br>
 *즉시 로딩은 JPQL 에서 N+1 문제를 일으킨다.(드라이빙 테이블에서 가져오고 보니 필드가 EAGER 인게 있어서 그것의 개수만큼 모두 조회 또 한다)<br>

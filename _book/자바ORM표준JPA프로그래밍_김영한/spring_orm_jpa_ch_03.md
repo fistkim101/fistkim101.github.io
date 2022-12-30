@@ -56,7 +56,7 @@ It sits between our application and persistent storage.
 *[Transient] : 임시로 체류중인 상태로 JPA가 관심을 두지 않는 상태(관리 X)<br>
 *[Persistent] : JPA가 해당 Entity 에 대해 관심을 두고 관리중인 상태(관리 O)<br>
 *Detached : JPA가 더이상 해당 Entity 에 대해 관심을 두지 않지 않는 상태(관리 X)<br>
-*Removed : JPA가 관리하긴 하지만 삭제하기로 한 상태(Removed 상태라고 해서 아직 delete 쿼리가 수행된 것이 아님)(관리 O)<br>
+*Removed : JPA가 관리하긴 하지만 삭제하기로 한 상태(Removed 상태라고 해서 아직 delete 쿼리가 수행된 것은 아니지만 영속성 컨텍스트에서 삭제된 상태가 된다)<br>
 
 ## DML 수행시 Persistent Context 에서의 상황 정리 
 
@@ -87,6 +87,9 @@ entityManager.persist(post2);
 1. persist 가 수행되면 transient 상태의 객체가 1차 캐시에 저장(= 영속 상태) 된다.
 2. 쓰기 지연 SQL 로 해당 entity 에 대한 insert 문이 저장된다.
 3. 트랜젝션이 끝나면서 flush 가 수행되며 database 에 쓰기 지연 SQL 에 저장된 모든 쿼리를 수행요청 한다. <b>(transactional write behind)</b>
+
+{: .careful }
+GeneratedValue 전략이 IDENTITY 인 경우에는 영속성 컨텍스트 저장을 위한 ID 값 채번이 필요하므로 persist 발생과 동시에 insert 가 실행된다.
 
 ### 수정
 
