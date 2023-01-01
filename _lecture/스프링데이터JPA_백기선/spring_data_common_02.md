@@ -102,6 +102,9 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     }
 ```
 
+{: .point }
+@Query 로 등록되는 쿼리는 사실상 하이버네이트의 @NamedQuery 와 동일하다.
+
 ### 쿼리를 만드는 방법
 이미 위에서 어느정도 확인을 했지만 @Query로 직접 설정해주는 방법과 메소드 이름으로 자동 생성되도록 하는 방법이 있다.
 직접 생성하는 거야 쿼리를 직접 넣어주는 것만 하면 되니, 내가 인지해야할 포인트는 어떤 규칙으로 메소드 이름을 구성해줘야 의도한대로 쿼리가 생성되도록 하는지에 관한

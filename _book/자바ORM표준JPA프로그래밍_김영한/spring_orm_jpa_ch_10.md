@@ -9,13 +9,14 @@ nav_order: 10
 - fetch join
   - fetch join 이란
   - fetch join 의 장점
-  - fetch join 의 한계
+  - fetch join 과 일반 join 의 차이
+  - fetch join 의 한계와 해결책
 - N+1 문제해결
   - N+1 문제란
   - 어떻게 해결하나 (방법은 세 가지)
     - EAGER 전략(아예 사용하지 말자)
     - fetch join  
-    - default_batch_fetch_size
+    - default_batch_fetch_size, @BatchSize
 - Criteria(다른 강의에서 이미 정리했기에 생략)
 - Query Dsl(다른 강의에서 이미 정리했기에 생략)
 
@@ -156,12 +157,21 @@ Hibernate:
 com.fistkim.springjpawhiteshipstudy.Team
 ```
 
-### fetch join 의 한계
+### fetch join 과 일반 join 의 차이
+fetch join 을 하면 inner join이 실행되는데, 이걸 참고해서 그러면 fetch join을 사용하지 않되 sql을 join 이 나가게 설정하면 어떻게 될까?
+
+결과적으로 sql은 join 문이 실행되지만 엔티티에는 프록시 객체가 할당된다.
+
+![](/images/jpa-fetch-join-vs-normal-join.png)
+
+### fetch join 의 한계와 해결책
 책에서는 아래와 같이 언급하고 있다.
 
 * 페치 조인 대상에는 별칭을 줄 수 없다.
 * 둘 이상의 컬렉션을 페치할 수 없다.
 * 컬렉션을 페치 조인 하면 페이징 API를 사용할 수 없다.
+
+페치 조인 대상에는 별칭을 줄 수 없다는 제약은 하이버네이트의 경우 별칭이 가능하다. 하지만 별칭 사용은 객체 탐색의 뎁스가 더 깊어져야할 때에만 사용하도록 한다.
 
 여기서 가장 크리티컬한 것이 페이징을 사용할 수 없다는 것이다. 사용할 수는 있으나 전체 데이터를 메모리에 올려서 페이징 처리를 하므로 문제가 있을 수 있다.
 ```java
@@ -236,12 +246,17 @@ Hibernate:
 
 [이 해결책을 코드에 적용한 것이 정리가 잘 된 포스트](https://junhyunny.github.io/spring-boot/jpa/jpa-fetch-join-paging-problem/)가 있어 링크를 남긴다.
 
+{: .point}
+*결론적으로 무조건 글로벌 fetch 전략으로 LAZY를 사용하고, EAGER하게 가져와야할 경우 전부 fetch join으로 해결하자.<br>
+*다만, 페이징처리가 필요한 경우에는 default_batch_fetch_size를 사용하자!
+
 ## N+1 문제해결
 
 ### N+1 문제란?
 [N+1 문제](https://junhyunny.github.io/spring-boot/jpa/jpa-one-plus-n-problem/) 는 LAZY 로딩을 사용하게 되면 매우 흔히 겪을 수 있는 문제이다. 
 이직을 할때 면접에서도 자주 질문을 받았었다. 이는 fetch join 을 이용하면 해결할 수 있다. 또다른 방법으로는 default_batch_fetch_size 설정이 있다.
 
+### <b>어떻게 해결하나? - fetch join</b><br>
 먼저 fetch join을 살펴보자.
 ```java
 public interface TeamRepository extends JpaRepository<Team, Long> {
@@ -263,12 +278,8 @@ public interface TeamRepository extends JpaRepository<Team, Long> {
 
 LAZY 로딩을 사용할 경우 team.getMembers() 를 호출할 때 member 테이블에 대해서 team 의 id 를 이용해서 조회하는 쿼리가 발생한다.
 그래서 teams 의 사이즈 만큼 member 테이블에 대한 조회가 발생하게 된다.
-
 최초로 teams 에 대한 조회 1회와 teams 를 순회하며 각 team element 에서 참조하고 있는 member들 컬렉션을 조회하는 N회를 합해서 1+N 쿼리가 수행되는 것이다.
 
-<br>
-
-### <b>어떻게 해결하나? - fetch join</b><br>
 하지만 fetch join 을 사용할 경우 아래와 같이 join 을 활용해서 1회의 쿼리로 조회를 끝낼 수 있다.
 ```sql
 Hibernate: 
@@ -322,55 +333,23 @@ Hibernate:
 ```
 
 결과를 보면 team은 아이디가 1, 2 밖에 없는데 (총 2개) row가 5개가 나온 것을 볼 수 있다. 이는 쿼리를 보면 inner join 의 결과인 것이다.
-그래서 아래와 같이 변환 작업을 해서 사용하면 된다.
-```java
-    @Override
-    @Transactional
-    public void run(ApplicationArguments args) throws Exception {
-        List<Team> teams = teamRepository.findAllFetchJoin();
-        System.out.println(">>>>> " + teams.size());
-        teams.forEach(team -> System.out.println("teamId: " + team.getId()));
 
-        System.out.println("Map===================================");
-        Map<Long, List<Team>> teamsMap = teams.stream().collect(Collectors.groupingBy(Team::getId));
-        System.out.println(">>>>> " + teamsMap.size());
-        teamsMap.keySet().forEach(System.out::println);
-        System.out.println("======================================");
+해결책으로는 jpql 에서 제공하는 distinct 를 사용하면 된다.
+sql의 distinct 는 중복된 결과를 제거하는 명령이지만 jpql의 distinct 는 아래 두 가지 기능을 수행한다.
 
-        System.out.println("Set===================================");
-        Map<Long, Set<Team>> teamsSet = teams.stream().collect(Collectors.groupingBy(Team::getId, Collectors.toSet()));
-        System.out.println(">>>>> " + teamsSet.size());
-        teamsMap.keySet().forEach(System.out::println);
-        System.out.println("======================================");
+* 중복된 결과를 제거.
+* 어플리케이션에 올린뒤 중복되는 객체를 제거.
 
-    }
-```
-```bash
->>>>> 5
-teamId: 1
-teamId: 1
-teamId: 2
-teamId: 2
-teamId: 2
-Map===================================
->>>>> 2
-1
-2
-======================================
-Set===================================
->>>>> 2
-1
-2
-======================================
-```
+![](/images/jpa-fetch-join-distinct.png)
 
 {: .warning }
 *일대다 페치 조인은 결과 수가 증가할 수 있다.<br>
+*일대다 페치 조인은 distinct를 사용하자.<br>
 *일대일, 다대일 페치 조인은 결과가 증가하지 않는다.
 
 <br>
 
-### <b>어떻게 해결하나? - default_batch_fetch_size</b><br>
+### <b>어떻게 해결하나? - default_batch_fetch_size,  @BatchSize</b><br>
 default_batch_fetch_size 의 원리는 지연 로딩으로 할당된 프록시 객체가 호출될 때 바로 호출하지 않고 모아서 in 절로 호출하는 원리이다.
 [이 포스팅](https://velog.io/@jadenkim5179/Spring-defaultbatchfetchsize%EC%9D%98-%EC%9E%91%EB%8F%99%EC%9B%90%EB%A6%AC)에 정리가 잘 되어있다.
 
@@ -411,4 +390,19 @@ Hibernate:
         members0_.team_id in (
             ?, ?
         )
+```
+
+개별 엔티티에 @BatchSize 를 이용해서 사이즈를 지정해주는 방식도 있다.
+```java
+    @BatchSize(size = 100)
+    @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
+    private Set<Member> members = new HashSet<>();
+```
+```java
+    @Override
+    @Transactional
+    public void run(ApplicationArguments args) throws Exception {
+        List<Team> teams = teamRepository.findAll();
+        teams.forEach(team -> System.out.println(team.getMembers().size()));
+    }
 ```
