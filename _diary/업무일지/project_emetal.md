@@ -11,11 +11,12 @@ nav_order: 1
   - [x] [요구사항 분석서](https://docs.google.com/spreadsheets/d/1lHmKznsJedaJZUxCLBaDLrUYgLfKVEgiVh3mCPJBUC8/edit#gid=0) 양식 작성
   - [ ] DEV 배포 파이프라인 구축(git action)
   - [ ] PROD 배포 파이프라인 구축(빈스토크 고려해보기)
+  - [x] 모듈 분리 (서비스 모듈, APP 모듈(서비스, 관리자) 분리)
 
 <br>
 
 - 서비스 (~ 1/8)
-  - [x] 모듈 분리 (서비스 모듈, APP 모듈(서비스, 관리자) 분리)
+  - [ ] platform-app 모듈 security 설정 및 기본 configuration 설정 
   - [ ] 경매 관련 API 리팩토링 (요구사항 정리 관련 엑셀 시트 작성과 병행)
   - [ ] 입찰 관련 API 리팩토링 (요구사항 정리 관련 엑셀 시트 작성과 병행)
   - [ ] 금속, 금속옵션 관련 API 리팩토링 (요구사항 정리 관련 엑셀 시트 작성과 병행)
@@ -26,6 +27,7 @@ nav_order: 1
 <br>    
 
 - 관리자 (~ 1/13)
+  - [ ] admin-app 모듈 security 설정 및 기본 configuration 설정
   - [ ] 경매 관련 API 리팩토링 (요구사항 정리 관련 엑셀 시트 작성과 병행)
   - [ ] 입찰 관련 API 리팩토링 (요구사항 정리 관련 엑셀 시트 작성과 병행)
   - [ ] 금속, 금속옵션 관련 API 리팩토링 (요구사항 정리 관련 엑셀 시트 작성과 병행)
