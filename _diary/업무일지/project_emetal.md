@@ -19,7 +19,7 @@ nav_order: 1
   - [x] [요구사항 분석서](https://docs.google.com/spreadsheets/d/1lHmKznsJedaJZUxCLBaDLrUYgLfKVEgiVh3mCPJBUC8/edit#gid=0) 양식 작성
   - [x] 모듈 분리 (서비스 모듈, APP 모듈(서비스, 관리자) 분리)
   - [x] DEV 배포 파이프라인 구축(git action)
-  - [ ] PROD 배포 파이프라인 구축(빈스토크 고려해보기)
+  - [x] PROD 배포 파이프라인 구축(빈스토크 고려해보기)
   - [x] 버그 및 추가 개선사항 진행
     - [x] 사업자유형 관련 플랫폼 회원가입 버그 픽스
     - [x] 가격지수관리 페이징 이슈(매끄럽지 못함)
