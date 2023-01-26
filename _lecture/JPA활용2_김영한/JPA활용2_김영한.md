@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 2023
+title: JPA활용2_김영한
 nav_order: 1
 has_children: true
 ---
