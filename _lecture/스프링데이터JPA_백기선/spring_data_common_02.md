@@ -198,3 +198,9 @@ public class SpringJpaWhiteshipStudyApplication {
 }
 ```
 Impl 이 default 값이고 이를 바꾸고 싶으면 위 설정에서 따로 바꿔 주어야 한다.
+
+최종적으로 아래와 같이 최하단의 Repository가 커스텀 레포지토리 인터페이스를 상속하도록 해준다.
+```java
+public interface PostRepository extends JpaRepository<Post, Long>, PostCustomRepository {
+}
+```
