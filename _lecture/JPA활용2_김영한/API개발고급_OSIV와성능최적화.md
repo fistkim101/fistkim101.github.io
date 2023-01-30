@@ -39,4 +39,5 @@ OrderService -> OrderQueryService 로의 의존을 갖고 OrderService에서 필
 지연로딩이 발생되도록 해서 필요한 DTO로의 변환을 처리하도록 하라는 것이다.
 
 이건 JPA 기본 강의 및 도서 보면서 OSIV 쓰지 않을때 어떻게 처리할지(FACADE 패턴 등)에 관해서 따로 정리를 할 필요성이 있을 것 같다.
-나중에 여기 이어서 정리를 해놔야겠다.
+일단 [기본 강의 들을때 정리해둔 부분](https://fistkim101.github.io/book/%EC%9E%90%EB%B0%94ORM%ED%91%9C%EC%A4%80JPA%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EA%B9%80%EC%98%81%ED%95%9C/spring_orm_jpa_ch_13/)을 링크를 남긴다. 
+나중에 FACADE 계층을 넣으면 샘플 코드를 다시 추가로 포스팅에 남겨야겠다.

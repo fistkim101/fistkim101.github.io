@@ -90,7 +90,7 @@ EntityManager 는 @PersistenceContext 를 통해서 아래와 같이 entityManag
     private EntityManager entityManager;
 ```
 
-책에서도 강조하듯 EntityManager는 데이터 베이스 커넥션과 밀접하게 작동하므로 스레드간애 공유하거나 재사용을 하면 안된다.
+책에서도 강조하듯 EntityManager는 데이터 베이스 커넥션과 밀접하게 작동하므로 스레드간에 공유하거나 재사용을 하면 안된다.
 아래와 같이 EntityManager 를 변수명을 달리 하여 두 개를 생성해봐도 결국 주소값을 비교해보면 동일한 EntityManager 임을 확인할 수 있다.
 
 ```java

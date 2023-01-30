@@ -11,8 +11,8 @@ nav_order: 10
   - fetch join 의 장점
   - fetch join 과 일반 join 의 차이
   - fetch join 의 한계와 해결책
-- N+1 문제해결
-  - N+1 문제란
+- 1+N 문제해결
+  - 1+N 문제란
   - 어떻게 해결하나 (방법은 세 가지)
     - EAGER 전략(아예 사용하지 말자)
     - fetch join  
@@ -250,9 +250,9 @@ Hibernate:
 *결론적으로 무조건 글로벌 fetch 전략으로 LAZY를 사용하고, EAGER하게 가져와야할 경우 전부 fetch join으로 해결하자.<br>
 *다만, 페이징처리가 필요한 경우에는 default_batch_fetch_size를 사용하자!
 
-## N+1 문제해결
+## 1+N 문제해결
 
-### N+1 문제란?
+### 1+N 문제란?
 [N+1 문제](https://junhyunny.github.io/spring-boot/jpa/jpa-one-plus-n-problem/) 는 LAZY 로딩을 사용하게 되면 매우 흔히 겪을 수 있는 문제이다. 
 이직을 할때 면접에서도 자주 질문을 받았었다. 이는 fetch join 을 이용하면 해결할 수 있다. 또다른 방법으로는 default_batch_fetch_size 설정이 있다.
 
