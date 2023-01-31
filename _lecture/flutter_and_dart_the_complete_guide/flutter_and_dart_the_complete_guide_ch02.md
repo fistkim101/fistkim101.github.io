@@ -8,7 +8,6 @@ nav_order: 3
 - visible widget vs invisible widget
 - Container
 - Padding
-- 
 
 ## visible widget vs invisible widget
 ![](images/visible_invisible_widget_01.png)

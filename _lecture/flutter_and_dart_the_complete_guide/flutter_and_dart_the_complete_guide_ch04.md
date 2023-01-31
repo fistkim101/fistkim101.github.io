@@ -16,6 +16,8 @@ nav_order: 5
 - Barrel
 - Column 의 height
 - Column 과 SingleChildScrollView
+- under score parameter 의미
+
 
 ### SizedBox vs Container
 [스택오버플로우에서도 있는 질문](https://stackoverflow.com/questions/55716322/flutter-sizedbox-vs-container-why-use-one-instead-of-the-other)이고,
@@ -89,4 +91,6 @@ Column, Row 를 사용할때 아래 세 가지는 기본값 쓰지말고 무조�
 Column 은 단지 free space의 제한이 없어진 상태일 뿐이다.
 4. 내부에 ListView 에 height를 알려줘야하는 이유는 ListView 가 infinite 한 height 를 차지하기 때문에 ListView가 속한 Column 내부에서 얼마의 공간을
 차지시켜야할지를 플러터가 모르기 때문에 지정을 해줘야하는 것이다.
+
+## [under score parameter 의미](https://stackoverflow.com/questions/25517016/what-does-it-mean-to-pass-i-e-underscore-as-the-sole-parameter-to-a-dart)
 
