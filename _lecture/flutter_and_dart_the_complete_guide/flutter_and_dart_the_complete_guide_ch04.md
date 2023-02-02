@@ -5,38 +5,9 @@ parent: Flutter & Dart - The Complete Guide
 nav_order: 5
 ---
 
-- Column, Row 
-  - mainAxisAlignment
-  - crossAxisAlignment
-- SizedBox vs Container
-- sort_child_properties_last
-- unnecessary_const
-- ListView
-- Card
 - Barrel
-- Column 의 height
+- Column 과 Row 의 MainAxisSize
 - Column 과 SingleChildScrollView
-- under score parameter 의미
-
-
-### SizedBox vs Container
-[스택오버플로우에서도 있는 질문](https://stackoverflow.com/questions/55716322/flutter-sizedbox-vs-container-why-use-one-instead-of-the-other)이고,
-[플러터 공식 가이드](https://dart-lang.github.io/linter/lints/sized_box_for_whitespace.html) 에도 있는 내용이다.
-
-> The main advantage seems to be that SizedBox can be const and won't even create a new instance during runtime.
-
-Container가 성능적으로 더 무겁다. 따라서 SizedBox로 충분하면 SizedBox를 사용하기.
-
-### [sort_child_properties_last](https://dart-lang.github.io/linter/lints/sort_child_properties_last.html)
-child, children 프로퍼티는 맨 하단으로 내리기. 그게 권장되는 스타일.
-
-### [unnecessary_const](https://dart-lang.github.io/linter/lints/unnecessary_const.html)
-const 는 최상단에만 해주면 된다. 쓸데없이 반복하지 말라.
-
-### [ListView](https://www.youtube.com/watch?v=KJpkjHGiI5A)
-[ListView children vs ListView.builder](https://velog.io/@juni416/ListView-vs-ListView.builder-%EC%B0%A8%EC%9D%B4%EC%A0%90)
-
-### [Card](https://www.youtube.com/watch?v=5lpMnWvrwGs)
 
 ### [Barrel](https://maruf-hassan.medium.com/handling-flutter-imports-like-a-pro-8ac128f0a6fd)
 
@@ -91,6 +62,3 @@ Column, Row 를 사용할때 아래 세 가지는 기본값 쓰지말고 무조�
 Column 은 단지 free space의 제한이 없어진 상태일 뿐이다.
 4. 내부에 ListView 에 height를 알려줘야하는 이유는 ListView 가 infinite 한 height 를 차지하기 때문에 ListView가 속한 Column 내부에서 얼마의 공간을
 차지시켜야할지를 플러터가 모르기 때문에 지정을 해줘야하는 것이다.
-
-## [under score parameter 의미](https://stackoverflow.com/questions/25517016/what-does-it-mean-to-pass-i-e-underscore-as-the-sole-parameter-to-a-dart)
-
