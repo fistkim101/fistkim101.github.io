@@ -28,7 +28,7 @@ nav_order: 7
 7. 이때 결정되는 기준 = (class type이 같은지? && key가 같은지?)
 8. 참조할 widget을 찾지 못한 element는 비로소 이때 삭제된다. (즉, widget 의 삭제에 이어서 즉시 삭제되지 않고 참조할 widget 을 탐색해본 뒤 없을때 지운다)
 
-![](images/concept-widget-element-tree.png)
-![](images/concept-app-lifecycle.png)
-![](images/concept-context.png)
-![](images/concept-widget-key.png)
+![](/images/concept-widget-element-tree.png)
+![](/images/concept-app-lifecycle.png)
+![](/images/concept-context.png)
+![](/images/concept-widget-key.png)
