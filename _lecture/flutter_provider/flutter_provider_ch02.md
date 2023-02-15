@@ -69,6 +69,58 @@ nav_order: 3
 
 - `<T>` 가 같은 두 개 이상의 인스턴스가 있는 경우에는 가장 가까운 인스턴스를 가져온다.
 
+```dart
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Provider<Dog>(
+      create: (context) => Dog(
+        name: 'Sun',
+        breed: 'Bulldog',
+        age: 3,
+      ),
+      child: MaterialApp(
+        title: 'Provider 02',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const MyHomePage(),
+      ),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Provider 02'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              '- name: ${Provider.of<Dog>(context).name}',
+              style: TextStyle(fontSize: 20.0),
+            ),
+            SizedBox(height: 10.0),
+            BreedAndAge(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
 <br>
 
 # ChangeNotifier & addListener
@@ -94,6 +146,137 @@ nav_order: 3
 - ChangeNotifierProvider 는 데이터를 필요로 하는 Widget 이 dependency injection 을 받음으로써 데이터(인스턴스)에 쉽게 접근할 수 있게 해준다.
 - 데이터의 변경이 발생했을 때 이 데이터의 변화에 맞춰서 선택적으로 Widget 을 rebuild 할 수 있게 해준다.
 
+```dart
+import 'package:flutter/foundation.dart';
+
+class Dog with ChangeNotifier {
+  final String name;
+  final String breed;
+  int age;
+  Dog({
+    required this.name,
+    required this.breed,
+    this.age = 1,
+  });
+
+  void grow() {
+    age++;
+    notifyListeners();
+  }
+}
+```
+
+{: .point }
+ChangeNotifier 의 notifyListeners() 는 이를 구독하고 있는 모든 listener 들에게 변경 사실을 알리고 rebuild 하도록 만든다. [공식문서](https://api.flutter.dev/flutter/foundation/ChangeNotifier/notifyListeners.html)를 참고하자.
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'models/dog.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider<Dog>(
+      create: (context) => Dog(name: 'dog04', breed: 'breed04'),
+      child: MaterialApp(
+        title: 'Provider 04',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const MyHomePage(),
+      ),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Provider 04'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              '- name: ${Provider.of<Dog>(context).name}',
+              style: TextStyle(fontSize: 20.0),
+            ),
+            SizedBox(height: 10.0),
+            BreedAndAge(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class BreedAndAge extends StatelessWidget {
+  const BreedAndAge({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          '- breed: ${Provider.of<Dog>(context).breed}',
+          style: TextStyle(fontSize: 20.0),
+        ),
+        SizedBox(height: 10.0),
+        Age(),
+      ],
+    );
+  }
+}
+
+class Age extends StatelessWidget {
+  const Age({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          '- age: ${Provider.of<Dog>(context).age}',
+          style: TextStyle(fontSize: 20.0),
+        ),
+        SizedBox(height: 20.0),
+        ElevatedButton(
+          onPressed: () => Provider.of<Dog>(context, listen: false).grow(),
+          child: Text(
+            'Grow',
+            style: TextStyle(fontSize: 20.0),
+          ),
+        ),
+      ],
+    );
+  }
+}
+```
+
 <br>
 
 # read, watch, select extension methods
@@ -107,6 +290,114 @@ nav_order: 3
 
 {: .point }
 <b>context.watch vs context.select</b>
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'models/dog.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider<Dog>(
+      create: (context) => Dog(name: 'dog05', breed: 'breed05', age: 3),
+      child: MaterialApp(
+        title: 'Provider 05',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const MyHomePage(),
+      ),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Provider 05'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              '- name: ${context.watch<Dog>().name}',
+              style: TextStyle(fontSize: 20.0),
+            ),
+            SizedBox(height: 10.0),
+            BreedAndAge(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class BreedAndAge extends StatelessWidget {
+  const BreedAndAge({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          '- breed: ${context.select<Dog, String>((Dog dog) => dog.breed)}',
+          style: TextStyle(fontSize: 20.0),
+        ),
+        SizedBox(height: 10.0),
+        Age(),
+      ],
+    );
+  }
+}
+
+class Age extends StatelessWidget {
+  const Age({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          '- age: ${context.select<Dog, int>((Dog dog) => dog.age)}',
+          style: TextStyle(fontSize: 20.0),
+        ),
+        SizedBox(height: 20.0),
+        ElevatedButton(
+          onPressed: () => context.read<Dog>().grow(),
+          child: Text(
+            'Grow',
+            style: TextStyle(fontSize: 20.0),
+          ),
+        ),
+      ],
+    );
+  }
+}
+```
 
 <br>
 
@@ -243,7 +534,73 @@ class Babies {
 ![](/images/Consumer-page-001.jpg)
 ![](/images/Consumer-page-002.jpg)
 
+```dart
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Provider 08'),
+      ),
+      body: Consumer<Dog>(
+        builder: (BuildContext context, Dog dog, Widget? child) {
+          return Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                child!,
+                SizedBox(height: 10.0),
+                Text(
+                  '- name: ${dog.name}',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+                SizedBox(height: 10.0),
+                BreedAndAge(),
+              ],
+            ),
+          );
+        },
+        child: Text(
+          'I like dogs very much',
+          style: TextStyle(fontSize: 20.0),
+        ),
+      ),
+    );
+  }
+}
+```
 
+- Consumer 의 파라미터 (BuildContext context, Dog dog, Widget? child) 중 child 는 builder 내에서 rebuild 될 필요가 없는 Widget 이 있는 경우를 대비해서 위와 같이 사용한다. 위 예제에서는 어떤 경우든 rebuild 될 필요가 없는 Text Widget 을 child 로 빼주었다.
+
+<br>
+
+# Consumer, builder, ProviderNotFoundException
+
+![](/images/Consumer-builder-ProviderNotFoundException-page-001.jpg)
+![](/images/Consumer-builder-ProviderNotFoundException-page-002.jpg)
+![](/images/Consumer-builder-ProviderNotFoundException-page-003.jpg)
+![](/images/Consumer-builder-ProviderNotFoundException-page-004.jpg)
+![](/images/Consumer-builder-ProviderNotFoundException-page-005.jpg)
+![](/images/Consumer-builder-ProviderNotFoundException-page-006.jpg)
+
+- Consumer 를 쓰든 builder 를 쓰든 둘 중 편한 방법을 사용하자.
+
+<br>
+
+# Selector
+
+![](/images/Selector-page-001.jpg)
+
+- Consumer 와 유사한데 Consumer 보다 더 세세한 컨트롤을 가능하게 해준다.
+- 앞에서 학습한 `context.select<T, R>((R selector(T value))) => R` 과 유사한 개념이다.
+- 지금 학습한 Selector 라는 Widget 과 `context.select<T, R>((R selector(T value))) => R` 는 공통적으로 특정 property 의 변경에 대해서 react 할 수 있도록 하는 것.
+
+<br>
+
+# ProviderNotFoundException 더 알아보기, Builder Widget
+
+![](/images/Selector-page-001.jpg)
 
 
 
