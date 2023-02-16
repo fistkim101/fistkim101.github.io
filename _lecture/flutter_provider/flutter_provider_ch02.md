@@ -602,20 +602,953 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ![](/images/Selector-page-001.jpg)
 
+- extension 의 context 는 build method 의 buildContext 임을 명심. 그래서 그걸 그대로 사용하면 ProviderNotFoundException 가 발생할 수 밖에 없다.
+- 이를 해결하려면 'Consumer, builder, ProviderNotFoundException' 에서 학습한 builder 프로퍼티를 사용하거나 child 로 Widget 을 따로 빼서 별도의 Widget 으로 사용한다.
+- Builder Widget 의 context 는 조상 Widget 의 BuildContext 가 아니고 Builder Widget 자체의 BuildContext 이기 때문에 이를 사용해서 Widget Tree 를 위로 탐색하면 원하는 T(type)에 대한 Provider 를 찾을 수 있다.
+- builder 프로퍼티도 이미 학습한 바와 같이 syntax sugar 로 Builder Widget 이 사용된 것과 동일하다.
 
+<br>
 
+# Provider Access - Anonymous route access
 
+![](/images/provider-access-and-value-constructor-page-001.jpg)
+![](/images/provider-access-and-value-constructor-page-002.jpg)
+![](/images/provider-access-and-value-constructor-page-003.jpg)
+![](/images/provider-access-and-value-constructor-page-004.jpg)
 
+- `Consumer, builder, ProviderNotFoundException` 에서 Error Message 2 의 경우를 학습함.
+- `Consumer, builder, ProviderNotFoundException` 에서 Error Message 3 의 경우 parent-child 관계에서 child 로서 Widget Tree 를 위로 탐색하면서 Provider 를 찾아하는데 탐색시 사용하는 context 가 해당 child 의 context 가 아니라, Provider 위치와 같거나 혹은 그 이상의 level 의 context 일 경우 발생한 에러.
+- Error Message 2 도 parent-child 관계에서 child 로서 위로 탐색이 발생되어야 하는데, 다른 route 에서 탐색했으므로(여기서 예제는 sibling 관계) 못찾는 문제가 발생.
+- 이 때의 해결 방법은 value constructor 이다. 새로운 sub-tree 에 이미 존재하는 class 에 대한 access 를 제공할 때 사용. value constructor 는 class 를 자동으로 close 하지 않는다.
 
+```dart
+onPressed: () {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (_) {
+      return ChangeNotifierProvider.value(
+        value: context.read<Counter>(),
+        child: ShowMeCounter(),
+      );
+    }),
+  );
+},
+```
 
+- context.read 시 사용하는 context 는 Navigator.push 의 context 를 사용해야 한다. MaterialPageRoute 의 context 가 아님을 명심. 위로 탐색하여 Provider 를 찾아야 하는데, MaterialPageRoute 의 경우 sibling 이기 때문에 MaterialPageRoute 의 context 를 사용할 경우 Provider 를 여전히 못찾는다.   
 
+<br>
 
+아래는 코드 전체.
 
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'counter.dart';
+import 'show_me_counter.dart';
 
+void main() {
+  runApp(const MyApp());
+}
 
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Anonymous Route',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: ChangeNotifierProvider<Counter>(
+        create: (context) => Counter(),
+        child: const MyHomePage(),
+      ),
+    );
+  }
+}
 
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              child: Text(
+                'Show Me Counter',
+                style: TextStyle(fontSize: 20.0),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) {
+                    return ChangeNotifierProvider.value(
+                      value: context.read<Counter>(),
+                      child: ShowMeCounter(),
+                    );
+                  }),
+                );
+              },
+            ),
+            SizedBox(height: 20.0),
+            ElevatedButton(
+              child: Text(
+                'Increment Counter',
+                style: TextStyle(fontSize: 20.0),
+              ),
+              onPressed: () {
+                context.read<Counter>().increment();
+              },
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+<br>
+
+# Provider Access - Named route access
+
+계속해서 Provider Access 에 대해서 학습한다. 바로 위에서는 Anonymous route access 를 살펴보았다. 
+왜 위의 케이스가 Anonymous route 냐면 Navigator.push 를 사용했기 때문이다.
+
+이번에는 Named route 에서의 Provider 에 대한 access 를 학습한다.
+
+복습 차원에서 짚고 넘어가자면, Anonymous route 가 Anonymous 인 이유는 말 그대로 이름이 없어서다. 반대로 이름이 있다는 말은 MaterialApp 에서 routes property 내에 route 주소와 Screen 으로 사용할 Widget 이 등록되어 있다는 것을 의미한다.
+바로 위 Anonymous route 는 Navigator.push 로 route 설정을 따로 해주지 않고 화면 Stack 을 바로 쌓아 올린 것이기 때문에 Anonymous 였다.
+
+```dart
+routes: {
+  '/': (context) => ChangeNotifierProvider.value(
+        value: _counter,
+        child: MyHomePage(),
+      ),
+  '/counter': (context) => ChangeNotifierProvider.value(
+        value: _counter,
+        child: ShowMeCounter(),
+      ),
+},
+```
+
+위와 같이 routes 설정 부분에서 ChangeNotifierProvider.value 로 감싸주면 되는데, 주의할 점이 있다.
+create 를 사용해서 사용할 인스턴스를 생성할 경우 자동으로 dispose 를 해주는데 지금 위의 경우 create 로 인스턴스를 생성하지 않았고, 아래 전체 코드에 나와있다시피 state 에서 인스턴스를 직접 생성해줬다.
+
+따라서 dispose 역시 아래와 같이 직접 해줘야한다.
+
+```dart
+  @override
+  void dispose() {
+    _counter.dispose();
+    super.dispose();
+  }
+```
+
+아래는 전체 코드이다.
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'counter.dart';
+import 'show_me_counter.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  final Counter _counter = Counter();
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Anonymous Route',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      routes: {
+        '/': (context) => ChangeNotifierProvider.value(
+              value: _counter,
+              child: MyHomePage(),
+            ),
+        '/counter': (context) => ChangeNotifierProvider.value(
+              value: _counter,
+              child: ShowMeCounter(),
+            ),
+      },
+    );
+  }
+
+  @override
+  void dispose() {
+    _counter.dispose();
+    super.dispose();
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              child: Text(
+                'Show Me Counter',
+                style: TextStyle(fontSize: 20.0),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/counter');
+              },
+            ),
+            SizedBox(height: 20.0),
+            ElevatedButton(
+              child: Text(
+                'Increment Counter',
+                style: TextStyle(fontSize: 20.0),
+              ),
+              onPressed: () {
+                context.read<Counter>().increment();
+              },
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+<br>
+
+# Provider Access - Generated route access, Global access
+
+학습한 Provider Access 에 대해서 무엇을 했고, 무엇이 남았는지 다시 짚어본다.
+
+- Provider Access
+  - Anonymous route access<br>
+    Navigator.push 내에서 사용할 screen 을 value constructor 로 감싸주되, context 를 Navigator.push 의 것을 사용한다.      
+
+  - Named route access<br>
+    routes 설정 부분에서 value constructor 로 감싸주되, 사용할 인스턴스가 create 로 만들어진게 아니라 자동으로 dispose 되지 않으므로 직접 해당 인스턴스를 dispose 처리 해준다.
+    
+  - Generated route access<br>
+    Named route access 과 거의 동일하다. 아래 코드를 보자.
+
+```dart
+class _MyAppState extends State<MyApp> {
+  final Counter _counter = Counter();
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Anonymous Route',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      onGenerateRoute: (RouteSettings settings) {
+        switch (settings.name) {
+          case '/':
+            return MaterialPageRoute(
+              builder: (context) => ChangeNotifierProvider.value(
+                value: _counter,
+                child: MyHomePage(),
+              ),
+            );
+          case '/counter':
+            return MaterialPageRoute(
+              builder: (context) => ChangeNotifierProvider.value(
+                value: _counter,
+                child: ShowMeCounter(),
+              ),
+            );
+          default:
+            return null;
+        }
+      },
+    );
+  }
+
+  @override
+  void dispose() {
+    _counter.dispose();
+    super.dispose();
+  }
+}
+```
+
+Global access 의 경우 아래와 같이 최 상단에 Provider 로 감싸두면 접근이 가능하다.
+
+```dart
+return Provider<T>(
+  create: (_) => T(),
+  child: MaterialApp(
+      ...
+  ),    
+);
+```
+
+하지만 분업 환경 및 유지보수 등을 고려할 때 적절지 못한 방식이다. 실무에서 이렇게 사용할 인스턴스가 있을까 싶다.
+전에 로딩스피너를 이렇게 global access 가능하게 처리해서 사용했던 것 같기도 하고.. 오픈소스 프로젝트들을 탐구할 때 확인해보도록 하자.
+
+<br>
+
+# ProxyProvider - 개요 1
+
+![](/images/ProxyProvider-Overview-1-page-001.jpg)
+
+- Provider 에서 다른 Provider 의 값이 필요한 경우에 ProxyProvider 를 사용한다.
+- 다른 Provider 에 기반하여 value 를 만드는 Provider (A provider that builds a value based on other provider)
+- 다른 Provider 의 값에 의존해서 value 를 만드는 Provider 인 것이다.
+- 꼭 다른 Provider 에 의존하지 않더라도, 어떤 변하는 값에 의존해야 한다면 ProxyProvider 를 사용한다.
+
+![](/images/ProxyProvider-Overview-1-page-002.jpg)
+
+- ProxyProvider 도 종류가 많다.
+
+![](/images/ProxyProvider-Overview-1-page-003.jpg)
+![](/images/ProxyProvider-Overview-1-page-004.jpg)
+
+- create 는 optional 이고 update 가 required 이다.
+- ProxyProvider 가 자체적으로 만들고 관리해야할 value 가 있다면 create 가 필요하지만, 그런 경우가 아니라면 만들 필요가 없기 때문이다.
+- 그래서 create 는 한 번만 called, 되고 update 는 여러번 called 된다.
+- ProxyProvider 는 다른 Provider 가 제공하는 값에 의존하는데, 다른 Provider 가 제공하는 value 가 바뀌면 이를 바라보고 있는(의존하고 있는) ProxyProvider 가 제공하는 값이 바뀌어야 하므로 update 가 여러번 called 되는 것은 매우 당연한 일이다.
+
+![](/images/ProxyProvider-Overview-1-page-005.jpg)
+![](/images/ProxyProvider-Overview-1-page-006.jpg)
+
+update 가 호출되는 경우들은 아래와 같다. 
+
+- ProxyProvider 가 가장 처음으로 의존하고 있는 다른 Provider 의 값을 얻은 경우
+- ProxyProvider 가 의존하고 있는 다른 Provider 가 제공하는 값이 변경된 경우
+- ProxyProvider 가 rebuild 되는 경우
+
+<br>
+
+# ProxyProvider - 개요 2
+
+![](/images/ProxyProvider-Overview-2-page-001.jpg)
+![](/images/ProxyProvider-Overview-2-page-002.jpg)
+![](/images/ProxyProvider-Overview-2-page-003.jpg)
+![](/images/ProxyProvider-Overview-2-page-004.jpg)
+
+- The instance of MyChangeNotifier is updated whenever myModel changes.
+- The same instance of MyChangeNotifier is used again and again, not created again. (새로 만들어지지 않고 한번 만들어진 MyChangeNotifier 가 계속 사용된다.)  
+
+![](/images/ProxyProvider-Overview-2-page-005.jpg)
+
+<br>
+
+# ProxyProvider - 실습 & 예제
+
+```dart
+
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+class Translations {
+  const Translations(this._value);
+  final int _value;
+
+  String get title => 'You clicked $_value times';
+}
+
+class WhyProxyProv extends StatefulWidget {
+  const WhyProxyProv({Key? key}) : super(key: key);
+
+  @override
+  _WhyProxyProvState createState() => _WhyProxyProvState();
+}
+
+class _WhyProxyProvState extends State<WhyProxyProv> {
+  int counter = 0;
+
+  void increment() {
+    setState(() {
+      counter++;
+      print('counter: $counter');
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Why ProxyProvider'),
+      ),
+      body: Center(
+        child: Provider<Translations>(
+          create: (_) => Translations(counter),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ShowTranslations(),
+              SizedBox(height: 20.0),
+              IncreaseButton(increment: increment),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ShowTranslations extends StatelessWidget {
+  const ShowTranslations({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final title = Provider.of<Translations>(context).title;
+
+    return Text(
+      title,
+      style: TextStyle(fontSize: 28.0),
+    );
+  }
+}
+
+class IncreaseButton extends StatelessWidget {
+  final VoidCallback increment;
+  const IncreaseButton({
+    Key? key,
+    required this.increment,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: increment,
+      child: Text(
+        'INCREASE',
+        style: TextStyle(fontSize: 20.0),
+      ),
+    );
+  }
+}
+```
+
+- create 는 한 번만 실행되므로 increment 에 의해서 counter 값이 증가해도 결국 `create: (_) => Translations(counter)` 에서 딱 한번 만들어진 인스턴스는 만들어지던 당시의 counter 로 만들어졌기 때문에 `final title = Provider.of<Translations>(context).title;` 의 값은 create 때 만들어진 인스턴스 그대로다.    
+
+<br>
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+class Translations {
+  const Translations(this._value);
+  final int _value;
+
+  String get title => 'You clicked $_value times';
+}
+
+class ProxyProvUpdate extends StatefulWidget {
+  const ProxyProvUpdate({Key? key}) : super(key: key);
+
+  @override
+  _ProxyProvUpdateState createState() => _ProxyProvUpdateState();
+}
+
+class _ProxyProvUpdateState extends State<ProxyProvUpdate> {
+  int counter = 0;
+
+  void increment() {
+    setState(() {
+      counter++;
+      print('counter: $counter');
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ProxyProvider update'),
+      ),
+      body: Center(
+        child: ProxyProvider0<Translations>(
+          update: (_, __) => Translations(counter),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ShowTranslations(),
+              SizedBox(height: 20.0),
+              IncreaseButton(increment: increment),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ShowTranslations extends StatelessWidget {
+  const ShowTranslations({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final title = Provider.of<Translations>(context).title;
+
+    return Text(
+      title,
+      style: TextStyle(fontSize: 28.0),
+    );
+  }
+}
+
+class IncreaseButton extends StatelessWidget {
+  final VoidCallback increment;
+  const IncreaseButton({
+    Key? key,
+    required this.increment,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: increment,
+      child: Text(
+        'INCREASE',
+        style: TextStyle(fontSize: 20.0),
+      ),
+    );
+  }
+}
+```
+
+- 제공해야할 값이 가변적인 값인 counter 에 의존하는 인스턴스이므로 ProxyProvider 를 사용해준 코드이다.
+- 이미 counter 값이 0 으로 초기화 되어 있어서, create 가 필요가 없다. 그리고 제공해야할 가변 인스턴스가 하나다. 그래서 ProxyProvider0 를 사용했다.([공식문서](https://pub.dev/documentation/provider/latest/provider/ProxyProvider0-class.html) 참고)
+
+<br>
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+class Translations {
+  late int _value;
+
+  void update(int newValue) {
+    _value = newValue;
+  }
+
+  String get title => 'You clicked $_value times';
+}
+
+class ProxyProvCreateUpdate extends StatefulWidget {
+  const ProxyProvCreateUpdate({Key? key}) : super(key: key);
+
+  @override
+  _ProxyProvCreateUpdateState createState() => _ProxyProvCreateUpdateState();
+}
+
+class _ProxyProvCreateUpdateState extends State<ProxyProvCreateUpdate> {
+  int counter = 0;
+
+  void increment() {
+    setState(() {
+      counter++;
+      print('counter: $counter');
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ProxyProvider create/update'),
+      ),
+      body: Center(
+        child: ProxyProvider0<Translations>(
+          create: (_) => Translations(),
+          update: (_, Translations? translations) {
+            translations!.update(counter);
+            return translations;
+          },
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ShowTranslations(),
+              SizedBox(height: 20.0),
+              IncreaseButton(increment: increment),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ShowTranslations extends StatelessWidget {
+  const ShowTranslations({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final title = context.watch<Translations>().title;
+
+    return Text(
+      title,
+      style: TextStyle(fontSize: 28.0),
+    );
+  }
+}
+
+class IncreaseButton extends StatelessWidget {
+  final VoidCallback increment;
+  const IncreaseButton({
+    Key? key,
+    required this.increment,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: increment,
+      child: Text(
+        'INCREASE',
+        style: TextStyle(fontSize: 20.0),
+      ),
+    );
+  }
+}
+```
+
+- create 에서 생성을 먼저 한 케이스다.
+- update 에서 create 에서 생성된 객체를 받아 .update() 를 call 하고 return 한다.
+- 여기서 또 update 발생하면 처음 create 발생시 만들어진 인스턴스(= 처음 update 때 사용된)를 계속 참조하여 재활용한다. (update 한다고 새로 만들어서 return 하는 것이 아니라는 것을 명심)
+
+<br>
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+class Translations {
+  const Translations(this._value);
+  final int _value;
+
+  String get title => 'You clicked $_value times';
+}
+
+class ProxyProvProxyProv extends StatefulWidget {
+  const ProxyProvProxyProv({Key? key}) : super(key: key);
+
+  @override
+  _ProxyProvProxyProvState createState() => _ProxyProvProxyProvState();
+}
+
+class _ProxyProvProxyProvState extends State<ProxyProvProxyProv> {
+  int counter = 0;
+
+  void increment() {
+    setState(() {
+      counter++;
+      print('counter: $counter');
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ProxyProvider ProxyProvider'),
+      ),
+      body: Center(
+        child: MultiProvider(
+          providers: [
+            ProxyProvider0<int>(
+              update: (_, __) => counter,
+            ),
+            ProxyProvider<int, Translations>(
+              update: (_, value, __) => Translations(value),
+            ),
+          ],
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ShowTranslations(),
+              SizedBox(height: 20.0),
+              IncreaseButton(increment: increment),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ShowTranslations extends StatelessWidget {
+  const ShowTranslations({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final title = context.watch<Translations>().title;
+
+    return Text(
+      title,
+      style: TextStyle(fontSize: 28.0),
+    );
+  }
+}
+
+class IncreaseButton extends StatelessWidget {
+  final VoidCallback increment;
+  const IncreaseButton({
+    Key? key,
+    required this.increment,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: increment,
+      child: Text(
+        'INCREASE',
+        style: TextStyle(fontSize: 20.0),
+      ),
+    );
+  }
+}
+```
+
+- 두 개의 ProxyProvider 를 사용하는 케이스.
+- ProxyProvider0 는 가변적인 int value 를 return
+- ProxyProvider 는 ProxyProvider0 가 제공하는 가변적인 int 를 받아서 새로운 인스턴스를 return
+- 이 경우에 ProxyProvider 가 항상 새로운 인스턴스를 만들어서 return 하고 있다는 것을 명심. 매번 새로운 Translations 를 만들어서 return 하고 있다. 
+
+<br>
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+class Counter with ChangeNotifier {
+  int counter = 0;
+
+  void increment() {
+    counter++;
+    notifyListeners();
+  }
+}
+
+class Translations with ChangeNotifier {
+  late int _value;
+
+  void update(Counter counter) {
+    _value = counter.counter;
+    notifyListeners();
+  }
+
+  String get title => 'You clicked $_value times';
+}
+
+class ChgNotiProvChgNotiProxyProv extends StatefulWidget {
+  const ChgNotiProvChgNotiProxyProv({Key? key}) : super(key: key);
+
+  @override
+  _ChgNotiProvChgNotiProxyProvState createState() =>
+      _ChgNotiProvChgNotiProxyProvState();
+}
+
+class _ChgNotiProvChgNotiProxyProvState
+    extends State<ChgNotiProvChgNotiProxyProv> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ChangeNotifierProvider ChagneNotifierProxyProvider'),
+      ),
+      body: Center(
+        child: MultiProvider(
+          providers: [
+            ChangeNotifierProvider<Counter>(
+              create: (_) => Counter(),
+            ),
+            ChangeNotifierProxyProvider<Counter, Translations>(
+              create: (_) => Translations(),
+              update: (
+                BuildContext _,
+                Counter counter,
+                Translations? translations,
+              ) {
+                translations!..update(counter);
+                return translations;
+              },
+            ),
+          ],
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ShowTranslations(),
+              SizedBox(height: 20.0),
+              IncreaseButton(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ShowTranslations extends StatelessWidget {
+  const ShowTranslations({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final title = context.watch<Translations>().title;
+
+    return Text(
+      title,
+      style: TextStyle(fontSize: 28.0),
+    );
+  }
+}
+
+class IncreaseButton extends StatelessWidget {
+  const IncreaseButton({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () => context.read<Counter>().increment(),
+      child: Text(
+        'INCREASE',
+        style: TextStyle(fontSize: 20.0),
+      ),
+    );
+  }
+}
+```
+
+- 정말 여러가지 방식으로 동일한 결과를 구현할 수 있다.
+- Counter 가 Value Object 로 사용 되었다.  
+- IncreaseButton 에서는 단지 Counter 에 access 만 했다. increment() 를 실행하기만 할 목적이기 때문.
+
+<br>
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+class Counter with ChangeNotifier {
+  int counter = 0;
+
+  void increment() {
+    counter++;
+    notifyListeners();
+  }
+}
+
+class Translations {
+  const Translations(this._value);
+  final int _value;
+
+  String get title => 'You clicked $_value times';
+}
+
+class ChgNotiProvProxyProv extends StatefulWidget {
+  const ChgNotiProvProxyProv({Key? key}) : super(key: key);
+
+  @override
+  _ChgNotiProvProxyProvState createState() => _ChgNotiProvProxyProvState();
+}
+
+class _ChgNotiProvProxyProvState extends State<ChgNotiProvProxyProv> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ChangeNotifierProvider ProxyProvider'),
+      ),
+      body: Center(
+        child: MultiProvider(
+          providers: [
+            ChangeNotifierProvider<Counter>(
+              create: (_) => Counter(),
+            ),
+            ProxyProvider<Counter, Translations>(
+              update: (_, counter, __) => Translations(counter.counter),
+            ),
+          ],
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ShowTranslations(),
+              SizedBox(height: 20.0),
+              IncreaseButton(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ShowTranslations extends StatelessWidget {
+  const ShowTranslations({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final title = context.watch<Translations>().title;
+
+    return Text(
+      title,
+      style: TextStyle(fontSize: 28.0),
+    );
+  }
+}
+
+class IncreaseButton extends StatelessWidget {
+  const IncreaseButton({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () => context.read<Counter>().increment(),
+      child: Text(
+        'INCREASE',
+        style: TextStyle(fontSize: 20.0),
+      ),
+    );
+  }
+}
+```
+
+- 직전에 살펴본 ChangeNotifierProvider, ChangeNotifierProxyProvider 조합은 기존의 Translations 를 mutation 시켜서 재활용 하는 반면 이 방식은 Counter 가 변할 때마다 매번 새로운 Translations 인스턴스를 return 한다. 
+- 강사님 이야기로는 단순히 computed state 를 만들어 내는 경우 ChangeNotifierProvider 를 쓰지 않고 ProxyProvider 를 사용하는 것이 매뉴얼에도 나와있는 preferred way 라고 한다.     
+
+{: .point }
+단순히 computed state 를 만들어 내는 경우 ChangeNotifierProvider 를 쓰지 않고 ProxyProvider 를 사용하는 것이 매뉴얼에도 나와있는 preferred way 라고 한다.
+
+<br>
 
 
 
