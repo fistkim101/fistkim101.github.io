@@ -1550,6 +1550,243 @@ class IncreaseButton extends StatelessWidget {
 
 <br>
 
+# Errors & addPostFrameCallback - 1
 
+![](/images/errors-and-addPostFrameCallback-1-page-001.jpg)
+![](/images/errors-and-addPostFrameCallback-1-page-002.jpg)
+![](/images/errors-and-addPostFrameCallback-1-page-003.jpg)
 
+<br>
 
+# Errors & addPostFrameCallback - 2
+
+![](/images/errors-and-addPostFrameCallback-2-page-001.jpg)
+
+- 위의 에러는 아래와 같은 코드에서 발생되었다.
+- flutter 가 Widget 들을 그리고 있는 중에 다시 build 요청을 할 수 없다는 것.
+
+```dart
+class Counter with ChangeNotifier {
+  int counter = 0;
+
+  void increment() {
+    counter++;
+    notifyListeners();
+  }
+}
+```
+```dart
+@override
+void initState(){
+  super.initState();
+  context.read<Counter>().increament();
+  myCounter = context.read<Counter>().counter + 10;
+}
+```
+
+![](/images/errors-and-addPostFrameCallback-2-page-002.jpg)
+![](/images/errors-and-addPostFrameCallback-2-page-003.jpg)
+
+```dart
+WidgetsBinding.instance!.addPostFrameCallback((_) {
+  context.read<Counter>().increment();
+  myCounter = context.read<Counter>().counter + 10;
+});
+```
+
+- addPostFrameCallback 은 현재의 Frame 이 완성된 후 등록된 callback 을 실행시키도록 한다.
+- add(추가) + PostFrameCallback(Frame 다 그려진 후 불려질 Callback)
+- UI에 영향을 미치는 action 의 실행을 현재의 Frame 이후로 지연시킬 수 있다. '현재의 Frame 이후' 라는 뜻은 결국 현재 싸이클의 build 가 끝난 후를 의미한다.
+- 다시 말하면 해당 Widget 의 build 가 끝난 후 실행될 action 을 예약할 수 있는 것이다.
+
+addPostFrameCallback 외에 아래와 같은 처리도 동일한 원리이다.
+
+```dart
+Future.delayed(Duration(seconds: 0), () {
+  context.read<Counter>().increment();
+  myCounter = context.read<Counter>().counter + 10;
+});
+```
+```dart
+Future.microtask(() {
+  context.read<Counter>().increment();
+  myCounter = context.read<Counter>().counter + 10;
+});
+```
+
+![](/images/errors-and-addPostFrameCallback-2-page-004.jpg)
+
+- 위 error 는 `context.read` 에서 read 를 watch 로 바꾸면 볼 수 있는 에러이다.
+- Widget Tree 밖에서 listen 을 하려 했다는 것.
+- 시간차를 두고 현재 Frame 끝나고 이걸 실행해달라는 예약 행위에서 listen 을 한다는 것이 논리적으로 맞지 않다. 이렇게 이해하자.
+
+<br>
+
+# Errors & addPostFrameCallback - 3
+
+`Errors & addPostFrameCallback - 3` 에서는 특정 화면에 진입했을때 혹은 가변적인 값이 특정 조건에 걸렸을 때 Dialog 를 띄우는 경우에 있어서 처리 방식 들을 살펴본다. 
+
+<br>
+
+![](/images/errors-and-addPostFrameCallback-3-page-001.jpg)
+
+- Dialog 는 해당 Screen 이 다 그려지고 나서 그 위에 그려지는 overlay Widget.
+- 따라서 initState 에서 그냥 호출시 위와 같은 에러가 발생하는 것이 당연하다.
+- 이 경우도 아래와 같이 해당 Frame 이 다 그려지고 나서 그 이후에 그려지도록 처리해야 한다.
+
+```dart
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            content: Text('Be careful!'),
+          );
+        },
+      );
+    });
+  }
+```
+
+<br>
+
+- 같은 맥락에서 가변적인 값을 바라보고 특정 조건에서 Dialog 를 띄우고 싶을때도 아래와 같이 addPostFrameCallback 로 처리해줘야한다.
+- 해당 Frame 이 다 그려지고 나서 이후에 조건 검사를 한 후 overlay 하는 것이기 때문이다.
+- 조건식을 포함한 Dialog call 자체를 모두 addPostFrameCallback 로 예약할 순 있으나 조건에 부합하지도 않는 경우에도 불필요하게 action 이 register 되므로 좋지 않은 코드가 된다.
+
+```dart
+  @override
+  Widget build(BuildContext context) {
+    if (context.read<Counter>().counter == 3) {
+      WidgetsBinding.instance!.addPostFrameCallback((_) {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              content: Text('Count is 3'),
+            );
+          },
+        );
+      });
+    }
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Handle Dialog'),
+      ),
+      body: Center(
+        child: Text(
+          '${context.watch<Counter>().counter}',
+          style: TextStyle(fontSize: 40.0),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          context.read<Counter>().increment();
+        },
+      ),
+    );
+  }
+```
+
+![](/images/errors-and-addPostFrameCallback-3-page-002.jpg)
+![](/images/errors-and-addPostFrameCallback-3-page-003.jpg)
+![](/images/errors-and-addPostFrameCallback-3-page-004.jpg)
+![](/images/errors-and-addPostFrameCallback-3-page-005.jpg)
+
+<br>
+
+# Errors & addPostFrameCallback - 4
+
+`Errors & addPostFrameCallback - 4` 에서는 State 가 변할 때 Navigate 하는 방법에 대해 살펴본다.
+
+![](/images/errors-and-addPostFrameCallback-4-page-001.jpg)
+
+- Navigate 하는 것도 결국 Stack 위에 올리는 Overlay 행위이기 때문에 아래와 같이 예약을 걸어 주어야 한다.
+- 만약 addPostFrameCallback 를 사용하지 않으면 build 하는 와중에 Navigator.push 가 처리 되는 것이고 이는 본 화면이 다 그려지기도 전에(정확히는 그려지는 중간에) Overlay 요청을 한 것과 같다. 그래서 위와 같은 에러를 만나게 된다.
+
+```dart
+    if (context.read<Counter>().counter == 3) {
+      WidgetsBinding.instance!.addPostFrameCallback((_) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => OtherPage(),
+          ),
+        );
+      });
+    }
+```
+
+![](/images/errors-and-addPostFrameCallback-4-page-002.jpg)
+
+- Dialog, Navigate, BottomSheet 모두 Overlay Widget 이므로 해당 Widget 을 사용할 경우 이번에 학습한 내용들을 잘 활용하도록 한다. 
+
+<br>
+
+# ChangeNotifier 의 addListener 를 이용한 action 처리
+
+![](/images/Performing-actions-using-addListener-of-ChangeNotifier-1-page-001.jpg)
+![](/images/Performing-actions-using-addListener-of-ChangeNotifier-1-page-002.jpg)
+![](/images/Performing-actions-using-addListener-of-ChangeNotifier-1-page-003.jpg)
+![](/images/Performing-actions-using-addListener-of-ChangeNotifier-1-page-004.jpg)
+![](/images/Performing-actions-using-addListener-of-ChangeNotifier-4-page-001.jpg)
+
+- 강사님은 두번째 혹은 세번째 방식을 추천.
+- 두번째 방식만 아래에 코드로 정리.
+
+```dart
+  Future<void> getResult(String searchTerm) async {
+    _state = AppState.loading;
+    notifyListeners();
+
+    await Future.delayed(Duration(seconds: 1));
+
+    try {
+      if (searchTerm == 'fail') {
+        throw 'Something went wrong';
+      }
+
+      _state = AppState.success;
+      notifyListeners();
+    } catch (e) {
+      _state = AppState.error;
+      notifyListeners();
+      rethrow;
+    }
+  }
+```
+```dart
+  void submit() async {
+    setState(() {
+      autovalidateMode = AutovalidateMode.always;
+    });
+
+    final form = formKey.currentState;
+
+    if (form == null || !form.validate()) return;
+
+    form.save();
+    try {
+      await context.read<AppProvider>().getResult(searchTerm!);
+      Navigator.push(context, MaterialPageRoute(
+        builder: (context) {
+          return SuccessPage();
+        },
+      ));
+    } catch (e){
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            content: Text('Something went wrong'),
+          );
+        },
+      );
+    }
+  }
+```
