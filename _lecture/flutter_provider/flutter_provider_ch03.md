@@ -31,7 +31,7 @@ nav_order: 4
 
 {: .point }
 <b>*이거 되게 중요한 슬라이드다.</b><br>
-<b>*실습 하면서 위 슬라이드 원칙들을 준수하며 살을 붙여나가고 내면화 시키도록 한다.</b>
+<b>*실습 하면서 위 슬라이드 원칙들을 준수하며 살을 붙여나가고 내면화 시키도록 한다.</b><br>
 <b>*TODO App 실습 다 끝내고 위 원칙들과 내가 실습하면서 느낀 것들 종합해서 원칙 다시 정리한다.</b>
 
 <hr>
@@ -41,3 +41,5 @@ nav_order: 4
 # App structure
 
 ![](/images/TODO+App+Structure-page-001.jpg)
+![](/images/ChangeNotifierProxyProvider_ProxyProvider-page-001.jpg)
+![](/images/ChangeNotifierProxyProvider_ProxyProvider-page-002.jpg)
