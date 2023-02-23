@@ -62,3 +62,13 @@ nav_order: 1
       <b>해결책은 아래 유투브에도 잘 나와있지만 inner Column 의 높이를 명시적으로 말해주면 된다. 정해진 수치(MediaQuery 로 계산이 되어도 되니 결국에 정해지는 고정값이면 된다)를 height 로 잡아주거나, Expanded 로 감싸주면 된다.</b> 
 
 {% include youtube.html id="jckqXR5CrPI" %}
+
+- [Container](https://api.flutter.dev/flutter/widgets/Container-class.html)
+  - child
+  - margin : container 의 outside 방향으로 여백을 얼마나 둘지
+  - padding : child 의 outside 방향과 container 의 inside 방향의 크기(결국 child 의 충전재 공간). 즉, padding 클수록 child 가 짜부됨. 
+  - decoration
+  - alignment : Align the child within the container.
+
+-   
+
