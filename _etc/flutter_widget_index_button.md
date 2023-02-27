@@ -26,3 +26,20 @@ nav_order: 2
 - [PopupMenuButton](https://api.flutter.dev/flutter/material/PopupMenuButton-class.html)
   Displays a menu when pressed and calls onSelected when the menu is dismissed because an item was selected.
   
+<br>
+
+- [DropdownButton](https://api.flutter.dev/flutter/material/DropdownButton-class.html)
+  Shows the currently selected item and an arrow that opens a menu for selecting another item.
+
+<br>
+
+- [TextButton](https://api.flutter.dev/flutter/material/TextButton-class.html)
+  A Material Design text button. A simple flat button without a border outline.
+
+<br>
+
+- [FloatingActionButton](https://api.flutter.dev/flutter/material/FloatingActionButton-class.html)
+  A floating action button is a circular icon button that hovers over content to promote a primary action in the application. Floating action buttons are most commonly used in the Scaffold.floatingActionButton field.
+
+<br>
+
