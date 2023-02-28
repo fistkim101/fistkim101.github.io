@@ -69,6 +69,4 @@ nav_order: 1
   - padding : child 의 outside 방향과 container 의 inside 방향의 크기(결국 child 의 충전재 공간). 즉, padding 클수록 child 가 짜부됨. 
   - decoration
   - alignment : Align the child within the container.
-
--   
-
+  

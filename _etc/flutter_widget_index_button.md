@@ -40,6 +40,3 @@ nav_order: 2
 
 - [FloatingActionButton](https://api.flutter.dev/flutter/material/FloatingActionButton-class.html)
   A floating action button is a circular icon button that hovers over content to promote a primary action in the application. Floating action buttons are most commonly used in the Scaffold.floatingActionButton field.
-
-<br>
-
