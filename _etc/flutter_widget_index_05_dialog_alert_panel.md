@@ -19,6 +19,4 @@ nav_order: 5
 
 <br>
 
-- [] simpledialog 할 차례
-
-
+- [SnackBar](https://api.flutter.dev/flutter/material/SnackBar-class.html)
