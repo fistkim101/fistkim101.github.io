@@ -26,7 +26,7 @@ nav_order: 6
 <br>
 
 - [GridView](https://api.flutter.dev/flutter/widgets/GridView-class.html)
-  이걸 쓸데가 있나 싶었는데, 생각해보면 인스타가 그리드뷰 형식이다. 사진을 정렬해서 preview 로 보여주는 방식의 페이지에서 사용해야할 수 있을 것 같다.
+  이걸 쓸데가 있나 싶었는데, 생각해보면 인스타가 그리드뷰 형식이다. 사진을 정렬해서 preview 로 보여주는 방식의 페이지에서 사용해야할 수 있을 것 같다. 아니면 일반적인 이커머스 앱에서도 괜찮을 것 같다.
 
 <br>
 
