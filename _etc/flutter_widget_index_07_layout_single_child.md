@@ -15,3 +15,19 @@ nav_order: 7
   - alignment : Align the child within the container.
 
 <br>
+
+- [Align](https://api.flutter.dev/flutter/widgets/Align-class.html)
+  A widget that aligns its child within itself and optionally sizes itself based on the child's size.
+  
+<br>
+
+- [AspectRatio](https://api.flutter.dev/flutter/widgets/AspectRatio-class.html)
+  A widget that attempts to size the child to a specific aspect ratio.
+
+<br>
+
+- [Baseline](https://api.flutter.dev/flutter/widgets/Baseline-class.html)
+
+<br>
+
+
