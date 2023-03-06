@@ -63,3 +63,9 @@ nav_order: 8
 
 <br>
 
+- [Flexible](https://api.flutter.dev/flutter/widgets/Flexible-class.html)
+  A widget that controls how a child of a Row, Column, or Flex flexes.
+  
+<br>
+
+- []()

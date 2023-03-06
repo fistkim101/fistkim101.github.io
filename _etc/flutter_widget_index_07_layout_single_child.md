@@ -47,4 +47,8 @@ nav_order: 7
 
 <br>
 
+- [FittedBox](https://api.flutter.dev/flutter/widgets/FittedBox-class.html)
 
+<br>
+
+- [FractionallySizedBox](https://api.flutter.dev/flutter/widgets/FractionallySizedBox-class.html)
