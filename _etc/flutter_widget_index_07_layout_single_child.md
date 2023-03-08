@@ -52,3 +52,21 @@ nav_order: 7
 <br>
 
 - [FractionallySizedBox](https://api.flutter.dev/flutter/widgets/FractionallySizedBox-class.html)
+
+<br>
+
+- [LimitedBox](https://api.flutter.dev/flutter/widgets/LimitedBox-class.html)
+  A box that limits its size only when it's unconstrained.
+  부모가 크기 제한을 두지 않은 경우 하위 요소를 Wrap 해서 크기 제한을 주고 싶을 때 사용.
+  굳이 이걸 써야하나 싶기도 하다. Container 로 Wrap 해서 제한 주는거랑 현재로서는 다른게 뭔지 잘 모르겠다. 결과가 동일하다.
+  LimitedBox 사용시 min, max 로 제한을 주는 것이 가능하긴 하다. 
+
+<br>
+
+- [Offstage](https://api.flutter.dev/flutter/widgets/Offstage-class.html)
+  bool 값으로 자식 위젯 숨길때 사용. 쓸일이 있을까 싶다.
+
+<br>
+
+- [Transform](https://api.flutter.dev/flutter/widgets/Transform-class.html)
+  이거 동적으로 사용하려면 Animation 적용을 같이 해줘야한다. 일단은 이런 사용법이 있다, 이런 위젯이 있다 정도만 숙지.
