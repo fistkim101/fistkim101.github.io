@@ -571,7 +571,9 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-- Consumer 의 파라미터 (BuildContext context, Dog dog, Widget? child) 중 child 는 builder 내에서 rebuild 될 필요가 없는 Widget 이 있는 경우를 대비해서 위와 같이 사용한다. 위 예제에서는 어떤 경우든 rebuild 될 필요가 없는 Text Widget 을 child 로 빼주었다.
+- Consumer 의 파라미터 (BuildContext context, Dog dog, Widget? child) 중 child 는 builder 내에서 rebuild 될 필요가 없는 Widget 이 있는 경우를 대비해서 위와 같이 사용한다.
+  위 예제에서는 어떤 경우든 rebuild 될 필요가 없는 Text Widget 을 child 로 빼주었다.
+- 이해가 안가면 유투브에 남아있는 [강의](https://www.youtube.com/watch?v=BrzAZYExBBA) 에서 이 부분을 다시 보고 오자.
 
 <br>
 
