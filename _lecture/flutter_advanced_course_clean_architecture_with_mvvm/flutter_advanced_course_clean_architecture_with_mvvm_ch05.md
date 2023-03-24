@@ -116,6 +116,10 @@ class SimpleModel {
 Provider 에서 notifyListeners(); 를 사용하는 방식과 유사하다. 결국 Stream 도 Publish, Subscribe 원리이며 이를 이용해서
 해당 Stream 을 구독하는 StreamBuilder 를 통해서 변경이 있을때마다 이를 받아 rebuild 하는 방식이다.
 
+유투브 강의에는 Provider 를 사용한 MVVM 도 있었는데, 사실 명칭을 이렇게 갖다 붙여서 다른 것 같지만 그냥 일반적인 Provider 였다.
+View 의 도메인 로직을 전부 Provider 에 위임하고 Provider 의 처리에 따라서 View 는 rebuild 가 필요할 때 알아서 rebuild 가 되도록(react)
+Provider 를 watch 하는 형태인 것이다. 이걸 기본형 맥락에서 보면 StreamBuilder 를 통해서 rebuild 되는 것과 똑같은 방식이다.
+
 ## 강의에서 사용된 MVVM 패턴
 
 [소스코드](https://github.com/minafarideleia/complete_advanced_flutter/tree/Lecture_41_How_to_Recive_Data_in_View_From_Viewmodel) 가 너무 길어서 링크만 남긴다.
