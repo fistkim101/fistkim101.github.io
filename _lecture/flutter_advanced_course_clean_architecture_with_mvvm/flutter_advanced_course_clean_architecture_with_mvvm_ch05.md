@@ -166,6 +166,96 @@ abstract class BaseViewModelOutputs {
 BaseViewModel 라는 최상위 class 를 만들고 모든 ViewModel 이 이를 상속하도록 한다. 각 ViewModel 에서도 또 계층을 아래와 같이 나눈다.
 
 ```dart
+import 'dart:async';
+
+import 'package:complete_advanced_flutter/domain/model/model.dart';
+import 'package:complete_advanced_flutter/presentation/base/baseviewmodel.dart';
+import 'package:complete_advanced_flutter/presentation/resources/assets_manager.dart';
+import 'package:complete_advanced_flutter/presentation/resources/strings_manager.dart';
+import 'package:easy_localization/easy_localization.dart';
+
+class OnBoardingViewModel extends BaseViewModel
+    with OnBoardingViewModelInputs, OnBoardingViewModelOutputs {
+  // stream controllers
+  final StreamController _streamController =
+      StreamController<SliderViewObject>();
+
+  late final List<SliderObject> _list;
+
+  int _currentIndex = 0;
+
+  // inputs
+  @override
+  void dispose() {
+    _streamController.close();
+  }
+
+  @override
+  void start() {
+    _list = _getSliderData();
+    // send this slider data to our view
+    _postDataToView();
+  }
+
+  @override
+  int goNext() {
+    int nextIndex = _currentIndex++; // +1
+    if (nextIndex >= _list.length) {
+      _currentIndex = 0; // infinite loop to go to first item inside the slider
+    }
+    return _currentIndex;
+  }
+
+  @override
+  int goPrevious() {
+    int previousIndex = _currentIndex--; // -1
+    if (previousIndex == -1) {
+      _currentIndex =
+          _list.length - 1; // infinite loop to go to the length of slider list
+    }
+    return _currentIndex;
+  }
+
+  @override
+  void onPageChanged(int index) {
+    _currentIndex = index;
+    _postDataToView();
+  }
+
+  @override
+  Sink get inputSliderViewObject => _streamController.sink;
+
+  // outputs
+  @override
+  Stream<SliderViewObject> get outputSliderViewObject =>
+      _streamController.stream.map((slideViewObject) => slideViewObject);
+
+  // private functions
+  List<SliderObject> _getSliderData() => [
+        SliderObject(
+            AppStrings.onBoardingTitle1.tr(),
+            AppStrings.onBoardingSubTitle1.tr(),
+            ImageAssets.onboardingLogo1),
+        SliderObject(
+            AppStrings.onBoardingTitle2.tr(),
+            AppStrings.onBoardingSubTitle2.tr(),
+            ImageAssets.onboardingLogo2),
+        SliderObject(
+            AppStrings.onBoardingTitle3.tr(),
+            AppStrings.onBoardingSubTitle3.tr(),
+            ImageAssets.onboardingLogo3),
+        SliderObject(
+            AppStrings.onBoardingTitle4.tr(),
+            AppStrings.onBoardingSubTitle4.tr(),
+            ImageAssets.onboardingLogo4)
+      ];
+
+  _postDataToView() {
+    inputSliderViewObject.add(
+        SliderViewObject(_list[_currentIndex], _list.length, _currentIndex));
+  }
+}
+
 // inputs mean the orders that our view model will recieve from our view
 abstract class OnBoardingViewModelInputs {
   void goNext(); // when user clicks on right arrow or swipe left.
@@ -195,10 +285,17 @@ class SliderViewObject {
 goNext, goPrevious, onPageChanged 는 해당 ViewModel 특유의 것이라서 ViewModel 에 선언해도 되지만 아마도 명시적으로 ~Input 내에 넣어주어서 확실하게
 분리시키려는 의도로 보인다.
 
-OnBoardingViewModelInputs 의 inputSliderViewObject 은 좀 잘못된 사용이라고 나는 생각한다. 왜냐면 저건 ViewModel -> View 로의 명확한 방향성이 있는데
-OnBoardingViewModelInputs 내에 위치함으로써 마치 View -> ViewModel 인 것처럼 오해를 불러 일으킨다.
+~Input 내에 Sink 로 설정해 준 것은 사실 결국 StreamController 의 sink 인데, 의미는 View -> ViewModel 로 데이터를 전달(상호작용)할때 데이터가 들어가는 입구라고 생각하면 된다.
+개인적으로 따로 분리하지 말고 ~controller.sink 로 그대로 사용하는 것이 훨씬 해석이 단순하고 좋은 것 같다. 단순히 ViewModel 이 데이터를 받아서 stream 으로 publish 할는 과정에서 '받는' input 개념이다.
 
-강사도 주석에 add data to the stream 이라고 정확하게 써놨다. 즉, 이건 ViewModel 에서 변경된 데이터를 View 가 Stream 에서 받아 쓸 수 있도록 Stream 에 넣어주는 용도라는 말인데
-정확히 방향이 ViewModel -> View 다. 그런데 ~ViewModelInputs 안에 넣어두면 말이 맞지 않다.
+<br>
 
-OnBoardingViewModelOutputs 도 굳이 저렇게 따로 빼줄 필요까진 없다고 보는데 아마도 명확한 분리르 위해서 명시적으로 그냥 저렇게 처리한 것 같다.
+## Stream 을 활용한 View, ViewModel 상호작용 이해
+
+아래 그림으로 만들었다. 강사의 샘플 코드가 중요한 것이 아니라 아래 그림이 골자라는 것을 알고 이해한다. 
+
+![](/images/concept_view_viewmodel.png)
+
+{: .point }
+Stream 은 필요하다면 여러 개가 될 수 있다. 강의에서는 로그인시 name, password, validation, isLoginSuccess 각각을 위한 네 개의 StreamController 를 만들어 사용하고 있다.
+강의 코드가 좀 깔끔하지 못하므로 View-ViewModel 간에 Stream 이 다수일 수 있다는 것만 기억하자. 다수인 상황이 오히려 많을 것 같다.
