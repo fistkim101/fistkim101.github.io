@@ -26,6 +26,10 @@ Application Layer 는 다른 Layer 들과 상호작용 한다기 보다는 어�
 
 ![](/images/concept_3layer.png)
 
+여기서 UI Widget 과 State Management 사이의 상호 작용이 곧 view 와 viewModel 간의 상호작용이며 복습을 위해 아래 그림을 다시 보자.
+
+![](/images/concept_view_viewmodel.png)
+
 구현 하다가 잠깐씩 막히더라도 학습했던 것을 보고 구현을 하면 그만이다. 달달 외우는게 중요한 것이 아니고
 저렇게 계층을 나누는 이유에 대해서 알고, 계층을 나누는 과정에서 어떤 방식으로 처리했는지와 그 과정에서
 어떤 라이브러리를 사용했는지 등에 대해서 인지하자.
