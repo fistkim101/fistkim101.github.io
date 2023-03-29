@@ -1,8 +1,9 @@
 ---
 layout: default
-title: test1
+title: 린치핀
 parent: Business Model
-nav_order: 1
+nav_order: 2
 ---
 
-test1
+<br>
+
