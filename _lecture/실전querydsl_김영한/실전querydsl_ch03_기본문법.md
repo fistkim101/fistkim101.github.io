@@ -9,6 +9,7 @@ nav_order: 3
 - JPAQueryFactory 를 필드로
 - 기본 Q_Type 활용
 - 기본 검색 쿼리
+- 결과조회
 
 <br>
 
@@ -157,3 +158,8 @@ public Q where(Predicate... o) {
     member.age.lt(30) // age < 30
     member.username.like("member%") //like 검색 member.username.contains("member") // like ‘%member%’ 검색 member.username.startsWith("member") //like ‘member%’ 검색
 ```
+
+<br>
+
+## 결과조회
+
