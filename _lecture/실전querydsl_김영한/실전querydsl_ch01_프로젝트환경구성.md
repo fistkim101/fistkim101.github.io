@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CH 1 프로젝트 환경구성
+title: CH 01 프로젝트 환경구성
 parent: 실전Querydsl_김영한
 nav_order: 1
 ---
