@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CH 3 TODO App
+title: CH 3 TODO App(실습)
 parent: Flutter Bloc Essential
 nav_order: 3
 ---
